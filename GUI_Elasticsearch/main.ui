@@ -869,7 +869,7 @@ Button */
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_widgets">
+                 <widget class="QPushButton" name="btn_search">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -904,7 +904,7 @@ Button */
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_new">
+                 <widget class="QPushButton" name="btn_add_data">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -996,7 +996,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-user.png);</string>
                   </property>
                   <property name="text">
-                   <string>Setting</string>
+                   <string>Info</string>
                   </property>
                  </widget>
                 </item>
@@ -1629,7 +1629,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -1638,7 +1638,7 @@ background-position: center;
 background-repeat: no-repeat;</string>
                       </property>
                      </widget>
-                     <widget class="QWidget" name="widgets">
+                     <widget class="QWidget" name="Search">
                       <property name="styleSheet">
                        <string notr="true">b</string>
                       </property>
@@ -1674,142 +1674,203 @@ background-repeat: no-repeat;</string>
                          </property>
                          <layout class="QVBoxLayout" name="verticalLayout_19">
                           <item>
-                           <layout class="QGridLayout" name="gridLayout_2">
-                            <item row="5" column="0">
-                             <widget class="QLineEdit" name="F_name">
-                              <property name="minimumSize">
-                               <size>
-                                <width>0</width>
-                                <height>30</height>
-                               </size>
+                           <layout class="QHBoxLayout" name="horizontalLayout_7">
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <layout class="QVBoxLayout" name="verticalLayout_16">
+                              <property name="spacing">
+                               <number>0</number>
                               </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgb(33, 37, 43);</string>
+                              <property name="leftMargin">
+                               <number>0</number>
                               </property>
-                              <property name="text">
-                               <string/>
+                              <property name="bottomMargin">
+                               <number>5</number>
                               </property>
-                              <property name="placeholderText">
-                               <string>Type here</string>
-                              </property>
-                             </widget>
+                              <item>
+                               <layout class="QGridLayout" name="gridLayout_2">
+                                <item row="6" column="0">
+                                 <widget class="QLineEdit" name="F_name">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>30</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                  </property>
+                                  <property name="text">
+                                   <string/>
+                                  </property>
+                                  <property name="placeholderText">
+                                   <string>Type here</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="3" column="0">
+                                 <widget class="QLineEdit" name="I_name">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>30</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                  </property>
+                                  <property name="text">
+                                   <string/>
+                                  </property>
+                                  <property name="placeholderText">
+                                   <string>Type here</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="4" column="0" alignment="Qt::AlignBottom">
+                                 <widget class="QLabel" name="labelBoxBlenderInstalation_3">
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>10</pointsize>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
+                                   </font>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true"/>
+                                  </property>
+                                  <property name="text">
+                                   <string>Field name here..</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="6" column="1">
+                                 <widget class="QLineEdit" name="Q_name">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>30</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                  </property>
+                                  <property name="text">
+                                   <string/>
+                                  </property>
+                                  <property name="placeholderText">
+                                   <string>Type here</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="4" column="1" alignment="Qt::AlignBottom">
+                                 <widget class="QLabel" name="labelBoxBlenderInstalation_4">
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>10</pointsize>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
+                                   </font>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true"/>
+                                  </property>
+                                  <property name="text">
+                                   <string>Query match here..</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="1" column="0" alignment="Qt::AlignBottom">
+                                 <widget class="QLabel" name="labelBoxBlenderInstalation_2">
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>10</pointsize>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
+                                   </font>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true"/>
+                                  </property>
+                                  <property name="text">
+                                   <string>Index Name</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="3" column="1">
+                                 <widget class="QPushButton" name="B_make">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>150</width>
+                                    <height>30</height>
+                                   </size>
+                                  </property>
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>10</pointsize>
+                                    <italic>false</italic>
+                                    <bold>false</bold>
+                                   </font>
+                                  </property>
+                                  <property name="cursor">
+                                   <cursorShape>PointingHandCursor</cursorShape>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                  </property>
+                                  <property name="text">
+                                   <string>Search</string>
+                                  </property>
+                                  <property name="icon">
+                                   <iconset resource="resources.qrc">
+                                    <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="0" column="0">
+                                 <widget class="QLabel" name="label_2">
+                                  <property name="text">
+                                   <string>Search Data</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>400</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_17"/>
+                               </widget>
+                              </item>
+                             </layout>
                             </item>
-                            <item row="3" column="1">
-                             <widget class="QLabel" name="labelBoxBlenderInstalation_4">
-                              <property name="font">
-                               <font>
-                                <pointsize>10</pointsize>
-                                <italic>false</italic>
-                                <bold>false</bold>
-                               </font>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Query match here..</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="5" column="1">
-                             <widget class="QLineEdit" name="Q_name">
-                              <property name="minimumSize">
-                               <size>
-                                <width>0</width>
-                                <height>30</height>
-                               </size>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgb(33, 37, 43);</string>
-                              </property>
-                              <property name="text">
-                               <string/>
-                              </property>
-                              <property name="placeholderText">
-                               <string>Type here</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="3" column="0">
-                             <widget class="QLabel" name="labelBoxBlenderInstalation_3">
-                              <property name="font">
-                               <font>
-                                <pointsize>10</pointsize>
-                                <italic>false</italic>
-                                <bold>false</bold>
-                               </font>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Field name here..</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <widget class="QLabel" name="labelBoxBlenderInstalation_2">
-                              <property name="font">
-                               <font>
-                                <pointsize>10</pointsize>
-                                <italic>false</italic>
-                                <bold>false</bold>
-                               </font>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Index Name</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="2" column="0">
-                             <widget class="QLineEdit" name="I_name">
-                              <property name="minimumSize">
-                               <size>
-                                <width>0</width>
-                                <height>30</height>
-                               </size>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgb(33, 37, 43);</string>
-                              </property>
-                              <property name="text">
-                               <string/>
-                              </property>
-                              <property name="placeholderText">
-                               <string>Type here</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="2" column="1">
-                             <widget class="QPushButton" name="B_make">
-                              <property name="minimumSize">
-                               <size>
-                                <width>150</width>
-                                <height>30</height>
-                               </size>
-                              </property>
-                              <property name="font">
-                               <font>
-                                <pointsize>10</pointsize>
-                                <italic>false</italic>
-                                <bold>false</bold>
-                               </font>
-                              </property>
-                              <property name="cursor">
-                               <cursorShape>PointingHandCursor</cursorShape>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgb(52, 59, 72);</string>
-                              </property>
-                              <property name="text">
-                               <string>Make</string>
-                              </property>
-                              <property name="icon">
-                               <iconset resource="resources.qrc">
-                                <normaloff>:/icons/images/icons/cil-folder-open.png</normaloff>:/icons/images/icons/cil-folder-open.png</iconset>
+                            <item>
+                             <widget class="QTextBrowser" name="textBrowser">
+                              <property name="html">
+                               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </item>
@@ -1818,58 +1879,14 @@ background-repeat: no-repeat;</string>
                          </layout>
                         </widget>
                        </item>
-                       <item>
-                        <widget class="QFrame" name="row_3">
-                         <property name="minimumSize">
-                          <size>
-                           <width>0</width>
-                           <height>150</height>
-                          </size>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_12">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QTextBrowser" name="textBrowser">
-                            <property name="html">
-                             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="new_page">
+                     <widget class="QWidget" name="Add_Data">
                       <layout class="QVBoxLayout" name="verticalLayout_20">
                        <item>
                         <widget class="QLabel" name="label">
                          <property name="text">
-                          <string>NEW PAGE TEST</string>
+                          <string>Upload Data Json</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -1878,220 +1895,6 @@ p, li { white-space: pre-wrap; }
                        </item>
                       </layout>
                      </widget>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="extraRightBox">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>0</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::NoFrame</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_7">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QFrame" name="themeSettingsTopDetail">
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>3</height>
-                      </size>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QFrame" name="contentSettings">
-                     <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_13">
-                      <property name="spacing">
-                       <number>0</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>0</number>
-                      </property>
-                      <item alignment="Qt::AlignTop">
-                       <widget class="QFrame" name="topMenus">
-                        <property name="frameShape">
-                         <enum>QFrame::NoFrame</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Raised</enum>
-                        </property>
-                        <layout class="QVBoxLayout" name="verticalLayout_14">
-                         <property name="spacing">
-                          <number>0</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QPushButton" name="btn_message">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>45</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <pointsize>10</pointsize>
-                             <italic>false</italic>
-                             <bold>false</bold>
-                            </font>
-                           </property>
-                           <property name="cursor">
-                            <cursorShape>PointingHandCursor</cursorShape>
-                           </property>
-                           <property name="layoutDirection">
-                            <enum>Qt::LeftToRight</enum>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">background-image: url(:/icons/images/icons/cil-envelope-open.png);</string>
-                           </property>
-                           <property name="text">
-                            <string>Message</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QPushButton" name="btn_print">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>45</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <pointsize>10</pointsize>
-                             <italic>false</italic>
-                             <bold>false</bold>
-                            </font>
-                           </property>
-                           <property name="cursor">
-                            <cursorShape>PointingHandCursor</cursorShape>
-                           </property>
-                           <property name="layoutDirection">
-                            <enum>Qt::LeftToRight</enum>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">background-image: url(:/icons/images/icons/cil-print.png);</string>
-                           </property>
-                           <property name="text">
-                            <string>Print</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QPushButton" name="btn_logout">
-                           <property name="sizePolicy">
-                            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                             <horstretch>0</horstretch>
-                             <verstretch>0</verstretch>
-                            </sizepolicy>
-                           </property>
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>45</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <pointsize>10</pointsize>
-                             <italic>false</italic>
-                             <bold>false</bold>
-                            </font>
-                           </property>
-                           <property name="cursor">
-                            <cursorShape>PointingHandCursor</cursorShape>
-                           </property>
-                           <property name="layoutDirection">
-                            <enum>Qt::LeftToRight</enum>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">background-image: url(:/icons/images/icons/cil-account-logout.png);</string>
-                           </property>
-                           <property name="text">
-                            <string>Logout</string>
-                           </property>
-                          </widget>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                     </layout>
                     </widget>
                    </item>
                   </layout>

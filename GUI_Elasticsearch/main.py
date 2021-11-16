@@ -88,8 +88,8 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
 
         widgets.btn_home.clicked.connect(self.buttonClick)
-        widgets.btn_widgets.clicked.connect(self.buttonClick)
-        widgets.btn_new.clicked.connect(self.buttonClick)
+        widgets.btn_search.clicked.connect(self.buttonClick)
+        widgets.btn_add_data.clicked.connect(self.buttonClick)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -166,14 +166,14 @@ class MainWindow(QMainWindow):
 
 
         # SHOW WIDGETS PAGE
-        if btnName == "btn_widgets":
-            widgets.stackedWidget.setCurrentWidget(widgets.widgets)
+        if btnName == "btn_search":
+            widgets.stackedWidget.setCurrentWidget(widgets.Search)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         # SHOW NEW PAGE
-        if btnName == "btn_new":
-            widgets.stackedWidget.setCurrentWidget(widgets.new_page) # SET PAGE
+        if btnName == "btn_add_data":
+            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
@@ -194,7 +194,7 @@ class MainWindow(QMainWindow):
     # ///////////////////////////////////////////////////////////////
     def mousePressEvent(self, event):
         # SET DRAG POS WINDOW
-        self.dragPos = event.globalPos()
+        self.dragPos = event.globalPosition().toPoint()
 
         # PRINT MOUSE EVENTS
         if event.buttons() == Qt.LeftButton:
@@ -206,4 +206,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("icon.ico"))
     window = MainWindow()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
