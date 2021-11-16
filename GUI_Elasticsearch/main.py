@@ -44,7 +44,7 @@ def make_query(filter, index_name):
         # catch any exceptions and return them to Kivy app
         try:
             # pass filter query to the client's search() method
-            response = client.search(index=index_name, body=filter)
+            response = client.search(index=index_name, query=filter)
 
             # print the query response for debugging purposes
             print ('response["hits"]:', len(response["hits"]))
@@ -107,13 +107,10 @@ class MainWindow(QMainWindow):
             # SHOW WIDGETS PAGE
 
         if btnName == "B_make":
-            print("make")
             # pass the field name and query args to filter dict
             filter = {
-                'query': {
-                    'match': {
-                        self.ui.F_name.text(): self.ui.Q_name.text()
-                    }
+                'match': {
+                    self.ui.F_name.text(): self.ui.Q_name.text()
                 }
             }
 
@@ -123,36 +120,31 @@ class MainWindow(QMainWindow):
             # print("query_input", self.ui.Q_name.text())
             # print("index_input", self.ui.I_name.text())
             # make sure that the user has entered an index name
-            # if len(index_name) == 0 or index_name == "":
-            #     json_resp = '{"error", "index name field cannot be empty"}'
-            # else:
+            if index_name == "":
+                json_resp = '{"error", "index name field cannot be empty"}'
+            else:
                 # pass the filter dict to the make_query() function
-            resp = make_query(filter, index_name)
-            json_resp = json.dumps(resp, indent=4)
-            print("Elasticsearch response:", resp)
-            # json_resp = '{"error", "index name field cannot be empty"}'
+                resp = make_query(filter, index_name)
+                json_resp = json.dumps(resp, indent=4)
+                print("Elasticsearch response:", resp)
+
             # change the label to match the Elasticsearch API response
             self.ui.textBrowser.setText(json_resp)
 
-
-
-        # SHOW WIDGETS PAGE
+        # SHOW SEARCH
         if btnName == "btn_search":
             widgets.stackedWidget.setCurrentWidget(widgets.Search)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        # SHOW NEW PAGE
+        # SHOW ADD DATA
         if btnName == "btn_add_data":
             widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
-        if btnName == "btn_save":
-            print("Save BTN clicked!")
-
         # PRINT BTN NAME
-        print(f'Button "{btnName}" pressed!')
+        # print(f'Button "{btnName}" pressed!')
 
 
     # RESIZE EVENTS
