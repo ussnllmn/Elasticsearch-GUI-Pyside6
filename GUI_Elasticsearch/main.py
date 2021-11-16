@@ -75,49 +75,20 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
-
-        # TOGGLE MENU
-        # ///////////////////////////////////////////////////////////////
         widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
-
-        # SET UI DEFINITIONS
-        # ///////////////////////////////////////////////////////////////
         UIFunctions.uiDefinitions(self)
-
-        # BUTTONS CLICK
-        # ///////////////////////////////////////////////////////////////
-
-        widgets.btn_home.clicked.connect(self.buttonClick)
-        widgets.btn_search.clicked.connect(self.buttonClick)
-        widgets.btn_add_data.clicked.connect(self.buttonClick)
-
-        # EXTRA LEFT BOX
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
         widgets.toggleLeftBox.clicked.connect(openCloseLeftBox)
         widgets.extraCloseColumnBtn.clicked.connect(openCloseLeftBox)
-
-        # SHOW APP
-        # ///////////////////////////////////////////////////////////////
         self.show()
-
-        # SET CUSTOM THEME
-        # ///////////////////////////////////////////////////////////////
-        useCustomTheme = False
-        themeFile = "themes\py_dracula_light.qss"
-
-        # SET THEME AND HACKS
-        if useCustomTheme:
-            # LOAD AND APPLY STYLE
-            UIFunctions.theme(self, themeFile, True)
-
-            # SET HACKS
-            AppFunctions.setThemeHack(self)
-
-        # SET HOME PAGE AND SELECT MENU
-        # ///////////////////////////////////////////////////////////////
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
+
+        widgets.btn_home.clicked.connect(self.buttonClick)
+        widgets.btn_search.clicked.connect(self.buttonClick)
+        widgets.btn_add_data.clicked.connect(self.buttonClick)
+        widgets.B_make.clicked.connect(self.buttonClick)
 
 
     # BUTTONS CLICK
@@ -148,9 +119,9 @@ class MainWindow(QMainWindow):
 
             # get the index name and put into a string variable
             index_name = self.ui.I_name.text()
-            print("field_input", self.ui.F_name.text())
-            print("query_input", self.ui.Q_name.text())
-            print("index_input", self.ui.I_name.text())
+            # print("field_input", self.ui.F_name.text())
+            # print("query_input", self.ui.Q_name.text())
+            # print("index_input", self.ui.I_name.text())
             # make sure that the user has entered an index name
             # if len(index_name) == 0 or index_name == "":
             #     json_resp = '{"error", "index name field cannot be empty"}'
