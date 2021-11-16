@@ -1,6 +1,8 @@
 <RCC>
   <qresource prefix="images">
+    <file>images/images/Home.png</file>
     <file>images/images/PyDracula.png</file>
+    <file>images/images/Elasticsearch.png</file>
     <file>images/images/PyDracula_vertical.png</file>
   </qresource>
   <qresource prefix="icons">
