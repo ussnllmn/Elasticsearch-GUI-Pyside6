@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainIkJvic.ui'
+## Form generated from reading UI file 'mainxdqoEc.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -79,6 +79,11 @@ class Ui_MainWindow(object):
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
+"#search_frame {	\n"
+"	border: 2px solid #bd93f9;\n"
+"	background-position: center;\n"
+"	background-repeat: no-repeat;\n"
+"}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Left Menu */\n"
@@ -95,12 +100,12 @@ class Ui_MainWindow(object):
 "#titleLeftDescription { font: 8pt \"Segoe UI\"; color: rgb(189, 147, 249); }\n"
 "\n"
 "/* MENUS */\n"
-"#topMenu .QPushButton {	\n"
+"#topMenu .Q"
+                        "PushButton {	\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: "
-                        "22px solid transparent;\n"
+"	border-left: 22px solid transparent;\n"
 "	background-color: transparent;\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
@@ -134,11 +139,11 @@ class Ui_MainWindow(object):
 "\n"
 "/* Toggle Button */\n"
 "#toggleButton {\n"
-"	background-position: left center;\n"
+""
+                        "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: 20px solid transp"
-                        "arent;\n"
+"	border-left: 20px solid transparent;\n"
 "	background-color: rgb(37, 41, 48);\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
@@ -175,9 +180,9 @@ class Ui_MainWindow(object):
 "#extraLabel { color: rgb(255, 255, 255); }\n"
 "\n"
 "/* Btn Close */\n"
-"#extraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
-"#extraCloseColumnBtn:hover { b"
-                        "ackground-color: rgb(196, 161, 249); border-style: solid; border-radius: 4px; }\n"
+"#extraClo"
+                        "seColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
+"#extraCloseColumnBtn:hover { background-color: rgb(196, 161, 249); border-style: solid; border-radius: 4px; }\n"
 "#extraCloseColumnBtn:pressed { background-color: rgb(180, 141, 238); border-style: solid; border-radius: 4px; }\n"
 "\n"
 "/* Extra Content */\n"
@@ -203,14 +208,14 @@ class Ui_MainWindow(object):
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* //////////////////////////////////////////////////////////////////////////////////////////////"
+                        "///\n"
 "Content App */\n"
 "#contentTopBg{	\n"
 "	background-color: rgb(33, 37, 43);\n"
 "}\n"
 "#contentBottom{\n"
-"	border-top: 3"
-                        "px solid rgb(44, 49, 58);\n"
+"	border-top: 3px solid rgb(44, 49, 58);\n"
 "}\n"
 "\n"
 "/* Top Buttons */\n"
@@ -229,12 +234,12 @@ class Ui_MainWindow(object):
 "/* CONTENT SETTINGS */\n"
 "/* MENUS */\n"
 "#contentSettings .QPushButton {	\n"
-"	background-position: left center;\n"
+"	background-position: left cente"
+                        "r;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
 "	border-left: 22px solid transparent;\n"
-"	background-color:tra"
-                        "nsparent;\n"
+"	background-color:transparent;\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
 "}\n"
@@ -265,12 +270,12 @@ class Ui_MainWindow(object):
 "	background-color: rgb(189, 147, 249);\n"
 "}\n"
 "QHeaderView::section{\n"
-"	background-color: rgb(33, 37, 43);\n"
+"	background-color: rgb(33, 37, 43"
+                        ");\n"
 "	max-width: 30px;\n"
 "	border: 1px solid rgb(44, 49, 58);\n"
 "	border-style: none;\n"
-"    border-bottom: 1px solid rgb("
-                        "44, 49, 60);\n"
+"    border-bottom: 1px solid rgb(44, 49, 60);\n"
 "    border-right: 1px solid rgb(44, 49, 60);\n"
 "}\n"
 "QTableWidget::horizontalHeader {	\n"
@@ -301,13 +306,13 @@ class Ui_MainWindow(object):
 "}\n"
 "QLineEdit:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
-"}\n"
+""
+                        "}\n"
 "QLineEdit:focus {\n"
 "	border: 2px solid rgb(91, 101, 124);\n"
 "}\n"
 "\n"
-"/* ///////////////////////////////////////"
-                        "//////////////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "PlainTextEdit */\n"
 "QPlainTextEdit {\n"
 "	background-color: rgb(27, 29, 35);\n"
@@ -338,13 +343,13 @@ class Ui_MainWindow(object):
 "    margin: 0px 21px 0 21px;\n"
 "	border-radius: 0px;\n"
 "}\n"
-"QScrollBar::handle:horizontal {\n"
+"QScrollBar::handle:hor"
+                        "izontal {\n"
 "    background: rgb(189, 147, 249);\n"
 "    min-width: 25px;\n"
 "	border-radius: 4px\n"
 "}\n"
-"QScrollBar::ad"
-                        "d-line:horizontal {\n"
+"QScrollBar::add-line:horizontal {\n"
 "    border: none;\n"
 "    background: rgb(55, 63, 77);\n"
 "    width: 20px;\n"
@@ -376,12 +381,12 @@ class Ui_MainWindow(object):
 "    width: 8px;\n"
 "    margin: 21px 0 21px 0;\n"
 "	border-radius: 0px;\n"
-" }\n"
+""
+                        " }\n"
 " QScrollBar::handle:vertical {	\n"
 "	background: rgb(189, 147, 249);\n"
 "    min-height: 25px;\n"
-"	border-radius: 4"
-                        "px\n"
+"	border-radius: 4px\n"
 " }\n"
 " QScrollBar::add-line:vertical {\n"
 "     border: none;\n"
@@ -411,13 +416,13 @@ class Ui_MainWindow(object):
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CheckBox */\n"
-"QCheckBox::indicator {\n"
+"QCheck"
+                        "Box::indicator {\n"
 "    border: 3px solid rgb(52, 59, 72);\n"
 "	width: 15px;\n"
 "	height: 15px;\n"
 "	border-radius: 10px;\n"
-""
-                        "    background: rgb(44, 49, 60);\n"
+"    background: rgb(44, 49, 60);\n"
 "}\n"
 "QCheckBox::indicator:hover {\n"
 "    border: 3px solid rgb(58, 66, 81);\n"
@@ -445,11 +450,11 @@ class Ui_MainWindow(object):
 "	border: 3px solid rgb(52, 59, 72);	\n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////"
+                        "////////////////////////////////////////////////////////\n"
 "ComboBox */\n"
 "QComboBox{\n"
-"	background-color: rgb(27, 29, 35);"
-                        "\n"
+"	background-color: rgb(27, 29, 35);\n"
 "	border-radius: 5px;\n"
 "	border: 2px solid rgb(33, 37, 43);\n"
 "	padding: 5px;\n"
@@ -478,13 +483,13 @@ class Ui_MainWindow(object):
 "	selection-background-color: rgb(39, 44, 54);\n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* ///////////////////////////////////////////////////////////////////////////"
+                        "//////////////////////\n"
 "Sliders */\n"
 "QSlider::groove:horizontal {\n"
 "    border-radius: 5px;\n"
 "    height: 10px;\n"
-"	m"
-                        "argin: 0px;\n"
+"	margin: 0px;\n"
 "	background-color: rgb(52, 59, 72);\n"
 "}\n"
 "QSlider::groove:horizontal:hover {\n"
@@ -519,12 +524,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "    height: 10px;\n"
 "    width: 10px;\n"
-"    margin: 0px;\n"
+""
+                        "    margin: 0px;\n"
 "	border-radius: 5px;\n"
 "}\n"
 "QSlider::handle:vertical:hover {\n"
-"    background-color: rgb(195, 155,"
-                        " 255);\n"
+"    background-color: rgb(195, 155, 255);\n"
 "}\n"
 "QSlider::handle:vertical:pressed {\n"
 "    background-color: rgb(255, 121, 198);\n"
@@ -554,12 +559,12 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;	\n"
 "	background-color: rgb(52, 59, 72);\n"
 "}\n"
-"#pagesContainer QPushButton:hover {\n"
+"#pagesContainer QPushButto"
+                        "n:hover {\n"
 "	background-color: rgb(57, 65, 80);\n"
 "	border: 2px solid rgb(61, 70, 86);\n"
 "}\n"
-"#pagesContainer QPushBut"
-                        "ton:pressed {	\n"
+"#pagesContainer QPushButton:pressed {	\n"
 "	background-color: rgb(35, 40, 49);\n"
 "	border: 2px solid rgb(43, 50, 61);\n"
 "}\n"
@@ -962,6 +967,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.pagesContainer = QFrame(self.content)
         self.pagesContainer.setObjectName(u"pagesContainer")
+        self.pagesContainer.setMaximumSize(QSize(16777215, 16777215))
         self.pagesContainer.setStyleSheet(u"")
         self.pagesContainer.setFrameShape(QFrame.NoFrame)
         self.pagesContainer.setFrameShadow(QFrame.Raised)
@@ -971,6 +977,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setContentsMargins(10, 10, 10, 10)
         self.stackedWidget = QStackedWidget(self.pagesContainer)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        sizePolicy2.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
+        self.stackedWidget.setSizePolicy(sizePolicy2)
+        self.stackedWidget.setMinimumSize(QSize(100, 0))
         self.stackedWidget.setStyleSheet(u"background: transparent;")
         self.home = QWidget()
         self.home.setObjectName(u"home")
@@ -999,53 +1008,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_16.setSpacing(5)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.verticalLayout_16.setContentsMargins(0, -1, -1, 0)
-        self.gridLayout_2 = QGridLayout()
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.gridLayout_2.setHorizontalSpacing(10)
-        self.gridLayout_2.setVerticalSpacing(6)
-        self.F_name = QLineEdit(self.row_2)
-        self.F_name.setObjectName(u"F_name")
-        self.F_name.setMinimumSize(QSize(0, 30))
-        self.F_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.F_name, 6, 0, 1, 1)
-
-        self.I_name = QLineEdit(self.row_2)
-        self.I_name.setObjectName(u"I_name")
-        self.I_name.setMinimumSize(QSize(0, 30))
-        self.I_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.I_name, 3, 0, 1, 1)
-
-        self.labelBoxBlenderInstalation_3 = QLabel(self.row_2)
-        self.labelBoxBlenderInstalation_3.setObjectName(u"labelBoxBlenderInstalation_3")
-        self.labelBoxBlenderInstalation_3.setFont(font)
-        self.labelBoxBlenderInstalation_3.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_3, 4, 0, 1, 1, Qt.AlignBottom)
-
-        self.Q_name = QLineEdit(self.row_2)
-        self.Q_name.setObjectName(u"Q_name")
-        self.Q_name.setMinimumSize(QSize(0, 30))
-        self.Q_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.Q_name, 6, 1, 1, 1)
-
-        self.labelBoxBlenderInstalation_4 = QLabel(self.row_2)
-        self.labelBoxBlenderInstalation_4.setObjectName(u"labelBoxBlenderInstalation_4")
-        self.labelBoxBlenderInstalation_4.setFont(font)
-        self.labelBoxBlenderInstalation_4.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_4, 4, 1, 1, 1, Qt.AlignBottom)
-
-        self.labelBoxBlenderInstalation_2 = QLabel(self.row_2)
-        self.labelBoxBlenderInstalation_2.setObjectName(u"labelBoxBlenderInstalation_2")
-        self.labelBoxBlenderInstalation_2.setFont(font)
-        self.labelBoxBlenderInstalation_2.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_2, 1, 0, 1, 1, Qt.AlignBottom)
-
-        self.B_make = QPushButton(self.row_2)
+        self.search_frame = QFrame(self.row_2)
+        self.search_frame.setObjectName(u"search_frame")
+        self.search_frame.setMinimumSize(QSize(0, 0))
+        self.search_frame.setFrameShape(QFrame.StyledPanel)
+        self.search_frame.setFrameShadow(QFrame.Raised)
+        self.gridLayout = QGridLayout(self.search_frame)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.B_make = QPushButton(self.search_frame)
         self.B_make.setObjectName(u"B_make")
         self.B_make.setMinimumSize(QSize(150, 30))
         self.B_make.setFont(font)
@@ -1055,24 +1025,66 @@ class Ui_MainWindow(object):
         icon3.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
         self.B_make.setIcon(icon3)
 
-        self.gridLayout_2.addWidget(self.B_make, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.B_make, 2, 1, 1, 1)
 
-        self.label_2 = QLabel(self.row_2)
+        self.label_2 = QLabel(self.search_frame)
         self.label_2.setObjectName(u"label_2")
 
-        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1)
+
+        self.labelBoxBlenderInstalation_2 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_2.setObjectName(u"labelBoxBlenderInstalation_2")
+        self.labelBoxBlenderInstalation_2.setFont(font)
+        self.labelBoxBlenderInstalation_2.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_2, 1, 0, 1, 1)
+
+        self.labelBoxBlenderInstalation_3 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_3.setObjectName(u"labelBoxBlenderInstalation_3")
+        self.labelBoxBlenderInstalation_3.setFont(font)
+        self.labelBoxBlenderInstalation_3.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_3, 3, 0, 1, 1)
+
+        self.I_name = QLineEdit(self.search_frame)
+        self.I_name.setObjectName(u"I_name")
+        self.I_name.setMinimumSize(QSize(0, 30))
+        self.I_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.I_name, 2, 0, 1, 1)
+
+        self.F_name = QLineEdit(self.search_frame)
+        self.F_name.setObjectName(u"F_name")
+        self.F_name.setMinimumSize(QSize(0, 30))
+        self.F_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.F_name, 4, 0, 1, 1)
+
+        self.labelBoxBlenderInstalation_4 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_4.setObjectName(u"labelBoxBlenderInstalation_4")
+        self.labelBoxBlenderInstalation_4.setFont(font)
+        self.labelBoxBlenderInstalation_4.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_4, 3, 1, 1, 1)
+
+        self.Q_name = QLineEdit(self.search_frame)
+        self.Q_name.setObjectName(u"Q_name")
+        self.Q_name.setMinimumSize(QSize(0, 30))
+        self.Q_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.Q_name, 4, 1, 1, 1)
 
 
-        self.verticalLayout_16.addLayout(self.gridLayout_2)
+        self.verticalLayout_16.addWidget(self.search_frame)
 
         self.info_frame = QFrame(self.row_2)
         self.info_frame.setObjectName(u"info_frame")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.info_frame.sizePolicy().hasHeightForWidth())
         self.info_frame.setSizePolicy(sizePolicy3)
-        self.info_frame.setMinimumSize(QSize(0, 400))
+        self.info_frame.setMinimumSize(QSize(0, 0))
         self.info_frame.setStyleSheet(u"")
         self.info_frame.setFrameShape(QFrame.StyledPanel)
         self.info_frame.setFrameShadow(QFrame.Raised)
@@ -1096,11 +1108,8 @@ class Ui_MainWindow(object):
 
         self.response_frame = QFrame(self.row_2)
         self.response_frame.setObjectName(u"response_frame")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.response_frame.sizePolicy().hasHeightForWidth())
-        self.response_frame.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.response_frame.sizePolicy().hasHeightForWidth())
+        self.response_frame.setSizePolicy(sizePolicy3)
         self.response_frame.setMinimumSize(QSize(0, 400))
         self.response_frame.setStyleSheet(u"")
         self.response_frame.setFrameShape(QFrame.StyledPanel)
@@ -1143,6 +1152,49 @@ class Ui_MainWindow(object):
 
 
         self.horizontalLayout_4.addWidget(self.pagesContainer)
+
+        self.extraRightBox = QFrame(self.content)
+        self.extraRightBox.setObjectName(u"extraRightBox")
+        self.extraRightBox.setMinimumSize(QSize(0, 0))
+        self.extraRightBox.setMaximumSize(QSize(0, 16777215))
+        self.extraRightBox.setFrameShape(QFrame.NoFrame)
+        self.extraRightBox.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_7 = QVBoxLayout(self.extraRightBox)
+        self.verticalLayout_7.setSpacing(0)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.themeSettingsTopDetail = QFrame(self.extraRightBox)
+        self.themeSettingsTopDetail.setObjectName(u"themeSettingsTopDetail")
+        self.themeSettingsTopDetail.setMaximumSize(QSize(16777215, 3))
+        self.themeSettingsTopDetail.setFrameShape(QFrame.NoFrame)
+        self.themeSettingsTopDetail.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_7.addWidget(self.themeSettingsTopDetail)
+
+        self.contentSettings = QFrame(self.extraRightBox)
+        self.contentSettings.setObjectName(u"contentSettings")
+        self.contentSettings.setFrameShape(QFrame.NoFrame)
+        self.contentSettings.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.contentSettings)
+        self.verticalLayout_13.setSpacing(0)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.topMenus = QFrame(self.contentSettings)
+        self.topMenus.setObjectName(u"topMenus")
+        self.topMenus.setFrameShape(QFrame.NoFrame)
+        self.topMenus.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_14 = QVBoxLayout(self.topMenus)
+        self.verticalLayout_14.setSpacing(0)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_13.addWidget(self.topMenus, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_7.addWidget(self.contentSettings)
+
+
+        self.horizontalLayout_4.addWidget(self.extraRightBox)
 
 
         self.verticalLayout_6.addWidget(self.content)
@@ -1240,17 +1292,17 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.F_name.setText("")
-        self.F_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.I_name.setText("")
-        self.I_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
-        self.Q_name.setText("")
-        self.Q_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
-        self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query match here..", None))
-        self.labelBoxBlenderInstalation_2.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.B_make.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Search Data", None))
+        self.labelBoxBlenderInstalation_2.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
+        self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
+        self.I_name.setText("")
+        self.I_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.F_name.setText("")
+        self.F_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query match here..", None))
+        self.Q_name.setText("")
+        self.Q_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Upload Data Json", None))
