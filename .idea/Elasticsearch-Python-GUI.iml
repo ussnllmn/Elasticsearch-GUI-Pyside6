@@ -5,5 +5,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Modern_GUI_PyDracula_PySide6_or_PyQt6-master" />
+    <orderEntry type="module" module-name="GUI_PyDracula" />
   </component>
 </module>

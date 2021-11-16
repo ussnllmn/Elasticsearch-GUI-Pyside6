@@ -111,6 +111,7 @@ class MainWindow(QMainWindow):
 
             # change the label to match the Elasticsearch API response
             self.ui.response_text.setText(json_resp)
+            print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
 
     def make_query(self, filter, index_name):
 
