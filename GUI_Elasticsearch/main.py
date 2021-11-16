@@ -16,7 +16,6 @@
 
 import sys
 import os
-import platform
 import json
 
 # import the Elasticsearch client library
@@ -30,39 +29,6 @@ os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 # create a client instance of Elasticsearch
 client = Elasticsearch("http://localhost:9200")
-
-def make_query(filter, index_name):
-
-    # make an API call to check if the index exists
-    index_exists = client.indices.exists(index=index_name)
-
-    # if it exists then make the API call
-    if index_exists == True:
-        print ("index_name:", index_name, "exists.")
-        print ("FILTER:", filter, "\n")
-
-        # catch any exceptions and return them to Kivy app
-        try:
-            # pass filter query to the client's search() method
-            response = client.search(index=index_name, query=filter)
-
-            # print the query response for debugging purposes
-            print ('response["hits"]:', len(response["hits"]))
-            print ('response TYPE:', type(response))
-
-        except Exception as err:
-            print ("search() index ERROR", err)
-            response = {"error": str(err)}
-
-    # error text response if index doesn't exist
-    else:
-        # build a string for the index-does-not-exist response
-        resp_text = "Elasticsearch index name '" + str(index_name)
-        resp_text += "' does not exist."
-        response = {"response": resp_text}
-
-    # return the dict response to Kivy app
-    return response
 
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -85,11 +51,14 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
+        resp = client.info()
+        json_resp = json.dumps(resp, indent=4)
+        widgets.client_text.setText(json_resp)
+
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_add_data.clicked.connect(self.buttonClick)
         widgets.B_make.clicked.connect(self.buttonClick)
-
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -105,6 +74,18 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
             # SHOW WIDGETS PAGE
+
+        # SHOW SEARCH
+        if btnName == "btn_search":
+            widgets.stackedWidget.setCurrentWidget(widgets.Search)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        # SHOW ADD DATA
+        if btnName == "btn_add_data":
+            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
+            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
         if btnName == "B_make":
             # pass the field name and query args to filter dict
@@ -124,28 +105,45 @@ class MainWindow(QMainWindow):
                 json_resp = '{"error", "index name field cannot be empty"}'
             else:
                 # pass the filter dict to the make_query() function
-                resp = make_query(filter, index_name)
+                resp = self.make_query(filter, index_name)
                 json_resp = json.dumps(resp, indent=4)
                 print("Elasticsearch response:", resp)
 
             # change the label to match the Elasticsearch API response
-            self.ui.textBrowser.setText(json_resp)
+            self.ui.response_text.setText(json_resp)
 
-        # SHOW SEARCH
-        if btnName == "btn_search":
-            widgets.stackedWidget.setCurrentWidget(widgets.Search)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+    def make_query(self, filter, index_name):
 
-        # SHOW ADD DATA
-        if btnName == "btn_add_data":
-            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+        # make an API call to check if the index exists
+        index_exists = client.indices.exists(index=index_name)
 
-        # PRINT BTN NAME
-        # print(f'Button "{btnName}" pressed!')
+        # if it exists then make the API call
+        if index_exists:
+            print("index_name:", index_name, "exists.")
+            print("FILTER:", filter, "\n")
 
+            # catch any exceptions and return them to Kivy app
+            try:
+                # pass filter query to the client's search() method
+                response = client.search(index=index_name, query=filter)
+
+                # print the query response for debugging purposes
+                print('response["hits"]:', len(response["hits"]))
+                print('response TYPE:', type(response))
+
+            except Exception as err:
+                print("search() index ERROR", err)
+                response = {"error": str(err)}
+
+        # error text response if index doesn't exist
+        else:
+            # build a string for the index-does-not-exist response
+            resp_text = "Elasticsearch index name '" + str(index_name)
+            resp_text += "' does not exist."
+            response = {"response": resp_text}
+
+        # return the dict response to Kivy app
+        return response
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
@@ -167,6 +165,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon("icon.ico"))
+    app.setWindowIcon(QIcon("ES_icon.ico"))
     window = MainWindow()
     sys.exit(app.exec())
