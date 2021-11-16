@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainxdqoEc.ui'
+## Form generated from reading UI file 'mainCdrGqk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1280, 720)
-        MainWindow.setMinimumSize(QSize(940, 560))
+        MainWindow.setMinimumSize(QSize(1280, 720))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
@@ -1306,7 +1306,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Upload Data Json", None))
-        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Wanderson M. Pimenta", None))
-        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.3", None))
+        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Kridsanapong Buathongjun", None))
+        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.5", None))
     # retranslateUi
 

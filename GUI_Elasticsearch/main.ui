@@ -13,8 +13,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>940</width>
-    <height>560</height>
+    <width>1280</width>
+    <height>720</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2151,7 +2151,7 @@ background-repeat: no-repeat;</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>By: Wanderson M. Pimenta</string>
+                   <string>By: Kridsanapong Buathongjun</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2161,7 +2161,7 @@ background-repeat: no-repeat;</string>
                 <item>
                  <widget class="QLabel" name="version">
                   <property name="text">
-                   <string>v1.0.3</string>
+                   <string>v1.0.5</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
