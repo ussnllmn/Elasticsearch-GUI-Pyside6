@@ -1730,6 +1730,9 @@ background-repeat: no-repeat;</string>
                           </property>
                           <item>
                            <layout class="QHBoxLayout" name="horizontalLayout_7">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
                             <property name="topMargin">
                              <number>0</number>
                             </property>
