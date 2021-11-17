@@ -1,7 +1,7 @@
 # Elasticsearch for Covid-19 Information Application
 This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564.
 
-> Before you run this application please make sure you're running elasticsearch.bat in background otherwise you may need to run this application again.
+> Before you run this application please make sure you're running ```elasticsearch.bat``` in background otherwise you may need to run this application again.
 
 # Screenshot
 ![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67TPvW.png)
