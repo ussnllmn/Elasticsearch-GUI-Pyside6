@@ -1,9 +1,12 @@
 # Elasticsearch for Covid-19 Information Application
-This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564
+This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564.
+
+> Before run this application make sure you're running elasticsearch.bat in background.
+Otherwise you may need to run this application again.
 # Screenshot
-![Home_Page](https://sv1.picz.in.th/images/2021/11/16/6dDg2b.png)
-![Search_Page](https://sv1.picz.in.th/images/2021/11/16/6dDwUy.png)
-![Add_Data_Page](https://sv1.picz.in.th/images/2021/11/16/6dDUGz.png)
+![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67TPvW.png)
+![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67T2N2.png)
+![Debug_Page](https://sv1.picz.in.th/images/2021/11/18/67TAjg.png)
 
 # High DPI
 > Qt Widgets is an old technology and does not have a good support for high DPI settings, making these images look distorted when your system has DPI applied above 100%.
