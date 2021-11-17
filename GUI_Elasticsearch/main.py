@@ -51,9 +51,16 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
-        resp = client.info()
-        json_resp = json.dumps(resp, indent=4)
-        widgets.client_text.setText(json_resp)
+        # SHOW client.info()
+        try:
+            print("Connecting to http://localhost:9200")
+            resp = client.info()
+            json_resp = json.dumps(resp, indent=4)
+            widgets.client_text.setText(json_resp)
+            print("Connection complete")
+        except:
+            print("Connection error. is elasticsearch.bat running ?")
+            widgets.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
@@ -105,13 +112,16 @@ class MainWindow(QMainWindow):
                 json_resp = '{"error", "index name field cannot be empty"}'
             else:
                 # pass the filter dict to the make_query() function
-                resp = self.make_query(filter, index_name)
-                json_resp = json.dumps(resp, indent=4)
-                print("Elasticsearch response:", resp)
-
+                try:
+                    resp = self.make_query(filter, index_name)
+                    json_resp = json.dumps(resp, indent=4)
+                    print("Elasticsearch response:", resp)
+                except:
+                    json_resp = "Cannot get response. is elasticsearch.bat running ?"
+                    print("Cannot get response. is elasticsearch.bat running ?")
             # change the label to match the Elasticsearch API response
             self.ui.response_text.setText(json_resp)
-            print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+            # print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
 
     def make_query(self, filter, index_name):
 
