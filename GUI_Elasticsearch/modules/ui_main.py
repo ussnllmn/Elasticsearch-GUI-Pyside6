@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainDjqXPA.ui'
+## Form generated from reading UI file 'mainmQORBy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1306, 720)
+        MainWindow.resize(1306, 723)
         MainWindow.setMinimumSize(QSize(1280, 720))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
@@ -70,12 +70,13 @@ class Ui_MainWindow(object):
 "	border: 1px solid rgb(44, 49, 58);\n"
 "	border-radius: 12px;\n"
 "}\n"
-"#info_frame {	\n"
+"/*\n"
+"#search_frame {	\n"
 "	border: 2px solid #bd93f9;\n"
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
-"#search_frame {	\n"
+"#info_frame {	\n"
 "	border: 2px solid #bd93f9;\n"
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
@@ -90,6 +91,7 @@ class Ui_MainWindow(object):
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
+"*/\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Left Menu */\n"
 "#leftMenuBg {	\n"
@@ -100,8 +102,8 @@ class Ui_MainWindow(object):
 "#topLogo {\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	background-image: url(:/images/images/images/Elasticsearch.png);\n"
-"	background-positio"
-                        "n: centered;\n"
+"	back"
+                        "ground-position: centered;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
 "#titleLeftApp { font: 63 12pt \"Segoe UI Semibold\"; }\n"
@@ -135,9 +137,9 @@ class Ui_MainWindow(object):
 "}\n"
 "#bottomMenu .QPushButton:hover {\n"
 "	background-color: rgb(40, 44, 52);\n"
-"}\n"
-"#bottomMe"
-                        "nu .QPushButton:pressed {	\n"
+"}"
+                        "\n"
+"#bottomMenu .QPushButton:pressed {	\n"
 "	background-color: rgb(189, 147, 249);\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
@@ -177,9 +179,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Icon */\n"
-"#extraIcon {\n"
-"	backgrou"
-                        "nd-position: center;\n"
+"#extraIcon {"
+                        "\n"
+"	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
 "	background-image: url(:/icons/images/icons/cil-user.png);\n"
 "}\n"
@@ -208,9 +210,9 @@ class Ui_MainWindow(object):
 "	padding-left: 44px;\n"
 "}\n"
 "#extraTopMenu .QPushButton:hover {\n"
-"	background-color: rgb(40, 44, 52);\n"
-""
-                        "}\n"
+"	background-color: rgb(40,"
+                        " 44, 52);\n"
+"}\n"
 "#extraTopMenu .QPushButton:pressed {	\n"
 "	background-color: rgb(189, 147, 249);\n"
 "	color: rgb(255, 255, 255);\n"
@@ -236,8 +238,8 @@ class Ui_MainWindow(object):
 "#themeSettingsTopDetail { background-color: rgb(189, 147, 249); }\n"
 "\n"
 "/* Bottom Bar */\n"
-"#bottomBar { background-color: rgb(4"
-                        "4, 49, 58); border-bottom-right-radius: 12px;}\n"
+"#bottomBar { backgroun"
+                        "d-color: rgb(44, 49, 58); border-bottom-right-radius: 12px;}\n"
 "#bottomBar QLabel { font-size: 11px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
@@ -266,9 +268,9 @@ class Ui_MainWindow(object):
 "	padding: 10px;\n"
 "	border-radius: 5px;\n"
 "	gridline-color: rgb(44, 49, 58);\n"
-"	border-bottom: 1px solid rgb(44, 49, 60);\n"
-""
-                        "}\n"
+"	border-bottom: 1px solid rgb(44,"
+                        " 49, 60);\n"
+"}\n"
 "QTableWidget::item{\n"
 "	border-color: rgb(44, 49, 60);\n"
 "	padding-left: 5px;\n"
@@ -303,9 +305,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
-"LineEdit */\n"
-"QLine"
-                        "Edit {\n"
+"LineEdi"
+                        "t */\n"
+"QLineEdit {\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	border-radius: 5px;\n"
 "	border: 2px solid rgb(33, 37, 43);\n"
@@ -342,8 +344,8 @@ class Ui_MainWindow(object):
 "	border: 2px solid rgb(91, 101, 124);\n"
 "}\n"
 "\n"
-"/* //////////"
-                        "///////////////////////////////////////////////////////////////////////////////////////\n"
+""
+                        "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "ScrollBars */\n"
 "QScrollBar:horizontal {\n"
 "    border: none;\n"
@@ -375,10 +377,10 @@ class Ui_MainWindow(object):
 "    subcontrol-position: left;\n"
 "    subcontrol-origin: margin;\n"
 "}\n"
-"QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal\n"
+"QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:hori"
+                        "zontal\n"
 "{\n"
-""
-                        "     background: none;\n"
+"     background: none;\n"
 "}\n"
 "QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal\n"
 "{\n"
@@ -414,8 +416,8 @@ class Ui_MainWindow(object):
 "     subcontrol-position: top;\n"
 "     subcontrol-origin: margin;\n"
 " }\n"
-" QScrollBar::up-arrow:vertical, QScrollBar:"
-                        ":down-arrow:vertical {\n"
+" QScrollBar::up-arrow:vert"
+                        "ical, QScrollBar::down-arrow:vertical {\n"
 "     background: none;\n"
 " }\n"
 "\n"
@@ -447,9 +449,9 @@ class Ui_MainWindow(object):
 "    border: 3px solid rgb(52, 59, 72);\n"
 "	width: 15px;\n"
 "	height: 15px;\n"
-"	border-radius: 10px;\n"
-"    backgro"
-                        "und: rgb(44, 49, 60);\n"
+"	border-radius: 10px"
+                        ";\n"
+"    background: rgb(44, 49, 60);\n"
 "}\n"
 "QRadioButton::indicator:hover {\n"
 "    border: 3px solid rgb(58, 66, 81);\n"
@@ -481,9 +483,9 @@ class Ui_MainWindow(object):
 "	border-top-right-radius: 3px;\n"
 "	border-bottom-right-radius: 3px;	\n"
 "	background-image: url(:/icons/images/icons/cil-arrow-bottom.png);\n"
-"	background-position: center;\n"
-"	backgrou"
-                        "nd-repeat: no-reperat;\n"
+"	background-position: cent"
+                        "er;\n"
+"	background-repeat: no-reperat;\n"
 " }\n"
 "QComboBox QAbstractItemView {\n"
 "	color: rgb(255, 121, 198);	\n"
@@ -519,9 +521,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QSlider::groove:vertical {\n"
-"    border-radius: 5px;\n"
-"    wid"
-                        "th: 10px;\n"
+"    border-radius:"
+                        " 5px;\n"
+"    width: 10px;\n"
 "    margin: 0px;\n"
 "	background-color: rgb(52, 59, 72);\n"
 "}\n"
@@ -557,9 +559,9 @@ class Ui_MainWindow(object):
 "}\n"
 "QCommandLinkButton:pressed {	\n"
 "	color: rgb(189, 147, 249);\n"
-"	background-color: rgb(52, 58, 71);\n"
-""
-                        "}\n"
+"	background-color: rgb"
+                        "(52, 58, 71);\n"
+"}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Button */\n"
@@ -1013,10 +1015,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.horizontalLayout_7.setContentsMargins(-1, 0, -1, -1)
-        self.verticalLayout_16 = QVBoxLayout()
-        self.verticalLayout_16.setSpacing(5)
-        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
-        self.verticalLayout_16.setContentsMargins(0, -1, -1, 0)
+        self.info_frame_2 = QVBoxLayout()
+        self.info_frame_2.setSpacing(0)
+        self.info_frame_2.setObjectName(u"info_frame_2")
+        self.info_frame_2.setContentsMargins(0, 0, -1, 0)
         self.search_frame = QFrame(self.row_2)
         self.search_frame.setObjectName(u"search_frame")
         self.search_frame.setMinimumSize(QSize(0, 0))
@@ -1102,14 +1104,17 @@ class Ui_MainWindow(object):
         font4.setPointSize(10)
         font4.setBold(True)
         font4.setItalic(False)
-        font4.setUnderline(True)
+        font4.setUnderline(False)
         self.label_2.setFont(font4)
-        self.label_2.setStyleSheet(u"font-weight: bold;")
+        self.label_2.setStyleSheet(u"font-weight: bold;\n"
+"border-radius: 5px;\n"
+"border: 2px solid #ff79c6;")
+        self.label_2.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_2, 0, 0, 1, 2)
 
 
-        self.verticalLayout_16.addWidget(self.search_frame)
+        self.info_frame_2.addWidget(self.search_frame)
 
         self.info_frame = QFrame(self.row_2)
         self.info_frame.setObjectName(u"info_frame")
@@ -1124,34 +1129,30 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.info_frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font4)
-        self.label_3.setStyleSheet(u"font-weight: bold;")
+        self.label_3.setStyleSheet(u"font-weight: bold;\n"
+"border-radius: 5px;\n"
+"border: 2px solid #ff79c6;")
+        self.label_3.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_17.addWidget(self.label_3)
 
         self.client_text = QTextBrowser(self.info_frame)
         self.client_text.setObjectName(u"client_text")
+        self.client_text.setStyleSheet(u"border: 2px solid #bd93f9;")
 
         self.verticalLayout_17.addWidget(self.client_text)
 
 
-        self.verticalLayout_16.addWidget(self.info_frame)
+        self.info_frame_2.addWidget(self.info_frame)
 
 
-        self.horizontalLayout_7.addLayout(self.verticalLayout_16)
+        self.horizontalLayout_7.addLayout(self.info_frame_2)
 
-        self.response_frame = QFrame(self.row_2)
-        self.response_frame.setObjectName(u"response_frame")
-        sizePolicy3.setHeightForWidth(self.response_frame.sizePolicy().hasHeightForWidth())
-        self.response_frame.setSizePolicy(sizePolicy3)
-        self.response_frame.setMinimumSize(QSize(0, 400))
-        self.response_frame.setStyleSheet(u"")
-        self.response_frame.setFrameShape(QFrame.StyledPanel)
-        self.response_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_18 = QVBoxLayout(self.response_frame)
-        self.verticalLayout_18.setSpacing(6)
-        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.response_json_frame = QFrame(self.response_frame)
+        self.response_frame2 = QVBoxLayout()
+        self.response_frame2.setSpacing(0)
+        self.response_frame2.setObjectName(u"response_frame2")
+        self.response_frame2.setContentsMargins(0, -1, -1, -1)
+        self.response_json_frame = QFrame(self.row_2)
         self.response_json_frame.setObjectName(u"response_json_frame")
         self.response_json_frame.setFrameShape(QFrame.StyledPanel)
         self.response_json_frame.setFrameShadow(QFrame.Raised)
@@ -1160,19 +1161,23 @@ class Ui_MainWindow(object):
         self.label_4 = QLabel(self.response_json_frame)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setFont(font4)
-        self.label_4.setStyleSheet(u"font-weight: bold;")
+        self.label_4.setStyleSheet(u"font-weight: bold;\n"
+"border-radius: 5px;\n"
+"border: 2px solid #ff79c6;")
+        self.label_4.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_21.addWidget(self.label_4)
 
         self.response_json = QTextBrowser(self.response_json_frame)
         self.response_json.setObjectName(u"response_json")
+        self.response_json.setStyleSheet(u"border: 2px solid #bd93f9;")
 
         self.verticalLayout_21.addWidget(self.response_json)
 
 
-        self.verticalLayout_18.addWidget(self.response_json_frame)
+        self.response_frame2.addWidget(self.response_json_frame)
 
-        self.response_text_frame = QFrame(self.response_frame)
+        self.response_text_frame = QFrame(self.row_2)
         self.response_text_frame.setObjectName(u"response_text_frame")
         self.response_text_frame.setFrameShape(QFrame.StyledPanel)
         self.response_text_frame.setFrameShadow(QFrame.Raised)
@@ -1181,20 +1186,25 @@ class Ui_MainWindow(object):
         self.label_5 = QLabel(self.response_text_frame)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setFont(font4)
-        self.label_5.setStyleSheet(u"font-weight: bold;")
+        self.label_5.setStyleSheet(u"font-weight: bold;\n"
+"border-radius: 5px;\n"
+"border: 2px solid #ff79c6;")
+        self.label_5.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_22.addWidget(self.label_5)
 
         self.response_text = QTextBrowser(self.response_text_frame)
         self.response_text.setObjectName(u"response_text")
+        self.response_text.setStyleSheet(u"border: 2px solid #bd93f9;\n"
+"")
 
         self.verticalLayout_22.addWidget(self.response_text)
 
 
-        self.verticalLayout_18.addWidget(self.response_text_frame)
+        self.response_frame2.addWidget(self.response_text_frame)
 
 
-        self.horizontalLayout_7.addWidget(self.response_frame)
+        self.horizontalLayout_7.addLayout(self.response_frame2)
 
 
         self.verticalLayout_19.addLayout(self.horizontalLayout_7)
