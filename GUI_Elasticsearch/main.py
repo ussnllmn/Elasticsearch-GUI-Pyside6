@@ -67,61 +67,37 @@ class MainWindow(QMainWindow):
         widgets.btn_add_data.clicked.connect(self.buttonClick)
         widgets.B_make.clicked.connect(self.buttonClick)
 
-    # BUTTONS CLICK
-    # Post here your functions for clicked buttons
-    # ///////////////////////////////////////////////////////////////
-    def buttonClick(self):
-        # GET BUTTON CLICKED
-        btn = self.sender()
-        btnName = btn.objectName()
+        widgets.I_name.keyReleaseEvent = self.check_login
+        widgets.F_name.keyReleaseEvent = self.check_login
+        widgets.Q_name.keyReleaseEvent = self.check_login
 
-        # SHOW HOME PAGE
-        if btnName == "btn_home":
-            widgets.stackedWidget.setCurrentWidget(widgets.home)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-            # SHOW WIDGETS PAGE
-
-        # SHOW SEARCH
-        if btnName == "btn_search":
-            widgets.stackedWidget.setCurrentWidget(widgets.Search)
-            UIFunctions.resetStyle(self, btnName)
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-
-        # SHOW ADD DATA
-        if btnName == "btn_add_data":
-            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
-
-        if btnName == "B_make":
-            # pass the field name and query args to filter dict
-            filter = {
-                'match': {
-                    self.ui.F_name.text(): self.ui.Q_name.text()
-                }
+    def show_query(self):
+        # pass the field name and query args to filter dict
+        filter = {
+            'match': {
+                self.ui.F_name.text(): self.ui.Q_name.text()
             }
-
-            # get the index name and put into a string variable
-            index_name = self.ui.I_name.text()
-            # print("field_input", self.ui.F_name.text())
-            # print("query_input", self.ui.Q_name.text())
-            # print("index_input", self.ui.I_name.text())
-            # make sure that the user has entered an index name
-            if index_name == "":
-                json_resp = '{"error", "index name field cannot be empty"}'
-            else:
-                # pass the filter dict to the make_query() function
-                try:
-                    resp = self.make_query(filter, index_name)
-                    json_resp = json.dumps(resp, indent=4)
-                    print("Elasticsearch response:", resp)
-                except:
-                    json_resp = "Cannot get response. is elasticsearch.bat running ?"
-                    print("Cannot get response. is elasticsearch.bat running ?")
-            # change the label to match the Elasticsearch API response
-            self.ui.response_text.setText(json_resp)
-            # print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+        }
+        # get the index name and put into a string variable
+        index_name = self.ui.I_name.text()
+        # print("field_input", self.ui.F_name.text())
+        # print("query_input", self.ui.Q_name.text())
+        # print("index_input", self.ui.I_name.text())
+        # make sure that the user has entered an index name
+        if index_name == "":
+            json_resp = '{"error", "index name field cannot be empty"}'
+        else:
+            # pass the filter dict to the make_query() function
+            try:
+                resp = self.make_query(filter, index_name)
+                json_resp = json.dumps(resp, indent=4)
+                print("Elasticsearch response:", resp)
+            except:
+                json_resp = "Cannot get response. is elasticsearch.bat running ?"
+                print("Cannot get response. is elasticsearch.bat running ?")
+        # change the label to match the Elasticsearch API response
+        self.ui.response_text.setText(json_resp)
+        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
 
     def make_query(self, filter, index_name):
 
@@ -155,6 +131,32 @@ class MainWindow(QMainWindow):
 
         # return the dict response to Kivy app
         return response
+
+    # BUTTONS CLICK
+    def buttonClick(self):
+        btn = self.sender()
+        btnName = btn.objectName()
+
+        if btnName == "btn_home":
+            widgets.stackedWidget.setCurrentWidget(widgets.home)
+            UIFunctions.resetStyle(self, btnName)
+
+        if btnName == "btn_search":
+            widgets.stackedWidget.setCurrentWidget(widgets.Search)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
+
+        if btnName == "btn_add_data":
+            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
+            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+
+        if btnName == "B_make":
+            self.show_query()
+
+    def check_login(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.show_query()
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
