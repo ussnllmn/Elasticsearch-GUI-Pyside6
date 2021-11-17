@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainyvNSNv.ui'
+## Form generated from reading UI file 'mainWMashm.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -143,8 +143,8 @@ class Ui_MainWindow(object):
 "}\n"
 "#bottomMenu .QPushButton:pressed {	\n"
 "	background-color: rgb(189, 147, 249);\n"
-"	color: rgb(255, 255, 255);\n"
 "	border-color:rgb(189, 147, 249);\n"
+"	color: rgb(255, 255, 255);\n"
 "}\n"
 "#leftMenuFrame{\n"
 "	border-top: 3px solid rgb(44, 49, 58);\n"

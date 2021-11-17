@@ -135,8 +135,8 @@ Left Menu */
 }
 #bottomMenu .QPushButton:pressed {	
 	background-color: rgb(189, 147, 249);
-	color: rgb(255, 255, 255);
 	border-color:rgb(189, 147, 249);
+	color: rgb(255, 255, 255);
 }
 #leftMenuFrame{
 	border-top: 3px solid rgb(44, 49, 58);
