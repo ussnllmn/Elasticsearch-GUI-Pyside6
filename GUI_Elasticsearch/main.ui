@@ -7,7 +7,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1306</width>
     <height>720</height>
    </rect>
   </property>
@@ -62,6 +62,7 @@ Bg App */
 #bgApp {	
 	background-color: rgb(40, 44, 52);
 	border: 1px solid rgb(44, 49, 58);
+	border-radius: 12px;
 }
 #info_frame {	
 	border: 2px solid #bd93f9;
@@ -87,6 +88,8 @@ Bg App */
 Left Menu */
 #leftMenuBg {	
 	background-color: rgb(33, 37, 43);
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
 }
 #topLogo {
 	background-color: rgb(33, 37, 43);
@@ -207,6 +210,7 @@ background-position: left center;
 Content App */
 #contentTopBg{	
 	background-color: rgb(33, 37, 43);
+	border-top-right-radius: 12px;
 }
 #contentBottom{
 	border-top: 3px solid rgb(44, 49, 58);
@@ -222,7 +226,7 @@ Content App */
 #themeSettingsTopDetail { background-color: rgb(189, 147, 249); }
 
 /* Bottom Bar */
-#bottomBar { background-color: rgb(44, 49, 58); }
+#bottomBar { background-color: rgb(44, 49, 58); border-bottom-right-radius: 12px;}
 #bottomBar QLabel { font-size: 11px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }
 
 /* CONTENT SETTINGS */
