@@ -18,20 +18,14 @@ import sys
 import os
 import json
 
-# import the Elasticsearch client library
 from elasticsearch import Elasticsearch
-# IMPORT / GUI AND MODULES AND WIDGETS
-# ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
-# define a function for the Elasticsearch query API call
 
 # create a client instance of Elasticsearch
 client = Elasticsearch("http://localhost:9200")
 
-# SET AS GLOBAL WIDGETS
-# ///////////////////////////////////////////////////////////////
 widgets = None
 
 class MainWindow(QMainWindow):
@@ -72,7 +66,6 @@ class MainWindow(QMainWindow):
     def show_query(self):
         # pass the field name and query args to filter dict
         filter = {
-
             'match': {
                 self.ui.Field_combo.currentText(): self.ui.Q_name.text()
             }
@@ -107,7 +100,6 @@ class MainWindow(QMainWindow):
         # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     def make_query(self, filter, index_name):
-
         # make an API call to check if the index exists
         index_exists = client.indices.exists(index=index_name)
 
