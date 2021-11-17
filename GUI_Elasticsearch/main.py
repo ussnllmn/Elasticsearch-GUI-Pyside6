@@ -139,6 +139,7 @@ class MainWindow(QMainWindow):
         if btnName == "btn_home":
             widgets.stackedWidget.setCurrentWidget(widgets.home)
             UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         if btnName == "btn_search":
             widgets.stackedWidget.setCurrentWidget(widgets.Search)
