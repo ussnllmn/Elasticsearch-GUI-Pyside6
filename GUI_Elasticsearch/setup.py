@@ -3,7 +3,7 @@ import os
 from cx_Freeze import setup, Executable
 
 # ADD FILES
-files = ['icon.ico','themes/']
+files = ['icon.ico']
 
 # TARGET
 target = Executable(
@@ -14,10 +14,10 @@ target = Executable(
 
 # SETUP CX FREEZE
 setup(
-    name = "PyDracula",
-    version = "1.0",
-    description = "Modern GUI for Python applications",
-    author = "Wanderson M. Pimenta",
+    name = "Elasticsearch",
+    version = "1.0.5",
+    description = "Elasticsearch for Covid-19 Information Application",
+    author = "Kridsanapong Buathongjun",
     options = {'build_exe' : {'include_files' : files}},
     executables = [target]
     
