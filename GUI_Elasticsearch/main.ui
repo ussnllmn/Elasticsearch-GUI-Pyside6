@@ -666,7 +666,7 @@ Button */
             <widget class="QFrame" name="topLogo">
              <property name="geometry">
               <rect>
-               <x>10</x>
+               <x>9</x>
                <y>5</y>
                <width>42</width>
                <height>42</height>
@@ -694,7 +694,7 @@ Button */
             <widget class="QLabel" name="titleLeftApp">
              <property name="geometry">
               <rect>
-               <x>70</x>
+               <x>73</x>
                <y>8</y>
                <width>160</width>
                <height>20</height>
@@ -717,7 +717,7 @@ Button */
             <widget class="QLabel" name="titleLeftDescription">
              <property name="geometry">
               <rect>
-               <x>70</x>
+               <x>73</x>
                <y>27</y>
                <width>160</width>
                <height>16</height>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainWMashm.ui'
+## Form generated from reading UI file 'mainpzmsSv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -614,14 +614,14 @@ class Ui_MainWindow(object):
         self.topLogoInfo.setFrameShadow(QFrame.Raised)
         self.topLogo = QFrame(self.topLogoInfo)
         self.topLogo.setObjectName(u"topLogo")
-        self.topLogo.setGeometry(QRect(10, 5, 42, 42))
+        self.topLogo.setGeometry(QRect(9, 5, 42, 42))
         self.topLogo.setMinimumSize(QSize(42, 42))
         self.topLogo.setMaximumSize(QSize(42, 42))
         self.topLogo.setFrameShape(QFrame.NoFrame)
         self.topLogo.setFrameShadow(QFrame.Raised)
         self.titleLeftApp = QLabel(self.topLogoInfo)
         self.titleLeftApp.setObjectName(u"titleLeftApp")
-        self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
+        self.titleLeftApp.setGeometry(QRect(73, 8, 160, 20))
         font1 = QFont()
         font1.setPointSize(12)
         font1.setBold(False)
@@ -630,7 +630,7 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.titleLeftDescription = QLabel(self.topLogoInfo)
         self.titleLeftDescription.setObjectName(u"titleLeftDescription")
-        self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
+        self.titleLeftDescription.setGeometry(QRect(73, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
         font2.setPointSize(8)
