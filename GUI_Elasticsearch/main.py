@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
 
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
-        widgets.btn_add_data.clicked.connect(self.buttonClick)
+        widgets.btn_debug.clicked.connect(self.buttonClick)
         widgets.btn_send.clicked.connect(self.buttonClick)
 
         widgets.Q_name.keyReleaseEvent = self.check_enter
@@ -153,7 +153,7 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        if btnName == "btn_add_data":
+        if btnName == "btn_debug":
             widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU

@@ -923,7 +923,7 @@ Button */
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_add_data">
+                 <widget class="QPushButton" name="btn_debug">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -950,10 +950,10 @@ Button */
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-cloud-upload.png);</string>
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-terminal.png);</string>
                   </property>
                   <property name="text">
-                   <string>Add Data</string>
+                   <string>Debug</string>
                   </property>
                  </widget>
                 </item>
@@ -2137,7 +2137,7 @@ background-repeat: no-repeat;</string>
                        <item>
                         <widget class="QLabel" name="label">
                          <property name="text">
-                          <string>Upload Data Json</string>
+                          <string>Debug Page</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>

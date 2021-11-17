@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'maingdsxTE.ui'
+## Form generated from reading UI file 'mainMeffER.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -699,17 +699,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.btn_search)
 
-        self.btn_add_data = QPushButton(self.topMenu)
-        self.btn_add_data.setObjectName(u"btn_add_data")
-        sizePolicy.setHeightForWidth(self.btn_add_data.sizePolicy().hasHeightForWidth())
-        self.btn_add_data.setSizePolicy(sizePolicy)
-        self.btn_add_data.setMinimumSize(QSize(0, 45))
-        self.btn_add_data.setFont(font)
-        self.btn_add_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_add_data.setLayoutDirection(Qt.LeftToRight)
-        self.btn_add_data.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-cloud-upload.png);")
+        self.btn_debug = QPushButton(self.topMenu)
+        self.btn_debug.setObjectName(u"btn_debug")
+        sizePolicy.setHeightForWidth(self.btn_debug.sizePolicy().hasHeightForWidth())
+        self.btn_debug.setSizePolicy(sizePolicy)
+        self.btn_debug.setMinimumSize(QSize(0, 45))
+        self.btn_debug.setFont(font)
+        self.btn_debug.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_debug.setLayoutDirection(Qt.LeftToRight)
+        self.btn_debug.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-terminal.png);")
 
-        self.verticalLayout_8.addWidget(self.btn_add_data)
+        self.verticalLayout_8.addWidget(self.btn_debug)
 
 
         self.verticalMenuLayout.addWidget(self.topMenu, 0, Qt.AlignTop)
@@ -1327,7 +1327,7 @@ class Ui_MainWindow(object):
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.btn_search.setText(QCoreApplication.translate("MainWindow", u"Search", None))
-        self.btn_add_data.setText(QCoreApplication.translate("MainWindow", u"Add Data", None))
+        self.btn_debug.setText(QCoreApplication.translate("MainWindow", u"Debug", None))
         self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Info", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Info", None))
 #if QT_CONFIG(tooltip)
@@ -1374,7 +1374,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response in json format", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Response in txt format", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Upload Data Json", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Debug Page", None))
         self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Kridsanapong Buathongjun", None))
         self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.5", None))
     # retranslateUi
