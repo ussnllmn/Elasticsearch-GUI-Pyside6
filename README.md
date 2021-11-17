@@ -4,9 +4,9 @@ This application use elasticsearch to search about Covid-19 Information for Info
 > Before you run this application please make sure you're running ```elasticsearch.bat``` in background otherwise you may need to run this application again.
 
 # Screenshot
-![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67TPvW.png)
-![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67T2N2.png)
-![Debug_Page](https://sv1.picz.in.th/images/2021/11/18/67TAjg.png)
+![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67t9ln.png)
+![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67tTGg.png)
+![Debug_Page](https://sv1.picz.in.th/images/2021/11/18/67twfW.png)
 
 # High DPI
 > Qt Widgets is an old technology and does not have a good support for high DPI settings, making these images look distorted when your system has DPI applied above 100%.
