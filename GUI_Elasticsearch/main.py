@@ -97,8 +97,14 @@ class MainWindow(QMainWindow):
                 json_resp = "Cannot get response. is elasticsearch.bat running ?"
                 print("Cannot get response. is elasticsearch.bat running ?")
         # change the label to match the Elasticsearch API response
-        self.ui.response_text.setText(json_resp)
-        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+        self.ui.response_json.setText(json_resp)
+        try:
+            self.ui.response_text.setText("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
+            self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+            self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
+        except:
+            self.ui.response_text.setText("Query not found.")
+        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     def make_query(self, filter, index_name):
 

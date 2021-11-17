@@ -68,17 +68,21 @@ Bg App */
 	background-position: center;
 	background-repeat: no-repeat;
 }
-#response_frame {	
-	border: 2px solid #bd93f9;
-	background-position: center;
-	background-repeat: no-repeat;
-}
 #search_frame {	
 	border: 2px solid #bd93f9;
 	background-position: center;
 	background-repeat: no-repeat;
 }
-
+#response_json_frame{
+	border: 2px solid #bd93f9;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#response_text_frame{
+	border: 2px solid #bd93f9;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 Left Menu */
 #leftMenuBg {	
@@ -1706,6 +1710,18 @@ background-repeat: no-repeat;</string>
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QVBoxLayout" name="verticalLayout_19">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
                           <item>
                            <layout class="QHBoxLayout" name="horizontalLayout_7">
                             <property name="topMargin">
@@ -1932,6 +1948,17 @@ background-repeat: no-repeat;</string>
                                  </item>
                                  <item row="0" column="0">
                                   <widget class="QLabel" name="label_2">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>true</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;</string>
+                                   </property>
                                    <property name="text">
                                     <string>Search Data</string>
                                    </property>
@@ -1966,6 +1993,17 @@ background-repeat: no-repeat;</string>
                                 <layout class="QVBoxLayout" name="verticalLayout_17">
                                  <item>
                                   <widget class="QLabel" name="label_3">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>true</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;</string>
+                                   </property>
                                    <property name="text">
                                     <string>Client info</string>
                                    </property>
@@ -2003,15 +2041,86 @@ background-repeat: no-repeat;</string>
                                <enum>QFrame::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_18">
+                               <property name="spacing">
+                                <number>6</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
                                <item>
-                                <widget class="QLabel" name="label_4">
-                                 <property name="text">
-                                  <string>Response</string>
+                                <widget class="QFrame" name="response_json_frame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                                  <item>
+                                   <widget class="QLabel" name="label_4">
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>10</pointsize>
+                                      <italic>false</italic>
+                                      <bold>true</bold>
+                                      <underline>true</underline>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">font-weight: bold;</string>
+                                    </property>
+                                    <property name="text">
+                                     <string>Response in json format</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextBrowser" name="response_json"/>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QTextBrowser" name="response_text"/>
+                                <widget class="QFrame" name="response_text_frame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                                  <item>
+                                   <widget class="QLabel" name="label_5">
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>10</pointsize>
+                                      <italic>false</italic>
+                                      <bold>true</bold>
+                                      <underline>true</underline>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">font-weight: bold;</string>
+                                    </property>
+                                    <property name="text">
+                                     <string>Response in txt format</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QTextBrowser" name="response_text"/>
+                                  </item>
+                                 </layout>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
