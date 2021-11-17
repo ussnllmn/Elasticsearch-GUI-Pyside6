@@ -127,13 +127,16 @@ Left Menu */
 	background-color:transparent;
 	text-align: left;
 	padding-left: 44px;
+	border-bottom-left-radius: 12px;
 }
 #bottomMenu .QPushButton:hover {
 	background-color: rgb(40, 44, 52);
+	border-color: rgb(40, 44, 52);
 }
 #bottomMenu .QPushButton:pressed {	
 	background-color: rgb(189, 147, 249);
 	color: rgb(255, 255, 255);
+	border-color:rgb(189, 147, 249);
 }
 #leftMenuFrame{
 	border-top: 3px solid rgb(44, 49, 58);
