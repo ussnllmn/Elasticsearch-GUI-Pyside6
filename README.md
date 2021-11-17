@@ -5,7 +5,7 @@ This application use elasticsearch to search about Covid-19 Information for Info
 
 # Screenshot
 ![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67t9ln.png)
-![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67tTGg.png)
+![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67tlSR.png)
 ![Debug_Page](https://sv1.picz.in.th/images/2021/11/18/67twfW.png)
 
 # High DPI
