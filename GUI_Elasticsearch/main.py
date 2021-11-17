@@ -65,24 +65,25 @@ class MainWindow(QMainWindow):
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_add_data.clicked.connect(self.buttonClick)
-        widgets.B_make.clicked.connect(self.buttonClick)
+        widgets.btn_send.clicked.connect(self.buttonClick)
 
-        widgets.I_name.keyReleaseEvent = self.check_login
-        widgets.F_name.keyReleaseEvent = self.check_login
-        widgets.Q_name.keyReleaseEvent = self.check_login
+        widgets.Q_name.keyReleaseEvent = self.check_enter
 
     def show_query(self):
         # pass the field name and query args to filter dict
         filter = {
+
             'match': {
-                self.ui.F_name.text(): self.ui.Q_name.text()
+                self.ui.Field_combo.currentText(): self.ui.Q_name.text()
             }
         }
         # get the index name and put into a string variable
-        index_name = self.ui.I_name.text()
-        # print("field_input", self.ui.F_name.text())
+        index_name = self.ui.Index_combo.currentText()
+
+        # print("index_input", self.ui.Index_combo.currentText())
+        # print("field_input", self.ui.Field_combo.currentText())
         # print("query_input", self.ui.Q_name.text())
-        # print("index_input", self.ui.I_name.text())
+
         # make sure that the user has entered an index name
         if index_name == "":
             json_resp = '{"error", "index name field cannot be empty"}'
@@ -112,7 +113,7 @@ class MainWindow(QMainWindow):
             # catch any exceptions and return them to Kivy app
             try:
                 # pass filter query to the client's search() method
-                response = client.search(index=index_name, query=filter)
+                response = client.search(index=index_name, query=filter, format='csv')
 
                 # print the query response for debugging purposes
                 print('response["hits"]:', len(response["hits"]))
@@ -151,10 +152,10 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
-        if btnName == "B_make":
+        if btnName == "btn_send":
             self.show_query()
 
-    def check_login(self, event):
+    def check_enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
             self.show_query()
 

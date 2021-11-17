@@ -1737,8 +1737,25 @@ background-repeat: no-repeat;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout">
-                                 <item row="2" column="1">
-                                  <widget class="QPushButton" name="B_make">
+                                 <item row="6" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Field name here..</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="1">
+                                  <widget class="QPushButton" name="btn_send">
                                    <property name="minimumSize">
                                     <size>
                                      <width>150</width>
@@ -1767,10 +1784,115 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="0" column="0">
-                                  <widget class="QLabel" name="label_2">
+                                 <item row="4" column="0">
+                                  <widget class="QComboBox" name="Index_combo">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>test1</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>test2</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>covid-19</string>
+                                    </property>
+                                   </item>
+                                  </widget>
+                                 </item>
+                                 <item row="8" column="0">
+                                  <widget class="QComboBox" name="Field_combo">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>firstname</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>lastname</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>age</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>gender</string>
+                                    </property>
+                                   </item>
+                                  </widget>
+                                 </item>
+                                 <item row="8" column="1">
+                                  <widget class="QLineEdit" name="Q_name">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
                                    <property name="text">
-                                    <string>Search Data</string>
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string>Type here</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -1791,62 +1913,7 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="3" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Field name here..</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="2" column="0">
-                                  <widget class="QLineEdit" name="I_name">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string>Type here</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="4" column="0">
-                                  <widget class="QLineEdit" name="F_name">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string>Type here</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="3" column="1">
+                                 <item row="6" column="1">
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_4">
                                    <property name="font">
                                     <font>
@@ -1863,22 +1930,10 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="4" column="1">
-                                  <widget class="QLineEdit" name="Q_name">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
+                                 <item row="0" column="0">
+                                  <widget class="QLabel" name="label_2">
                                    <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string>Type here</string>
+                                    <string>Search Data</string>
                                    </property>
                                   </widget>
                                  </item>
