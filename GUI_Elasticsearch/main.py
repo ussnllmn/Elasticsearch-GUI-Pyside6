@@ -67,7 +67,7 @@ class MainWindow(QMainWindow):
         widgets.btn_debug.clicked.connect(self.buttonClick)
         widgets.btn_send.clicked.connect(self.buttonClick)
 
-        widgets.Q_name.keyReleaseEvent = self.check_enter
+        widgets.Q_name.keyReleaseEvent = self.check_Enter
 
     def show_query(self):
         # pass the field name and query args to filter dict
@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
         else:
             # pass the filter dict to the make_query() function
             try:
-                resp = self.make_query(query, index_name)
+                resp = self.make_Query(query, index_name)
                 json_resp = json.dumps(resp, indent=4)
                 print("Elasticsearch response:", resp)
                 print("total hits:", len(resp["hits"]["hits"]))
@@ -123,7 +123,7 @@ class MainWindow(QMainWindow):
             self.ui.response_text.setText("Query not found.")
         print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
-    def make_query(self, query, index_name):
+    def make_Query(self, query, index_name):
         # make an API call to check if the index exists
         index_exists = client.indices.exists(index=index_name)
 
@@ -189,7 +189,7 @@ class MainWindow(QMainWindow):
         if btnName == "btn_send":
             self.show_query()
 
-    def check_enter(self, event):
+    def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
             self.show_query()
 
