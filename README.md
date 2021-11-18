@@ -1,6 +1,6 @@
 # Elasticsearch for Covid-19 Information Application
 This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564.
-This project is based on Python 3.9.7 and PySide6 to use elasticsearch in Python GUI.
+Based on Python 3.9.7 and PySide6.
 
 > Before you run this application please make sure you're running ```elasticsearch.bat``` in background otherwise you may need to run this application again.
 
