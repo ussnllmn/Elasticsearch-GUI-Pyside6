@@ -94,22 +94,34 @@ class MainWindow(QMainWindow):
         self.ui.response_json.setText(json_resp)
 
         # try:
-        # self.ui.response_text.setText("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
-        # self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
-        # self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
         # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
-        all_hits = json.loads(json_resp)["hits"]["hits"]
+        all_hits = resp["hits"]["hits"]
+        i = 0
         # iterate the nested dictionaries inside the ["hits"]["hits"] list
         for num, doc in enumerate(all_hits):
             # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
             # print("DOC ID:", doc["_id"], "--->", doc, type(doc), "\n")
             # Use 'iteritems()` instead of 'items()' if using Python 2
             for key, value in doc.items():
-                self.ui.response_text.append(key + "-->" + str(value))
-                # print(key, "-->", value)
+                if key != "_source":
+                    self.ui.response_text.append(key + " = " + str(value))
+                # if key == "_source":
+                #     for values in value["_source"]:
+                #         self.ui.response_text.append(key + " --> " + str(values))
+                # print(all_hits[i]["_source"])
+                    # print(key, "-->", value)
             # print a few spaces between each doc for readability
             # print("\n\n")
+            self.ui.response_text.append("Firstname: " + all_hits[i]["_source"]["firstname"])
+            self.ui.response_text.append("Lastname: " + all_hits[i]["_source"]["lastname"])
+            self.ui.response_text.append("Gender: " + all_hits[i]["_source"]["gender"])
             self.ui.response_text.append("")
+            i += 1
+
+
+            # self.ui.response_text.append("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
+            # self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+            # self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
 
         # except:
         #     self.ui.response_text.setText("Query not found.")
