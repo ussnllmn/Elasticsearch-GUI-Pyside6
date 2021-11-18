@@ -67,7 +67,8 @@ class MainWindow(QMainWindow):
         # pass the field name and query args to filter dict
         query = {
             'match': {
-                self.ui.Field_combo.currentText(): self.ui.Q_name.text()
+                # self.ui.Field_combo.currentText(): self.ui.Q_name.text()
+                "age": 30
             }
         }
         # get the index name and put into a string variable
@@ -91,12 +92,27 @@ class MainWindow(QMainWindow):
                 print("Cannot get response. is elasticsearch.bat running ?")
         # change the label to match the Elasticsearch API response
         self.ui.response_json.setText(json_resp)
-        try:
-            self.ui.response_text.setText("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
-            self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
-            self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
-        except:
-            self.ui.response_text.setText("Query not found.")
+
+        # try:
+        # self.ui.response_text.setText("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
+        # self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
+        # self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
+        # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
+        all_hits = json.loads(json_resp)["hits"]["hits"]
+        # iterate the nested dictionaries inside the ["hits"]["hits"] list
+        for num, doc in enumerate(all_hits):
+            # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
+            # print("DOC ID:", doc["_id"], "--->", doc, type(doc), "\n")
+            # Use 'iteritems()` instead of 'items()' if using Python 2
+            for key, value in doc.items():
+                self.ui.response_text.append(key + "-->" + str(value))
+                # print(key, "-->", value)
+            # print a few spaces between each doc for readability
+            # print("\n\n")
+            self.ui.response_text.append("")
+
+        # except:
+        #     self.ui.response_text.setText("Query not found.")
         # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     def make_query(self, query, index_name):
