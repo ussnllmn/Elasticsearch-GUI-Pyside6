@@ -161,9 +161,10 @@ class MainWindow(QMainWindow):
         self.ui.Health_text.setText(json_health)
 
     def show_Indices(self):
-        indices = client.indices.get_alias("*")
-        json_indices = json.dumps(indices, indent=2)
-        self.ui.Indices_text.setText(json_indices)
+        indices = client.indices.get_alias().keys()
+        sortIndices = sorted(indices)
+        for index in sortIndices:
+            self.ui.Indices_text.append(index)
 
     # BUTTONS CLICK
     def buttonClick(self):
