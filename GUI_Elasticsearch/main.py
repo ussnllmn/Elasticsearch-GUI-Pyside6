@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
         widgets.btn_debug.clicked.connect(self.buttonClick)
         widgets.btn_send.clicked.connect(self.buttonClick)
 
-        widgets.Q_name.keyReleaseEvent = self.check_Enter
+        widgets.Query_name.keyReleaseEvent = self.check_Enter
 
     def show_query(self):
         # pass the field name and query args to filter dict

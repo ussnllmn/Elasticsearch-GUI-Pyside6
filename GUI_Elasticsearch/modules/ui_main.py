@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainHLlGjE.ui'
+## Form generated from reading UI file 'mainLPgicG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1306, 723)
+        MainWindow.resize(1306, 720)
         MainWindow.setMinimumSize(QSize(1280, 720))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
@@ -1095,17 +1095,17 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.Field_combo, 8, 0, 1, 1)
 
-        self.Q_name = QLineEdit(self.search_frame)
-        self.Q_name.setObjectName(u"Q_name")
+        self.Query_name = QLineEdit(self.search_frame)
+        self.Query_name.setObjectName(u"Query_name")
         sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.Q_name.sizePolicy().hasHeightForWidth())
-        self.Q_name.setSizePolicy(sizePolicy3)
-        self.Q_name.setMinimumSize(QSize(0, 30))
-        self.Q_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        sizePolicy3.setHeightForWidth(self.Query_name.sizePolicy().hasHeightForWidth())
+        self.Query_name.setSizePolicy(sizePolicy3)
+        self.Query_name.setMinimumSize(QSize(0, 30))
+        self.Query_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout.addWidget(self.Q_name, 8, 1, 1, 1)
+        self.gridLayout.addWidget(self.Query_name, 8, 1, 1, 1)
 
         self.labelBoxBlenderInstalation_2 = QLabel(self.search_frame)
         self.labelBoxBlenderInstalation_2.setObjectName(u"labelBoxBlenderInstalation_2")
@@ -1296,58 +1296,14 @@ class Ui_MainWindow(object):
         self.search_frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.search_frame_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
-        self.labelBoxBlenderInstalation_5.setFont(font)
-        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
+        self.Content_name = QLineEdit(self.search_frame_2)
+        self.Content_name.setObjectName(u"Content_name")
+        sizePolicy3.setHeightForWidth(self.Content_name.sizePolicy().hasHeightForWidth())
+        self.Content_name.setSizePolicy(sizePolicy3)
+        self.Content_name.setMinimumSize(QSize(0, 30))
+        self.Content_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 6, 0, 1, 1)
-
-        self.btn_send_2 = QPushButton(self.search_frame_2)
-        self.btn_send_2.setObjectName(u"btn_send_2")
-        self.btn_send_2.setMinimumSize(QSize(150, 30))
-        self.btn_send_2.setFont(font)
-        self.btn_send_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_send_2.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        self.btn_send_2.setIcon(icon3)
-
-        self.gridLayout_2.addWidget(self.btn_send_2, 4, 1, 1, 1)
-
-        self.Index_combo_2 = QComboBox(self.search_frame_2)
-        self.Index_combo_2.addItem("")
-        self.Index_combo_2.addItem("")
-        self.Index_combo_2.addItem("")
-        self.Index_combo_2.setObjectName(u"Index_combo_2")
-        self.Index_combo_2.setFont(font)
-        self.Index_combo_2.setAutoFillBackground(False)
-        self.Index_combo_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Index_combo_2.setIconSize(QSize(16, 16))
-        self.Index_combo_2.setFrame(True)
-
-        self.gridLayout_2.addWidget(self.Index_combo_2, 4, 0, 1, 1)
-
-        self.Field_combo_2 = QComboBox(self.search_frame_2)
-        self.Field_combo_2.addItem("")
-        self.Field_combo_2.addItem("")
-        self.Field_combo_2.addItem("")
-        self.Field_combo_2.addItem("")
-        self.Field_combo_2.setObjectName(u"Field_combo_2")
-        self.Field_combo_2.setFont(font)
-        self.Field_combo_2.setAutoFillBackground(False)
-        self.Field_combo_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Field_combo_2.setIconSize(QSize(16, 16))
-        self.Field_combo_2.setFrame(True)
-
-        self.gridLayout_2.addWidget(self.Field_combo_2, 8, 0, 1, 1)
-
-        self.Q_name_2 = QLineEdit(self.search_frame_2)
-        self.Q_name_2.setObjectName(u"Q_name_2")
-        sizePolicy3.setHeightForWidth(self.Q_name_2.sizePolicy().hasHeightForWidth())
-        self.Q_name_2.setSizePolicy(sizePolicy3)
-        self.Q_name_2.setMinimumSize(QSize(0, 30))
-        self.Q_name_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.Q_name_2, 8, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.Content_name, 9, 1, 1, 1)
 
         self.labelBoxBlenderInstalation_6 = QLabel(self.search_frame_2)
         self.labelBoxBlenderInstalation_6.setObjectName(u"labelBoxBlenderInstalation_6")
@@ -1356,12 +1312,42 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_6, 1, 0, 1, 1)
 
-        self.labelBoxBlenderInstalation_7 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_7.setObjectName(u"labelBoxBlenderInstalation_7")
-        self.labelBoxBlenderInstalation_7.setFont(font)
-        self.labelBoxBlenderInstalation_7.setStyleSheet(u"")
+        self.Title_name = QLineEdit(self.search_frame_2)
+        self.Title_name.setObjectName(u"Title_name")
+        sizePolicy3.setHeightForWidth(self.Title_name.sizePolicy().hasHeightForWidth())
+        self.Title_name.setSizePolicy(sizePolicy3)
+        self.Title_name.setMinimumSize(QSize(0, 30))
+        self.Title_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 6, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.Title_name, 9, 0, 1, 1)
+
+        self.btn_add_data = QPushButton(self.search_frame_2)
+        self.btn_add_data.setObjectName(u"btn_add_data")
+        self.btn_add_data.setMinimumSize(QSize(150, 30))
+        self.btn_add_data.setFont(font)
+        self.btn_add_data.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_add_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/images/icons/cil-cloud-upload.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_add_data.setIcon(icon4)
+
+        self.gridLayout_2.addWidget(self.btn_add_data, 4, 1, 1, 1)
+
+        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
+        self.labelBoxBlenderInstalation_5.setFont(font)
+        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
+
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 6, 0, 1, 1)
+
+        self.Index_name = QLineEdit(self.search_frame_2)
+        self.Index_name.setObjectName(u"Index_name")
+        sizePolicy3.setHeightForWidth(self.Index_name.sizePolicy().hasHeightForWidth())
+        self.Index_name.setSizePolicy(sizePolicy3)
+        self.Index_name.setMinimumSize(QSize(0, 30))
+        self.Index_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout_2.addWidget(self.Index_name, 4, 0, 1, 1)
 
         self.label_6 = QLabel(self.search_frame_2)
         self.label_6.setObjectName(u"label_6")
@@ -1372,6 +1358,13 @@ class Ui_MainWindow(object):
         self.label_6.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.label_6, 0, 0, 1, 2)
+
+        self.labelBoxBlenderInstalation_7 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_7.setObjectName(u"labelBoxBlenderInstalation_7")
+        self.labelBoxBlenderInstalation_7.setFont(font)
+        self.labelBoxBlenderInstalation_7.setStyleSheet(u"")
+
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 6, 1, 1, 1)
 
 
         self.info_frame_3.addWidget(self.search_frame_2)
@@ -1661,30 +1654,25 @@ class Ui_MainWindow(object):
         self.Field_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"age", None))
         self.Field_combo.setItemText(3, QCoreApplication.translate("MainWindow", u"gender", None))
 
-        self.Q_name.setText("")
-        self.Q_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.Query_name.setText("")
+        self.Query_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.labelBoxBlenderInstalation_2.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query match here..", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Search Data", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response in json format", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Response in txt format", None))
-        self.labelBoxBlenderInstalation_5.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
-        self.btn_send_2.setText(QCoreApplication.translate("MainWindow", u"Search", None))
-        self.Index_combo_2.setItemText(0, QCoreApplication.translate("MainWindow", u"test1", None))
-        self.Index_combo_2.setItemText(1, QCoreApplication.translate("MainWindow", u"test2", None))
-        self.Index_combo_2.setItemText(2, QCoreApplication.translate("MainWindow", u"covid-19", None))
-
-        self.Field_combo_2.setItemText(0, QCoreApplication.translate("MainWindow", u"firstname", None))
-        self.Field_combo_2.setItemText(1, QCoreApplication.translate("MainWindow", u"lastname", None))
-        self.Field_combo_2.setItemText(2, QCoreApplication.translate("MainWindow", u"age", None))
-        self.Field_combo_2.setItemText(3, QCoreApplication.translate("MainWindow", u"gender", None))
-
-        self.Q_name_2.setText("")
-        self.Q_name_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.Content_name.setText("")
+        self.Content_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.labelBoxBlenderInstalation_6.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
-        self.labelBoxBlenderInstalation_7.setText(QCoreApplication.translate("MainWindow", u"Query match here..", None))
+        self.Title_name.setText("")
+        self.Title_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.btn_add_data.setText(QCoreApplication.translate("MainWindow", u"Add Data", None))
+        self.labelBoxBlenderInstalation_5.setText(QCoreApplication.translate("MainWindow", u"Title", None))
+        self.Index_name.setText("")
+        self.Index_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Add data", None))
+        self.labelBoxBlenderInstalation_7.setText(QCoreApplication.translate("MainWindow", u"Content", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Indices info", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Cluster health", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Result", None))
