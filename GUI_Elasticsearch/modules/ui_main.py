@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainpzmsSv.ui'
+## Form generated from reading UI file 'mainJfFIYR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -70,6 +70,15 @@ class Ui_MainWindow(object):
 "	border: 1px solid rgb(44, 49, 58);\n"
 "	border-radius: 12px;\n"
 "}\n"
+"#response_json_frame_2 {	\n"
+"	border: 2px solid #bd93f9;\n"
+"}\n"
+"#response_text_frame_2 {	\n"
+"	border: 2px solid #bd93f9;\n"
+"}\n"
+"#client_text_frame {	\n"
+"	border: 2px solid #bd93f9;\n"
+"}\n"
 "/*\n"
 "#search_frame {	\n"
 "	border: 2px solid #bd93f9;\n"
@@ -96,14 +105,14 @@ class Ui_MainWindow(object):
 "Left Menu */\n"
 "#leftMenuBg {	\n"
 "	background-color: rgb(33, 37, 43);\n"
-"	border-top-left-radius: 12px;\n"
+"	border-t"
+                        "op-left-radius: 12px;\n"
 "	border-bottom-left-radius: 12px;\n"
 "}\n"
 "#topLogo {\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	background-image: url(:/images/images/images/Elasticsearch.png);\n"
-"	back"
-                        "ground-position: centered;\n"
+"	background-position: centered;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
 "#titleLeftApp { font: 63 12pt \"Segoe UI Semibold\"; }\n"
@@ -130,15 +139,15 @@ class Ui_MainWindow(object):
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: 20px solid transparent;\n"
+"	border-l"
+                        "eft: 20px solid transparent;\n"
 "	background-color:transparent;\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
 "	border-bottom-left-radius: 12px;\n"
 "}\n"
 "#bottomMenu .QPushButton:hover {\n"
-"	ba"
-                        "ckground-color: rgb(40, 44, 52);\n"
+"	background-color: rgb(40, 44, 52);\n"
 "	border-color: rgb(40, 44, 52);\n"
 "}\n"
 "#bottomMenu .QPushButton:pressed {	\n"
@@ -169,14 +178,14 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Title Menu */\n"
-"#titleRightInfo { padding-left: 10px; }\n"
+"#titleRightInfo { padding-lef"
+                        "t: 10px; }\n"
 "\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Extra Tab */\n"
 "#extraLeftBox {	\n"
-"	background-color: rgb(44, 49, 5"
-                        "8);\n"
+"	background-color: rgb(44, 49, 58);\n"
 "}\n"
 "#extraTopBg{	\n"
 "	background-color: rgb(189, 147, 249)\n"
@@ -203,14 +212,14 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Extra Top Menus */\n"
-"#extraTopMenu .QPushButton {\n"
+"#extraTopMen"
+                        "u .QPushButton {\n"
 "background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
 "	border-left: 22px solid transparent;\n"
 "	background-color:transparent;\n"
-"	text-a"
-                        "lign: left;\n"
+"	text-align: left;\n"
 "	padding-left: 44px;\n"
 "}\n"
 "#extraTopMenu .QPushButton:hover {\n"
@@ -234,12 +243,12 @@ class Ui_MainWindow(object):
 "/* Top Buttons */\n"
 "#rightButtons .QPushButton { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
 "#rightButtons .QPushButton:hover { background-color: rgb(44, 49, 57); border-style: solid; border-radius: 4px; }\n"
-"#rightButtons .QPushButton:pressed { background-color: rgb(23, 26, 30); border-style: solid; border-radius: 4px; }\n"
+"#rightButtons"
+                        " .QPushButton:pressed { background-color: rgb(23, 26, 30); border-style: solid; border-radius: 4px; }\n"
 "\n"
 "/* Theme Settings */\n"
 "#extraRightBox { background-color: rgb(44, 49, 58); }\n"
-"#theme"
-                        "SettingsTopDetail { background-color: rgb(189, 147, 249); }\n"
+"#themeSettingsTopDetail { background-color: rgb(189, 147, 249); }\n"
 "\n"
 "/* Bottom Bar */\n"
 "#bottomBar { background-color: rgb(44, 49, 58); border-bottom-right-radius: 12px;}\n"
@@ -262,14 +271,14 @@ class Ui_MainWindow(object):
 "#contentSettings .QPushButton:pressed {	\n"
 "	background-color: rgb(189, 147, 249);\n"
 "	color: rgb(255, 255, 255);\n"
-"}\n"
+""
+                        "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "QTableWidget */\n"
 "QTableWidget {	\n"
 "	background-color: transparent;\n"
-"	pad"
-                        "ding: 10px;\n"
+"	padding: 10px;\n"
 "	border-radius: 5px;\n"
 "	gridline-color: rgb(44, 49, 58);\n"
 "	border-bottom: 1px solid rgb(44, 49, 60);\n"
@@ -297,7 +306,8 @@ class Ui_MainWindow(object):
 "QHeaderView::section:horizontal\n"
 "{\n"
 "    border: 1px solid rgb(33, 37, 43);\n"
-"	background-color: rgb(33, 37, 43);\n"
+"	background-color: rgb(33, 37, 43);"
+                        "\n"
 "	padding: 3px;\n"
 "	border-top-left-radius: 7px;\n"
 "    border-top-right-radius: 7px;\n"
@@ -307,8 +317,7 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgb(44, 49, 60);\n"
 "}\n"
 "\n"
-""
-                        "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "LineEdit */\n"
 "QLineEdit {\n"
 "	background-color: rgb(33, 37, 43);\n"
@@ -332,7 +341,8 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "	padding: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121, 198);\n"
+"	selection-background-color: rgb(255, 121, 1"
+                        "98);\n"
 "}\n"
 "QPlainTextEdit  QScrollBar:vertical {\n"
 "    width: 8px;\n"
@@ -341,8 +351,7 @@ class Ui_MainWindow(object):
 "    height: 8px;\n"
 " }\n"
 "QPlainTextEdit:hover {\n"
-"	border: 2px "
-                        "solid rgb(64, 71, 88);\n"
+"	border: 2px solid rgb(64, 71, 88);\n"
 "}\n"
 "QPlainTextEdit:focus {\n"
 "	border: 2px solid rgb(91, 101, 124);\n"
@@ -371,14 +380,14 @@ class Ui_MainWindow(object):
 "    subcontrol-position: right;\n"
 "    subcontrol-origin: margin;\n"
 "}\n"
-"QScrollBar::sub-line:horizontal {\n"
+"QScrollBar::sub-lin"
+                        "e:horizontal {\n"
 "    border: none;\n"
 "    background: rgb(55, 63, 77);\n"
 "    width: 20px;\n"
 "	border-top-left-radius: 4px;\n"
 "    border-bottom-left-radius: 4px;\n"
-"    subcontrol-position"
-                        ": left;\n"
+"    subcontrol-position: left;\n"
 "    subcontrol-origin: margin;\n"
 "}\n"
 "QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal\n"
@@ -408,15 +417,15 @@ class Ui_MainWindow(object):
 "	border-bottom-left-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
 "     subcontrol-position: bottom;\n"
-"     subcontrol-origin: margin;\n"
+"     subcontrol-origin: ma"
+                        "rgin;\n"
 " }\n"
 " QScrollBar::sub-line:vertical {\n"
 "	border: none;\n"
 "    background: rgb(55, 63, 77);\n"
 "     height: 20px;\n"
 "	border-top-left-radius: 4px;\n"
-"    border-top-right-radius: "
-                        "4px;\n"
+"    border-top-right-radius: 4px;\n"
 "     subcontrol-position: top;\n"
 "     subcontrol-origin: margin;\n"
 " }\n"
@@ -443,13 +452,13 @@ class Ui_MainWindow(object):
 "QCheckBox::indicator:checked {\n"
 "    background: 3px solid rgb(52, 59, 72);\n"
 "	border: 3px solid rgb(52, 59, 72);	\n"
-"	background-image: url(:/icons/images/icons/cil-check-alt.png);\n"
+"	background-image: url(:"
+                        "/icons/images/icons/cil-check-alt.png);\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "RadioButton */\n"
-"QRadioButton::ind"
-                        "icator {\n"
+"QRadioButton::indicator {\n"
 "    border: 3px solid rgb(52, 59, 72);\n"
 "	width: 15px;\n"
 "	height: 15px;\n"
@@ -478,14 +487,14 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::drop-down {\n"
 "	subcontrol-origin: padding;\n"
-"	subcontrol-position: top right;\n"
+"	subcontrol-position: top"
+                        " right;\n"
 "	width: 25px; \n"
 "	border-left-width: 3px;\n"
 "	border-left-color: rgba(39, 44, 54, 150);\n"
 "	border-left-style: solid;\n"
 "	border-top-right-radius: 3px;\n"
-"	border-bottom-right-ra"
-                        "dius: 3px;	\n"
+"	border-bottom-right-radius: 3px;	\n"
 "	background-image: url(:/icons/images/icons/cil-arrow-bottom.png);\n"
 "	background-position: center;\n"
 "	background-repeat: no-reperat;\n"
@@ -512,15 +521,15 @@ class Ui_MainWindow(object):
 "    background-color: rgb(189, 147, 249);\n"
 "    border: none;\n"
 "    height: 10px;\n"
-"    width: 10px;\n"
+"  "
+                        "  width: 10px;\n"
 "    margin: 0px;\n"
 "	border-radius: 5px;\n"
 "}\n"
 "QSlider::handle:horizontal:hover {\n"
 "    background-color: rgb(195, 155, 255);\n"
 "}\n"
-"QSlider::handle:horizontal:pressed"
-                        " {\n"
+"QSlider::handle:horizontal:pressed {\n"
 "    background-color: rgb(255, 121, 198);\n"
 "}\n"
 "\n"
@@ -551,15 +560,15 @@ class Ui_MainWindow(object):
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CommandLinkButton */\n"
 "QCommandLinkButton {	\n"
-"	color: rgb(255, 121, 198);\n"
+"	co"
+                        "lor: rgb(255, 121, 198);\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
 "	color: rgb(255, 170, 255);\n"
 "}\n"
 "QCommandLinkButton:hover {	\n"
 "	color: rgb(255, 170, 255);\n"
-"	background-color: rg"
-                        "b(44, 49, 60);\n"
+"	background-color: rgb(44, 49, 60);\n"
 "}\n"
 "QCommandLinkButton:pressed {	\n"
 "	color: rgb(189, 147, 249);\n"
@@ -1140,11 +1149,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.label_3)
 
-        self.client_text = QTextBrowser(self.info_frame)
+        self.client_text_frame = QFrame(self.info_frame)
+        self.client_text_frame.setObjectName(u"client_text_frame")
+        self.client_text_frame.setFrameShape(QFrame.StyledPanel)
+        self.client_text_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_23 = QVBoxLayout(self.client_text_frame)
+        self.verticalLayout_23.setSpacing(0)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.client_text = QTextBrowser(self.client_text_frame)
         self.client_text.setObjectName(u"client_text")
-        self.client_text.setStyleSheet(u"border: 2px solid #bd93f9;")
+        self.client_text.setStyleSheet(u"")
 
-        self.verticalLayout_17.addWidget(self.client_text)
+        self.verticalLayout_23.addWidget(self.client_text)
+
+
+        self.verticalLayout_17.addWidget(self.client_text_frame)
 
 
         self.info_frame_2.addWidget(self.info_frame)
@@ -1172,11 +1192,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_21.addWidget(self.label_4)
 
-        self.response_json = QTextBrowser(self.response_json_frame)
+        self.response_json_frame_2 = QFrame(self.response_json_frame)
+        self.response_json_frame_2.setObjectName(u"response_json_frame_2")
+        self.response_json_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.response_json_frame_2.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_16 = QVBoxLayout(self.response_json_frame_2)
+        self.verticalLayout_16.setSpacing(0)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.response_json = QTextBrowser(self.response_json_frame_2)
         self.response_json.setObjectName(u"response_json")
-        self.response_json.setStyleSheet(u"border: 2px solid #bd93f9;")
+        self.response_json.setStyleSheet(u"")
 
-        self.verticalLayout_21.addWidget(self.response_json)
+        self.verticalLayout_16.addWidget(self.response_json)
+
+
+        self.verticalLayout_21.addWidget(self.response_json_frame_2)
 
 
         self.response_frame2.addWidget(self.response_json_frame)
@@ -1197,12 +1228,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_22.addWidget(self.label_5)
 
-        self.response_text = QTextBrowser(self.response_text_frame)
+        self.response_text_frame_2 = QFrame(self.response_text_frame)
+        self.response_text_frame_2.setObjectName(u"response_text_frame_2")
+        self.response_text_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.response_text_frame_2.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_18 = QVBoxLayout(self.response_text_frame_2)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.response_text = QTextBrowser(self.response_text_frame_2)
         self.response_text.setObjectName(u"response_text")
-        self.response_text.setStyleSheet(u"border: 2px solid #bd93f9;\n"
-"")
+        self.response_text.setStyleSheet(u"")
 
-        self.verticalLayout_22.addWidget(self.response_text)
+        self.verticalLayout_18.addWidget(self.response_text)
+
+
+        self.verticalLayout_22.addWidget(self.response_text_frame_2)
 
 
         self.response_frame2.addWidget(self.response_text_frame)

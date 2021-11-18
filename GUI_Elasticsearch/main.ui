@@ -64,6 +64,15 @@ Bg App */
 	border: 1px solid rgb(44, 49, 58);
 	border-radius: 12px;
 }
+#response_json_frame_2 {	
+	border: 2px solid #bd93f9;
+}
+#response_text_frame_2 {	
+	border: 2px solid #bd93f9;
+}
+#client_text_frame {	
+	border: 2px solid #bd93f9;
+}
 /*
 #search_frame {	
 	border: 2px solid #bd93f9;
@@ -2035,10 +2044,37 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QTextBrowser" name="client_text">
-                                   <property name="styleSheet">
-                                    <string notr="true">border: 2px solid #bd93f9;</string>
+                                  <widget class="QFrame" name="client_text_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
                                    </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QVBoxLayout" name="verticalLayout_23">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QTextBrowser" name="client_text">
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -2087,10 +2123,37 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QTextBrowser" name="response_json">
-                                   <property name="styleSheet">
-                                    <string notr="true">border: 2px solid #bd93f9;</string>
+                                  <widget class="QFrame" name="response_json_frame_2">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
                                    </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QVBoxLayout" name="verticalLayout_16">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QTextBrowser" name="response_json">
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -2129,11 +2192,38 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QTextBrowser" name="response_text">
-                                   <property name="styleSheet">
-                                    <string notr="true">border: 2px solid #bd93f9;
-</string>
+                                  <widget class="QFrame" name="response_text_frame_2">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
                                    </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QTextBrowser" name="response_text">
+                                      <property name="styleSheet">
+                                       <string notr="true">
+</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
