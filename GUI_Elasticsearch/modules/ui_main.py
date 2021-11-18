@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainfvycqN.ui'
+## Form generated from reading UI file 'mainpNHeUO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -735,7 +735,7 @@ class Ui_MainWindow(object):
         self.btn_debug.setFont(font)
         self.btn_debug.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_debug.setLayoutDirection(Qt.LeftToRight)
-        self.btn_debug.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-terminal.png);")
+        self.btn_debug.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-cloud-upload.png);")
 
         self.verticalLayout_8.addWidget(self.btn_debug)
 
@@ -1384,7 +1384,7 @@ class Ui_MainWindow(object):
         self.btn_delete_data.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_delete_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
         icon4 = QIcon()
-        icon4.addFile(u":/icons/images/icons/cil-x.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/icons/images/icons/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_delete_data.setIcon(icon4)
 
         self.gridLayout_2.addWidget(self.btn_delete_data, 8, 1, 1, 1)
@@ -1396,7 +1396,7 @@ class Ui_MainWindow(object):
         self.btn_add_data.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_add_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
         icon5 = QIcon()
-        icon5.addFile(u":/icons/images/icons/cil-cloud-upload.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u":/icons/images/icons/cil-plus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_add_data.setIcon(icon5)
 
         self.gridLayout_2.addWidget(self.btn_add_data, 3, 1, 1, 1)
@@ -1637,7 +1637,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
