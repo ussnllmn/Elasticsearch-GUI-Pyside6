@@ -63,8 +63,8 @@ class MainWindow(QMainWindow):
     def Add_data(self):
         print("start Add_data")
         doc = {
-            'Title': self.ui.Title_add_name.text(),
-            'Content': self.ui.Content_add_name.text(),
+            'Title': self.ui.Title_add_text.toPlainText(),
+            'Content': self.ui.Content_add_text.toPlainText(),
         }
         res = client.index(index=self.ui.Index_add_combo.currentText(), document=doc)
         print(res['result'])
@@ -116,7 +116,7 @@ class MainWindow(QMainWindow):
 
         except:
             self.ui.response_text.setText("Query not found.")
-        print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
+        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     def make_Query(self, query, index_name):
         # make an API call to check if the index exists
@@ -200,7 +200,7 @@ class MainWindow(QMainWindow):
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
-            self.show_query()
+            self.show_Query()
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////

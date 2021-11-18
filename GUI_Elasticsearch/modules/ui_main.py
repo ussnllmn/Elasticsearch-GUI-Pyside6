@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainMoqvIh.ui'
+## Form generated from reading UI file 'mainfvycqN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QHBoxLayout, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QStackedWidget, QTextBrowser,
-    QTextEdit, QVBoxLayout, QWidget)
+    QPlainTextEdit, QPushButton, QSizePolicy, QStackedWidget,
+    QTextBrowser, QTextEdit, QVBoxLayout, QWidget)
 from .resources_rc import *
 
 class Ui_MainWindow(object):
@@ -1298,33 +1298,35 @@ class Ui_MainWindow(object):
         self.search_frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.search_frame_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.Title_add_name = QLineEdit(self.search_frame_2)
-        self.Title_add_name.setObjectName(u"Title_add_name")
-        sizePolicy3.setHeightForWidth(self.Title_add_name.sizePolicy().hasHeightForWidth())
-        self.Title_add_name.setSizePolicy(sizePolicy3)
-        self.Title_add_name.setMinimumSize(QSize(0, 58))
-        self.Title_add_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.Content_add_text = QPlainTextEdit(self.search_frame_2)
+        self.Content_add_text.setObjectName(u"Content_add_text")
+        self.Content_add_text.setMinimumSize(QSize(200, 100))
+        self.Content_add_text.setMaximumSize(QSize(16777215, 100))
+        self.Content_add_text.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.Title_add_name, 6, 0, 3, 1)
+        self.gridLayout_2.addWidget(self.Content_add_text, 6, 1, 1, 1)
 
-        self.labelBoxBlenderInstalation_6 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_6.setObjectName(u"labelBoxBlenderInstalation_6")
-        self.labelBoxBlenderInstalation_6.setFont(font)
-        self.labelBoxBlenderInstalation_6.setStyleSheet(u"")
+        self.labelBoxBlenderInstalation_7 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_7.setObjectName(u"labelBoxBlenderInstalation_7")
+        self.labelBoxBlenderInstalation_7.setFont(font)
+        self.labelBoxBlenderInstalation_7.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_6, 1, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 5, 1, 1, 1)
 
-        self.btn_add_data = QPushButton(self.search_frame_2)
-        self.btn_add_data.setObjectName(u"btn_add_data")
-        self.btn_add_data.setMinimumSize(QSize(150, 30))
-        self.btn_add_data.setFont(font)
-        self.btn_add_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_add_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/images/icons/cil-cloud-upload.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_add_data.setIcon(icon4)
+        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
+        self.labelBoxBlenderInstalation_5.setFont(font)
+        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.btn_add_data, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 5, 0, 1, 1)
+
+        self.Title_add_text = QPlainTextEdit(self.search_frame_2)
+        self.Title_add_text.setObjectName(u"Title_add_text")
+        self.Title_add_text.setMinimumSize(QSize(200, 100))
+        self.Title_add_text.setMaximumSize(QSize(16777215, 100))
+        self.Title_add_text.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout_2.addWidget(self.Title_add_text, 6, 0, 1, 1)
 
         self.Index_add_combo = QComboBox(self.search_frame_2)
         self.Index_add_combo.addItem("")
@@ -1339,27 +1341,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.Index_add_combo, 3, 0, 1, 1)
 
-        self.Delete_doc_name = QLineEdit(self.search_frame_2)
-        self.Delete_doc_name.setObjectName(u"Delete_doc_name")
-        sizePolicy3.setHeightForWidth(self.Delete_doc_name.sizePolicy().hasHeightForWidth())
-        self.Delete_doc_name.setSizePolicy(sizePolicy3)
-        self.Delete_doc_name.setMinimumSize(QSize(0, 30))
-        self.Delete_doc_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.Delete_doc_name, 10, 0, 1, 1)
-
-        self.btn_delete_data = QPushButton(self.search_frame_2)
-        self.btn_delete_data.setObjectName(u"btn_delete_data")
-        self.btn_delete_data.setMinimumSize(QSize(150, 30))
-        self.btn_delete_data.setFont(font)
-        self.btn_delete_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_delete_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/images/icons/cil-x.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_delete_data.setIcon(icon5)
-
-        self.gridLayout_2.addWidget(self.btn_delete_data, 10, 1, 1, 1)
-
         self.label_6 = QLabel(self.search_frame_2)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setFont(font4)
@@ -1370,29 +1351,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_6, 0, 0, 1, 2)
 
-        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
-        self.labelBoxBlenderInstalation_5.setFont(font)
-        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 5, 0, 1, 1)
-
-        self.Content_add_name = QLineEdit(self.search_frame_2)
-        self.Content_add_name.setObjectName(u"Content_add_name")
-        sizePolicy3.setHeightForWidth(self.Content_add_name.sizePolicy().hasHeightForWidth())
-        self.Content_add_name.setSizePolicy(sizePolicy3)
-        self.Content_add_name.setMinimumSize(QSize(0, 58))
-        self.Content_add_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout_2.addWidget(self.Content_add_name, 6, 1, 3, 1)
-
-        self.labelBoxBlenderInstalation_7 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_7.setObjectName(u"labelBoxBlenderInstalation_7")
-        self.labelBoxBlenderInstalation_7.setFont(font)
-        self.labelBoxBlenderInstalation_7.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 5, 1, 1, 1)
-
         self.label_11 = QLabel(self.search_frame_2)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setFont(font4)
@@ -1401,7 +1359,47 @@ class Ui_MainWindow(object):
 "border: 2px solid #ff79c6;")
         self.label_11.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.label_11, 9, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.label_11, 7, 0, 1, 2)
+
+        self.Delete_doc_name = QLineEdit(self.search_frame_2)
+        self.Delete_doc_name.setObjectName(u"Delete_doc_name")
+        sizePolicy3.setHeightForWidth(self.Delete_doc_name.sizePolicy().hasHeightForWidth())
+        self.Delete_doc_name.setSizePolicy(sizePolicy3)
+        self.Delete_doc_name.setMinimumSize(QSize(0, 30))
+        self.Delete_doc_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout_2.addWidget(self.Delete_doc_name, 8, 0, 1, 1)
+
+        self.labelBoxBlenderInstalation_6 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_6.setObjectName(u"labelBoxBlenderInstalation_6")
+        self.labelBoxBlenderInstalation_6.setFont(font)
+        self.labelBoxBlenderInstalation_6.setStyleSheet(u"")
+
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_6, 1, 0, 1, 1)
+
+        self.btn_delete_data = QPushButton(self.search_frame_2)
+        self.btn_delete_data.setObjectName(u"btn_delete_data")
+        self.btn_delete_data.setMinimumSize(QSize(150, 30))
+        self.btn_delete_data.setFont(font)
+        self.btn_delete_data.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_delete_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/images/icons/cil-x.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_delete_data.setIcon(icon4)
+
+        self.gridLayout_2.addWidget(self.btn_delete_data, 8, 1, 1, 1)
+
+        self.btn_add_data = QPushButton(self.search_frame_2)
+        self.btn_add_data.setObjectName(u"btn_add_data")
+        self.btn_add_data.setMinimumSize(QSize(150, 30))
+        self.btn_add_data.setFont(font)
+        self.btn_add_data.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_add_data.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/images/icons/cil-cloud-upload.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_add_data.setIcon(icon5)
+
+        self.gridLayout_2.addWidget(self.btn_add_data, 3, 1, 1, 1)
 
 
         self.info_frame_3.addWidget(self.search_frame_2)
@@ -1701,23 +1699,20 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response in json format", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Response in txt format", None))
-        self.Title_add_name.setText("")
-        self.Title_add_name.setPlaceholderText("")
-        self.labelBoxBlenderInstalation_6.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
-        self.btn_add_data.setText(QCoreApplication.translate("MainWindow", u"Add Data", None))
+        self.labelBoxBlenderInstalation_7.setText(QCoreApplication.translate("MainWindow", u"Content", None))
+        self.labelBoxBlenderInstalation_5.setText(QCoreApplication.translate("MainWindow", u"Title", None))
+        self.Title_add_text.setPlainText("")
         self.Index_add_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
         self.Index_add_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"test1", None))
         self.Index_add_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"Covid-19", None))
 
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Add data", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Delete data", None))
         self.Delete_doc_name.setText("")
         self.Delete_doc_name.setPlaceholderText("")
+        self.labelBoxBlenderInstalation_6.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.btn_delete_data.setText(QCoreApplication.translate("MainWindow", u"Delete Data", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Add data", None))
-        self.labelBoxBlenderInstalation_5.setText(QCoreApplication.translate("MainWindow", u"Title", None))
-        self.Content_add_name.setText("")
-        self.Content_add_name.setPlaceholderText("")
-        self.labelBoxBlenderInstalation_7.setText(QCoreApplication.translate("MainWindow", u"Content", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Delete data", None))
+        self.btn_add_data.setText(QCoreApplication.translate("MainWindow", u"Add Data", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Result", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Cluster health", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Indices info", None))
