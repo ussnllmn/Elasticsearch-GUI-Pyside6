@@ -1859,12 +1859,12 @@ background-repeat: no-repeat;</string>
                                    </property>
                                    <item>
                                     <property name="text">
-                                     <string>test1</string>
+                                     <string>test-covid</string>
                                     </property>
                                    </item>
                                    <item>
                                     <property name="text">
-                                     <string>test2</string>
+                                     <string>test1</string>
                                     </property>
                                    </item>
                                    <item>
@@ -1898,6 +1898,16 @@ background-repeat: no-repeat;</string>
                                    <property name="frame">
                                     <bool>true</bool>
                                    </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>Title</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>Content</string>
+                                    </property>
+                                   </item>
                                    <item>
                                     <property name="text">
                                      <string>firstname</string>

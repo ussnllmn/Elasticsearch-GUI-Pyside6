@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainbnjLFJ.ui'
+## Form generated from reading UI file 'mainMoqvIh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -1086,6 +1086,8 @@ class Ui_MainWindow(object):
         self.Field_combo.addItem("")
         self.Field_combo.addItem("")
         self.Field_combo.addItem("")
+        self.Field_combo.addItem("")
+        self.Field_combo.addItem("")
         self.Field_combo.setObjectName(u"Field_combo")
         self.Field_combo.setFont(font)
         self.Field_combo.setAutoFillBackground(False)
@@ -1680,14 +1682,16 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setText("")
         self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
         self.btn_send.setText(QCoreApplication.translate("MainWindow", u"Search", None))
-        self.Index_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"test1", None))
-        self.Index_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"test2", None))
+        self.Index_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
+        self.Index_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"test1", None))
         self.Index_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"covid-19", None))
 
-        self.Field_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"firstname", None))
-        self.Field_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"lastname", None))
-        self.Field_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"age", None))
-        self.Field_combo.setItemText(3, QCoreApplication.translate("MainWindow", u"gender", None))
+        self.Field_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"Title", None))
+        self.Field_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"Content", None))
+        self.Field_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"firstname", None))
+        self.Field_combo.setItemText(3, QCoreApplication.translate("MainWindow", u"lastname", None))
+        self.Field_combo.setItemText(4, QCoreApplication.translate("MainWindow", u"age", None))
+        self.Field_combo.setItemText(5, QCoreApplication.translate("MainWindow", u"gender", None))
 
         self.Query_name.setText("")
         self.Query_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))

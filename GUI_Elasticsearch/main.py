@@ -70,20 +70,16 @@ class MainWindow(QMainWindow):
         print(res['result'])
 
     def show_Query(self):
+        self.ui.response_text.setText("")
         # pass the field name and query args to filter dict
         query = {
             'match': {
-                # self.ui.Field_combo.currentText(): self.ui.Q_name.text()
-                "age": 30
+                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
+                # "age": 30
             }
         }
         # get the index name and put into a string variable
         index_name = self.ui.Index_combo.currentText()
-
-        # print("index_input", self.ui.Index_combo.currentText())
-        # print("field_input", self.ui.Field_combo.currentText())
-        # print("query_input", self.ui.Q_name.text())
-
         # make sure that the user has entered an index name
         if index_name == "":
             json_resp = '{"error", "index name field cannot be empty"}'
@@ -113,9 +109,8 @@ class MainWindow(QMainWindow):
                     if key != "_source":
                         self.ui.response_text.append(key + " = " + str(value))
 
-                self.ui.response_text.append("Firstname: " + all_hits[i]["_source"]["firstname"])
-                self.ui.response_text.append("Lastname: " + all_hits[i]["_source"]["lastname"])
-                self.ui.response_text.append("Gender: " + all_hits[i]["_source"]["gender"])
+                self.ui.response_text.append("Title: " + all_hits[i]["_source"]["Title"])
+                self.ui.response_text.append("Content: " + all_hits[i]["_source"]["Content"])
                 self.ui.response_text.append("")
                 i += 1
 
