@@ -57,10 +57,19 @@ class MainWindow(QMainWindow):
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_debug.clicked.connect(self.buttonClick)
         widgets.btn_send.clicked.connect(self.buttonClick)
-
+        widgets.btn_add_data.clicked.connect(self.buttonClick)
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
-    def show_query(self):
+    def Add_data(self):
+        print("start Add_data")
+        doc = {
+            'Title': self.ui.Title_add_name.text(),
+            'Content': self.ui.Content_add_name.text(),
+        }
+        res = client.index(index=self.ui.Index_add_combo.currentText(), document=doc)
+        print(res['result'])
+
+    def show_Query(self):
         # pass the field name and query args to filter dict
         query = {
             'match': {
@@ -189,7 +198,10 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         if btnName == "btn_send":
-            self.show_query()
+            self.show_Query()
+
+        if btnName == "btn_add_data":
+            self.Add_data()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
