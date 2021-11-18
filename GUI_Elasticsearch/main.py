@@ -49,19 +49,10 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
-        # SHOW client.info()
-        try:
-            print("Connecting to http://localhost:9200")
-            resp = client.info()
-            json_resp = json.dumps(resp, indent=4)
-            widgets.client_text.setText(json_resp)
-            print("Connection complete")
-        except:
-            print("Connection error. is elasticsearch.bat running ?")
-            widgets.client_text.setText("Connection error. is elasticsearch.bat running ?")
-
+        self.show_Client()
         self.show_Indices()
         self.show_Health()
+
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_debug.clicked.connect(self.buttonClick)
@@ -165,6 +156,17 @@ class MainWindow(QMainWindow):
         sortIndices = sorted(indices)
         for index in sortIndices:
             self.ui.Indices_text.append(index)
+
+    def show_Client(self):
+        try:
+            print("Connecting to http://localhost:9200")
+            resp = client.info()
+            json_resp = json.dumps(resp, indent=4)
+            widgets.client_text.setText(json_resp)
+            print("Connection complete")
+        except:
+            print("Connection error. is elasticsearch.bat running ?")
+            widgets.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
     # BUTTONS CLICK
     def buttonClick(self):
