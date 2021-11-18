@@ -65,7 +65,7 @@ class MainWindow(QMainWindow):
 
     def show_query(self):
         # pass the field name and query args to filter dict
-        filter = {
+        query = {
             'match': {
                 self.ui.Field_combo.currentText(): self.ui.Q_name.text()
             }
@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
         else:
             # pass the filter dict to the make_query() function
             try:
-                resp = self.make_query(filter, index_name)
+                resp = self.make_query(query, index_name)
                 json_resp = json.dumps(resp, indent=4)
                 print("Elasticsearch response:", resp)
             except:
@@ -99,19 +99,19 @@ class MainWindow(QMainWindow):
             self.ui.response_text.setText("Query not found.")
         # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
-    def make_query(self, filter, index_name):
+    def make_query(self, query, index_name):
         # make an API call to check if the index exists
         index_exists = client.indices.exists(index=index_name)
 
         # if it exists then make the API call
         if index_exists:
             print("index_name:", index_name, "exists.")
-            print("FILTER:", filter, "\n")
+            print("body:", query, "\n")
 
             # catch any exceptions and return them to Kivy app
             try:
                 # pass filter query to the client's search() method
-                response = client.search(index=index_name, query=filter, format='csv')
+                response = client.search(index=index_name, query=query)
 
                 # print the query response for debugging purposes
                 print('response["hits"]:', len(response["hits"]))
