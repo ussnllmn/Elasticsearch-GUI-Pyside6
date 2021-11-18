@@ -21,12 +21,14 @@ import json
 from elasticsearch import Elasticsearch
 from modules import *
 from widgets import *
-os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
+
+os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
 # create a client instance of Elasticsearch
 client = Elasticsearch("http://localhost:9200")
 
 widgets = None
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -37,8 +39,10 @@ class MainWindow(QMainWindow):
         widgets = self.ui
         widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
         UIFunctions.uiDefinitions(self)
+
         def openCloseLeftBox():
             UIFunctions.toggleLeftBox(self, True)
+
         widgets.toggleLeftBox.clicked.connect(openCloseLeftBox)
         widgets.extraCloseColumnBtn.clicked.connect(openCloseLeftBox)
         self.show()
@@ -56,6 +60,8 @@ class MainWindow(QMainWindow):
             print("Connection error. is elasticsearch.bat running ?")
             widgets.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
+        self.show_Indices()
+        self.show_Health()
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_debug.clicked.connect(self.buttonClick)
@@ -87,45 +93,35 @@ class MainWindow(QMainWindow):
                 resp = self.make_query(query, index_name)
                 json_resp = json.dumps(resp, indent=4)
                 print("Elasticsearch response:", resp)
+                print("total hits:", len(resp["hits"]["hits"]))
             except:
                 json_resp = "Cannot get response. is elasticsearch.bat running ?"
                 print("Cannot get response. is elasticsearch.bat running ?")
         # change the label to match the Elasticsearch API response
         self.ui.response_json.setText(json_resp)
 
-        # try:
-        # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
-        all_hits = resp["hits"]["hits"]
-        i = 0
-        # iterate the nested dictionaries inside the ["hits"]["hits"] list
-        for num, doc in enumerate(all_hits):
-            # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
-            # print("DOC ID:", doc["_id"], "--->", doc, type(doc), "\n")
-            # Use 'iteritems()` instead of 'items()' if using Python 2
-            for key, value in doc.items():
-                if key != "_source":
-                    self.ui.response_text.append(key + " = " + str(value))
-                # if key == "_source":
-                #     for values in value["_source"]:
-                #         self.ui.response_text.append(key + " --> " + str(values))
-                # print(all_hits[i]["_source"])
-                    # print(key, "-->", value)
-            # print a few spaces between each doc for readability
-            # print("\n\n")
-            self.ui.response_text.append("Firstname: " + all_hits[i]["_source"]["firstname"])
-            self.ui.response_text.append("Lastname: " + all_hits[i]["_source"]["lastname"])
-            self.ui.response_text.append("Gender: " + all_hits[i]["_source"]["gender"])
-            self.ui.response_text.append("")
-            i += 1
+        try:
+            # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
+            all_hits = resp["hits"]["hits"]
+            i = 0
+            # iterate the nested dictionaries inside the ["hits"]["hits"] list
+            for num, doc in enumerate(all_hits):
+                # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
 
+                # Use 'iteritems()` instead of 'items()' if using Python 2
+                for key, value in doc.items():
+                    if key != "_source":
+                        self.ui.response_text.append(key + " = " + str(value))
 
-            # self.ui.response_text.append("Firstname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["firstname"])
-            # self.ui.response_text.append("Lastname: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["lastname"])
-            # self.ui.response_text.append("Gender: "+json.loads(json_resp)["hits"]["hits"][0]["_source"]["gender"])
+                self.ui.response_text.append("Firstname: " + all_hits[i]["_source"]["firstname"])
+                self.ui.response_text.append("Lastname: " + all_hits[i]["_source"]["lastname"])
+                self.ui.response_text.append("Gender: " + all_hits[i]["_source"]["gender"])
+                self.ui.response_text.append("")
+                i += 1
 
-        # except:
-        #     self.ui.response_text.setText("Query not found.")
-        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
+        except:
+            self.ui.response_text.setText("Query not found.")
+        print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     def make_query(self, query, index_name):
         # make an API call to check if the index exists
@@ -159,6 +155,16 @@ class MainWindow(QMainWindow):
         # return the dict response to Kivy app
         return response
 
+    def show_Health(self):
+        health = client.cluster.health()
+        json_health = json.dumps(health, indent=4)
+        self.ui.Health_text.setText(json_health)
+
+    def show_Indices(self):
+        indices = client.indices.get_alias("*")
+        json_indices = json.dumps(indices, indent=2)
+        self.ui.Indices_text.setText(json_indices)
+
     # BUTTONS CLICK
     def buttonClick(self):
         btn = self.sender()
@@ -175,9 +181,9 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         if btnName == "btn_debug":
-            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         if btnName == "btn_send":
             self.show_query()
@@ -197,6 +203,7 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         # SET DRAG POS WINDOW
         self.dragPos = event.globalPosition().toPoint()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
