@@ -2,8 +2,9 @@ import json
 from datetime import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch.client import indices
-# create a new instance of the Elasticsearch client class
 
+# ////////////////////// DELETE ALL //////////////////////////////////////////
+# create a new instance of the Elasticsearch client class
 # elastic = Elasticsearch()
 #
 # # get the names of the indexes
@@ -29,7 +30,8 @@ from elasticsearch.client import indices
 # for _index in final_indices:
 #     print ("Index name:", _index)
 
-es = Elasticsearch()
+# ////////////////////// UPDATE //////////////////////////////////////////
+# es = Elasticsearch()
 #
 # doc = {
 #     'author': 'kimchy',
@@ -55,12 +57,3 @@ es = Elasticsearch()
 # resp = client.update(index="test-covid", id='3nCTOH0BRcOD75nExr3G', body=doc)
 # print(resp)
 # print(resp['result'])
-# ///////////////////////////////////////////////////////////////////////
-
-# res = es.indices.create(index='test-covidss')
-# print(res)
-
-res = es.indices.delete(index='test-covidss')
-print(res)
-
-# ///////////////////////////////////////////////////////////////////////
