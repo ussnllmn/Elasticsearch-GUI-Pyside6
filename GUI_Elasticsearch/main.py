@@ -71,14 +71,17 @@ class MainWindow(QMainWindow):
             self.ui.Result_text.setText("ID: " + self.ui.Delete_doc_id.text() + " is not found can't delete.")
 
     def Add_doc(self):
-        doc = {
-            'Title': self.ui.Title_add_doc.toPlainText(),
-            'Content': self.ui.Content_add_doc.toPlainText(),
-        }
-        res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
-        # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
-        self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
-        print(res)
+        try:
+            doc = {
+                'Title': self.ui.Title_add_doc.toPlainText(),
+                'Content': self.ui.Content_add_doc.toPlainText(),
+            }
+            res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
+            # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
+            self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
+            print(res)
+        except:
+            self.ui.Result_text.setText("Unknown error please try again.")
 
     def show_Query(self):
         self.ui.response_text.setText("")
