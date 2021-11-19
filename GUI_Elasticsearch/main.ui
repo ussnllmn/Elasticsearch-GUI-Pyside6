@@ -2941,7 +2941,7 @@ border: 2px solid #ff79c6;</string>
                                      <number>0</number>
                                     </property>
                                     <item>
-                                     <widget class="QTextEdit" name="textEdit_2">
+                                     <widget class="QTextEdit" name="Result_text">
                                       <property name="enabled">
                                        <bool>true</bool>
                                       </property>
@@ -3343,24 +3343,24 @@ border: 2px solid #ff79c6;</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>Delete_doc_id</tabstop>
-  <tabstop>btn_delete_doc_id</tabstop>
-  <tabstop>btn_add_doc</tabstop>
-  <tabstop>btn_document</tabstop>
-  <tabstop>toggleLeftBox</tabstop>
-  <tabstop>extraCloseColumnBtn</tabstop>
-  <tabstop>textEdit</tabstop>
   <tabstop>minimizeAppBtn</tabstop>
   <tabstop>maximizeRestoreAppBtn</tabstop>
   <tabstop>client_text</tabstop>
+  <tabstop>Title_add_doc</tabstop>
+  <tabstop>ID_update_doc</tabstop>
+  <tabstop>Data_update_doc</tabstop>
+  <tabstop>btn_update_doc</tabstop>
+  <tabstop>Delete_doc_id</tabstop>
+  <tabstop>btn_delete_doc_id</tabstop>
+  <tabstop>btn_add_doc</tabstop>
   <tabstop>response_json</tabstop>
   <tabstop>response_text</tabstop>
   <tabstop>Content_add_doc</tabstop>
   <tabstop>Index_doc</tabstop>
-  <tabstop>textEdit_2</tabstop>
+  <tabstop>Result_text</tabstop>
   <tabstop>Index_combo</tabstop>
   <tabstop>Field_combo</tabstop>
-  <tabstop>Title_add_doc</tabstop>
+  <tabstop>btn_document</tabstop>
   <tabstop>Health_text</tabstop>
   <tabstop>Indices_text</tabstop>
   <tabstop>btn_search</tabstop>
@@ -3371,9 +3371,9 @@ border: 2px solid #ff79c6;</string>
   <tabstop>btn_home</tabstop>
   <tabstop>Query_name</tabstop>
   <tabstop>btn_send</tabstop>
-  <tabstop>ID_update_doc</tabstop>
-  <tabstop>Data_update_doc</tabstop>
-  <tabstop>btn_update_doc</tabstop>
+  <tabstop>toggleLeftBox</tabstop>
+  <tabstop>extraCloseColumnBtn</tabstop>
+  <tabstop>textEdit</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>

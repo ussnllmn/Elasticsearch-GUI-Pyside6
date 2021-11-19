@@ -51,22 +51,11 @@ es = Elasticsearch()
 
 
 # ///////////////////////////////////////////////////////////////////////
-# print(es.cluster.health())
-# print(es.indices.get_alias("*"))
 
-# res = es.delete(index="test-index", id=1)
-# print(res['result'])
-
-# es.delete(index="test-index", id=1)
-
-res = es.indices.create(index='test-covid')
-print(res)
+# res = es.indices.create(index='test-covid')
+# print(res)
 #
 # res = es.indices.delete(index='some-new-index')
 # print(res)
 
-
-# es.indices.delete(index='test-index', ignore=[400, 404])
-# for index in es.indices.get('*'):
-#   print(index)
 # ///////////////////////////////////////////////////////////////////////

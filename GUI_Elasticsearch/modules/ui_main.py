@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainarMFEe.ui'
+## Form generated from reading UI file 'mainQSbURg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -1531,13 +1531,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_30.setSpacing(0)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
         self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
-        self.textEdit_2 = QTextEdit(self.result_frame)
-        self.textEdit_2.setObjectName(u"textEdit_2")
-        self.textEdit_2.setEnabled(True)
-        self.textEdit_2.setMaximumSize(QSize(16777215, 30))
-        self.textEdit_2.setReadOnly(True)
+        self.Result_text = QTextEdit(self.result_frame)
+        self.Result_text.setObjectName(u"Result_text")
+        self.Result_text.setEnabled(True)
+        self.Result_text.setMaximumSize(QSize(16777215, 30))
+        self.Result_text.setReadOnly(True)
 
-        self.verticalLayout_30.addWidget(self.textEdit_2)
+        self.verticalLayout_30.addWidget(self.Result_text)
 
 
         self.verticalLayout_25.addWidget(self.result_frame)
@@ -1735,24 +1735,24 @@ class Ui_MainWindow(object):
         self.appMargins.addWidget(self.bgApp)
 
         MainWindow.setCentralWidget(self.styleSheet)
-        QWidget.setTabOrder(self.Delete_doc_id, self.btn_delete_doc_id)
-        QWidget.setTabOrder(self.btn_delete_doc_id, self.btn_add_doc)
-        QWidget.setTabOrder(self.btn_add_doc, self.btn_document)
-        QWidget.setTabOrder(self.btn_document, self.toggleLeftBox)
-        QWidget.setTabOrder(self.toggleLeftBox, self.extraCloseColumnBtn)
-        QWidget.setTabOrder(self.extraCloseColumnBtn, self.textEdit)
-        QWidget.setTabOrder(self.textEdit, self.minimizeAppBtn)
         QWidget.setTabOrder(self.minimizeAppBtn, self.maximizeRestoreAppBtn)
         QWidget.setTabOrder(self.maximizeRestoreAppBtn, self.client_text)
-        QWidget.setTabOrder(self.client_text, self.response_json)
+        QWidget.setTabOrder(self.client_text, self.Title_add_doc)
+        QWidget.setTabOrder(self.Title_add_doc, self.ID_update_doc)
+        QWidget.setTabOrder(self.ID_update_doc, self.Data_update_doc)
+        QWidget.setTabOrder(self.Data_update_doc, self.btn_update_doc)
+        QWidget.setTabOrder(self.btn_update_doc, self.Delete_doc_id)
+        QWidget.setTabOrder(self.Delete_doc_id, self.btn_delete_doc_id)
+        QWidget.setTabOrder(self.btn_delete_doc_id, self.btn_add_doc)
+        QWidget.setTabOrder(self.btn_add_doc, self.response_json)
         QWidget.setTabOrder(self.response_json, self.response_text)
         QWidget.setTabOrder(self.response_text, self.Content_add_doc)
         QWidget.setTabOrder(self.Content_add_doc, self.Index_doc)
-        QWidget.setTabOrder(self.Index_doc, self.textEdit_2)
-        QWidget.setTabOrder(self.textEdit_2, self.Index_combo)
+        QWidget.setTabOrder(self.Index_doc, self.Result_text)
+        QWidget.setTabOrder(self.Result_text, self.Index_combo)
         QWidget.setTabOrder(self.Index_combo, self.Field_combo)
-        QWidget.setTabOrder(self.Field_combo, self.Title_add_doc)
-        QWidget.setTabOrder(self.Title_add_doc, self.Health_text)
+        QWidget.setTabOrder(self.Field_combo, self.btn_document)
+        QWidget.setTabOrder(self.btn_document, self.Health_text)
         QWidget.setTabOrder(self.Health_text, self.Indices_text)
         QWidget.setTabOrder(self.Indices_text, self.btn_search)
         QWidget.setTabOrder(self.btn_search, self.btn_index)
@@ -1762,9 +1762,9 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.toggleButton, self.btn_home)
         QWidget.setTabOrder(self.btn_home, self.Query_name)
         QWidget.setTabOrder(self.Query_name, self.btn_send)
-        QWidget.setTabOrder(self.btn_send, self.ID_update_doc)
-        QWidget.setTabOrder(self.ID_update_doc, self.Data_update_doc)
-        QWidget.setTabOrder(self.Data_update_doc, self.btn_update_doc)
+        QWidget.setTabOrder(self.btn_send, self.toggleLeftBox)
+        QWidget.setTabOrder(self.toggleLeftBox, self.extraCloseColumnBtn)
+        QWidget.setTabOrder(self.extraCloseColumnBtn, self.textEdit)
 
         self.retranslateUi(MainWindow)
 

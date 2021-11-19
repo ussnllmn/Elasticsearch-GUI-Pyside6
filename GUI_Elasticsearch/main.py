@@ -63,15 +63,21 @@ class MainWindow(QMainWindow):
 
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
-    def Add_data(self):
-        print("start Add_data")
+    def Del_doc(self):
+        try:
+            res = client.delete(index=self.ui.Index_doc.currentText(), id=self.ui.Delete_doc_id.text())
+            self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'])
+        except:
+            self.ui.Result_text.setText("ID: " + self.ui.Delete_doc_id.text() + " is not found can't delete.")
+
+    def Add_doc(self):
         doc = {
             'Title': self.ui.Title_add_doc.toPlainText(),
             'Content': self.ui.Content_add_doc.toPlainText(),
         }
         res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
         # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
-        self.ui.textEdit_2.setText("ID: " + res['_id'] + " is " + res['result'])
+        self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
         print(res)
 
     def show_Query(self):
@@ -201,7 +207,10 @@ class MainWindow(QMainWindow):
             self.show_Query()
 
         if btnName == "btn_add_doc":
-            self.Add_data()
+            self.Add_doc()
+
+        if btnName == "btn_delete_doc_id":
+            self.Del_doc()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
