@@ -61,7 +61,23 @@ class MainWindow(QMainWindow):
         widgets.btn_update_doc.clicked.connect(self.buttonClick)
         widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
 
+        widgets.btn_index.clicked.connect(self.buttonClick)
+        widgets.btn_create_index.clicked.connect(self.buttonClick)
+        widgets.btn_delete_index.clicked.connect(self.buttonClick)
+
         widgets.Query_name.keyReleaseEvent = self.check_Enter
+
+
+    def Update_doc(self):
+        # try:
+        doc = {
+            self.ui.Field_update_doc.currentText(): self.ui.Data_update_doc,
+        }
+        res = client.update(index=self.ui.Index_doc.currentText(), id=self.ui.ID_update_doc, body=doc)
+        self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
+
+        # except:
+        #     self.ui.Result_text.setText("Unknown error please try again.")
 
     def Del_doc(self):
         try:
@@ -202,7 +218,12 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
         if btnName == "btn_document":
-            widgets.stackedWidget.setCurrentWidget(widgets.Add_Data)  # SET PAGE
+            widgets.stackedWidget.setCurrentWidget(widgets.Document)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
+
+        if btnName == "btn_index":
+            widgets.stackedWidget.setCurrentWidget(widgets.Index)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
@@ -214,6 +235,15 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_delete_doc_id":
             self.Del_doc()
+
+        if btnName == "btn_update_doc":
+            self.Update_doc()
+
+        if btnName == "btn_update_doc":
+            self.Update_doc()
+
+        if btnName == "btn_update_doc":
+            self.Update_doc()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:

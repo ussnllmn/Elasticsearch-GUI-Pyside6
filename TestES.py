@@ -48,14 +48,19 @@ es = Elasticsearch()
 # print("Got %d Hits:" % res['hits']['total']['value'])
 # for hit in res['hits']['hits']:
 #     print("%(timestamp)s %(author)s: %(text)s" % hit["_source"])
-
-
+# client = Elasticsearch("http://localhost:9200")
+# doc = {
+#     'Title': 'author_name',
+# }
+# resp = client.update(index="test-covid", id='3nCTOH0BRcOD75nExr3G', body=doc)
+# print(resp)
+# print(resp['result'])
 # ///////////////////////////////////////////////////////////////////////
 
-# res = es.indices.create(index='test-covid')
+# res = es.indices.create(index='test-covidss')
 # print(res)
-#
-# res = es.indices.delete(index='some-new-index')
-# print(res)
+
+res = es.indices.delete(index='test-covidss')
+print(res)
 
 # ///////////////////////////////////////////////////////////////////////
