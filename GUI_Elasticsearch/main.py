@@ -55,19 +55,24 @@ class MainWindow(QMainWindow):
 
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
-        widgets.btn_debug.clicked.connect(self.buttonClick)
+        widgets.btn_document.clicked.connect(self.buttonClick)
         widgets.btn_send.clicked.connect(self.buttonClick)
-        widgets.btn_add_data.clicked.connect(self.buttonClick)
+        widgets.btn_add_doc.clicked.connect(self.buttonClick)
+        widgets.btn_update_doc.clicked.connect(self.buttonClick)
+        widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
+
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
     def Add_data(self):
         print("start Add_data")
         doc = {
-            'Title': self.ui.Title_add_text.toPlainText(),
-            'Content': self.ui.Content_add_text.toPlainText(),
+            'Title': self.ui.Title_add_doc.toPlainText(),
+            'Content': self.ui.Content_add_doc.toPlainText(),
         }
-        res = client.index(index=self.ui.Index_add_combo.currentText(), document=doc)
-        print(res['result'])
+        res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
+        # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
+        self.ui.textEdit_2.setText("ID: " + res['_id'] + " is " + res['result'])
+        print(res)
 
     def show_Query(self):
         self.ui.response_text.setText("")
@@ -124,8 +129,8 @@ class MainWindow(QMainWindow):
 
         # if it exists then make the API call
         if index_exists:
-            print("index_name:", index_name, "exists.")
-            print("body:", query, "\n")
+            print("Index_name:", index_name, "exists.")
+            print("Query:", query, "\n")
 
             # catch any exceptions and return them to Kivy app
             try:
@@ -187,7 +192,7 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        if btnName == "btn_debug":
+        if btnName == "btn_document":
             widgets.stackedWidget.setCurrentWidget(widgets.Add_Data)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
@@ -195,7 +200,7 @@ class MainWindow(QMainWindow):
         if btnName == "btn_send":
             self.show_Query()
 
-        if btnName == "btn_add_data":
+        if btnName == "btn_add_doc":
             self.Add_data()
 
     def check_Enter(self, event):
@@ -213,7 +218,6 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         # SET DRAG POS WINDOW
         self.dragPos = event.globalPosition().toPoint()
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

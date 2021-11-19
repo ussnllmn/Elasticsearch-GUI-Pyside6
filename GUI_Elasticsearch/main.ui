@@ -950,7 +950,7 @@ Button */
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="btn_debug">
+                 <widget class="QPushButton" name="btn_document">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -977,7 +977,42 @@ Button */
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-cloud-upload.png);</string>
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-file.png);</string>
+                  </property>
+                  <property name="text">
+                   <string>Debug</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_index">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>45</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-folder-open.png);</string>
                   </property>
                   <property name="text">
                    <string>Debug</string>
@@ -1693,7 +1728,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>2</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -2334,26 +2369,32 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout_2">
-                                 <item row="6" column="1">
-                                  <widget class="QPlainTextEdit" name="Content_add_text">
+                                 <item row="18" column="0">
+                                  <widget class="QLineEdit" name="Delete_doc_id">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
                                    <property name="minimumSize">
                                     <size>
-                                     <width>200</width>
-                                     <height>100</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>100</height>
+                                     <width>0</width>
+                                     <height>34</height>
                                     </size>
                                    </property>
                                    <property name="styleSheet">
                                     <string notr="true">background-color: rgb(33, 37, 43);</string>
                                    </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
                                   </widget>
                                  </item>
-                                 <item row="5" column="1">
+                                 <item row="4" column="1">
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_7">
                                    <property name="font">
                                     <font>
@@ -2370,8 +2411,80 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="5" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_5">
+                                 <item row="5" column="1">
+                                  <widget class="QPlainTextEdit" name="Content_add_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>50</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>100</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="7" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_12">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Update document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="14" column="1">
+                                  <widget class="QPushButton" name="btn_update_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Update document</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-data-transfer-up.png</normaloff>:/icons/images/icons/cil-data-transfer-up.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="17" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_9">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -2383,16 +2496,99 @@ border: 2px solid #ff79c6;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Title</string>
+                                    <string>ID</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="6" column="0">
-                                  <widget class="QPlainTextEdit" name="Title_add_text">
+                                 <item row="3" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_6">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Add document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="18" column="1">
+                                  <widget class="QPushButton" name="btn_delete_doc_id">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete document</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-minus.png</normaloff>:/icons/images/icons/cil-minus.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="6" column="0" colspan="2">
+                                  <widget class="QPushButton" name="btn_add_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Add document</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-plus.png</normaloff>:/icons/images/icons/cil-plus.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="5" column="0">
+                                  <widget class="QPlainTextEdit" name="Title_add_doc">
                                    <property name="minimumSize">
                                     <size>
                                      <width>200</width>
-                                     <height>100</height>
+                                     <height>50</height>
                                     </size>
                                    </property>
                                    <property name="maximumSize">
@@ -2409,8 +2605,98 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="3" column="0">
-                                  <widget class="QComboBox" name="Index_add_combo">
+                                 <item row="13" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_10">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Data</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="12" column="0">
+                                  <widget class="QComboBox" name="Field_update_doc">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>Title</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>Content</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>firstname</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>lastname</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>age</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>gender</string>
+                                    </property>
+                                   </item>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_5">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Title</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="0" colspan="2">
+                                  <widget class="QComboBox" name="Index_doc">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -2445,35 +2731,12 @@ border: 2px solid #ff79c6;</string>
                                    </item>
                                    <item>
                                     <property name="text">
-                                     <string>Covid-19</string>
+                                     <string>test2</string>
                                     </property>
                                    </item>
                                   </widget>
                                  </item>
-                                 <item row="0" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_6">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Add data</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="7" column="0" colspan="2">
+                                 <item row="16" column="0" colspan="2">
                                   <widget class="QLabel" name="label_11">
                                    <property name="font">
                                     <font>
@@ -2489,15 +2752,15 @@ border-radius: 5px;
 border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="text">
-                                    <string>Delete data</string>
+                                    <string>Delete document</string>
                                    </property>
                                    <property name="alignment">
                                     <set>Qt::AlignCenter</set>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="8" column="0">
-                                  <widget class="QLineEdit" name="Delete_doc_name">
+                                 <item row="14" column="0">
+                                  <widget class="QLineEdit" name="Data_update_doc">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                      <horstretch>0</horstretch>
@@ -2521,8 +2784,56 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_6">
+                                 <item row="0" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_10">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Index Name</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="12" column="1">
+                                  <widget class="QLineEdit" name="ID_update_doc">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="11" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_8">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -2534,18 +2845,12 @@ border: 2px solid #ff79c6;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Index Name</string>
+                                    <string>Field name here..</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="8" column="1">
-                                  <widget class="QPushButton" name="btn_delete_data">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
+                                 <item row="11" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -2553,48 +2858,11 @@ border: 2px solid #ff79c6;</string>
                                      <bold>false</bold>
                                     </font>
                                    </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                    <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Delete Data</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-minus.png</normaloff>:/icons/images/icons/cil-minus.png</iconset>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="3" column="1">
-                                  <widget class="QPushButton" name="btn_add_data">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Add Data</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-plus.png</normaloff>:/icons/images/icons/cil-plus.png</iconset>
+                                    <string>ID</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -2673,9 +2941,12 @@ border: 2px solid #ff79c6;</string>
                                      <number>0</number>
                                     </property>
                                     <item>
-                                     <widget class="QTextBrowser" name="Result_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
+                                     <widget class="QTextEdit" name="textEdit_2">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>30</height>
+                                       </size>
                                       </property>
                                      </widget>
                                     </item>
