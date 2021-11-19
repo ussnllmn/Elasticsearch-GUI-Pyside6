@@ -29,7 +29,6 @@ client = Elasticsearch("http://localhost:9200")
 
 widgets = None
 
-
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -56,12 +55,14 @@ class MainWindow(QMainWindow):
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_document.clicked.connect(self.buttonClick)
+        widgets.btn_index.clicked.connect(self.buttonClick)
+
         widgets.btn_send.clicked.connect(self.buttonClick)
+
         widgets.btn_add_doc.clicked.connect(self.buttonClick)
         widgets.btn_update_doc.clicked.connect(self.buttonClick)
         widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
 
-        widgets.btn_index.clicked.connect(self.buttonClick)
         widgets.btn_create_index.clicked.connect(self.buttonClick)
         widgets.btn_delete_index.clicked.connect(self.buttonClick)
 
@@ -196,13 +197,14 @@ class MainWindow(QMainWindow):
     def show_Health(self):
         health = client.cluster.health()
         json_health = json.dumps(health, indent=4)
-        self.ui.Health_text.setText(json_health)
+        self.ui.Health_text_2.setText(json_health)
 
     def show_Indices(self):
         indices = client.indices.get_alias().keys()
         sortIndices = sorted(indices)
         for index in sortIndices:
             self.ui.Indices_text.append(index)
+            self.ui.Indices_text_2.append(index)
 
     def show_Client(self):
         try:
