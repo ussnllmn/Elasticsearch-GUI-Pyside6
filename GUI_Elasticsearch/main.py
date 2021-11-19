@@ -67,6 +67,19 @@ class MainWindow(QMainWindow):
 
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
+    def Create_index(self):
+        try:
+            client.indices.create(index=self.ui.Create_index.text())
+            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is created.")
+        except:
+            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
+
+    def Del_index(self):
+        try:
+            client.indices.delete(index=self.ui.Delete_index.text())
+            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is deleted.")
+        except:
+            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is not found can't delete.")
 
     def Update_doc(self):
         # try:
@@ -239,11 +252,11 @@ class MainWindow(QMainWindow):
         if btnName == "btn_update_doc":
             self.Update_doc()
 
-        if btnName == "btn_update_doc":
-            self.Update_doc()
+        if btnName == "btn_create_index":
+            self.Create_index()
 
-        if btnName == "btn_update_doc":
-            self.Update_doc()
+        if btnName == "btn_delete_index":
+            self.Del_index()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
