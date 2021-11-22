@@ -91,6 +91,10 @@ Bg App */
 #Result_text_2{	
 	border: 2px solid #bd93f9;
 }
+#Danger_zone_frame{	
+	border-radius: 5px;
+	border: 2px solid #ff5555;
+}
 /*
 #search_frame {	
 	border: 2px solid #bd93f9;
@@ -986,7 +990,7 @@ Button */
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-file.png);</string>
+                   <string notr="true">background-image: url(:/icons/images/icons/cil-description.png);</string>
                   </property>
                   <property name="text">
                    <string>Document</string>
@@ -1483,6 +1487,22 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="Status_text">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <property name="indent">
+                   <number>10</number>
                   </property>
                  </widget>
                 </item>
@@ -2329,6 +2349,9 @@ border: 2px solid #ff79c6;</string>
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QVBoxLayout" name="verticalLayout_24">
+                          <property name="spacing">
+                           <number>5</number>
+                          </property>
                           <property name="leftMargin">
                            <number>0</number>
                           </property>
@@ -2378,143 +2401,7 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout_2">
-                                 <item row="5" column="1">
-                                  <widget class="QPlainTextEdit" name="Content_index_doc">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>200</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>100</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="0" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_10">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Index Name</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="13" column="0">
-                                  <widget class="QLineEdit" name="Delete_doc_id">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>34</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="4" column="1">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_7">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Content</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="5" column="0">
-                                  <widget class="QPlainTextEdit" name="Title_index_doc">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>200</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>100</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="plainText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="13" column="1">
-                                  <widget class="QPushButton" name="btn_delete_doc_id">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Delete document</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-minus.png</normaloff>:/icons/images/icons/cil-minus.png</iconset>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="2" column="0" colspan="2">
+                                 <item row="4" column="0">
                                   <widget class="QComboBox" name="Index_doc">
                                    <property name="font">
                                     <font>
@@ -2555,7 +2442,24 @@ border: 2px solid #ff79c6;</string>
                                    </item>
                                   </widget>
                                  </item>
-                                 <item row="6" column="0" colspan="2">
+                                 <item row="5" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_7">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Content</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="7" column="0" colspan="2">
                                   <widget class="QPushButton" name="btn_index_doc">
                                    <property name="minimumSize">
                                     <size>
@@ -2585,24 +2489,7 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="12" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_9">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Type ID to delete.</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="4" column="0">
+                                 <item row="5" column="0">
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_5">
                                    <property name="font">
                                     <font>
@@ -2619,30 +2506,24 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="11" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_11">
+                                 <item row="3" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_8">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
                                      <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
+                                     <bold>false</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
+                                    <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Delete document</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
+                                    <string>Type ID create</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="3" column="0" colspan="2">
+                                 <item row="2" column="0" colspan="2">
                                   <widget class="QLabel" name="label_6">
                                    <property name="font">
                                     <font>
@@ -2662,6 +2543,89 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="alignment">
                                     <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="1">
+                                  <widget class="QLineEdit" name="ID_index_doc">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>34</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_6">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Index name</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="6" column="1">
+                                  <widget class="QPlainTextEdit" name="Content_index_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>40</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="6" column="0">
+                                  <widget class="QPlainTextEdit" name="Title_index_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>40</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="plainText">
+                                    <string/>
                                    </property>
                                   </widget>
                                  </item>
@@ -2692,6 +2656,240 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QVBoxLayout" name="verticalLayout_25">
+                                 <item>
+                                  <widget class="QLabel" name="label_7">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Indices info</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="indice_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QVBoxLayout" name="verticalLayout_26">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QTextBrowser" name="Indices_text">
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </item>
+                            <item>
+                             <layout class="QVBoxLayout" name="response_frame2_2">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QFrame" name="search_frame_4">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QGridLayout" name="gridLayout_4">
+                                 <item row="1" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_9">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Type ID to delete.</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="1">
+                                  <widget class="QLineEdit" name="Delete_doc_id">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>34</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="0">
+                                  <widget class="QLineEdit" name="Delete_doc_name">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>34</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_10">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Index name</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="0" colspan="2">
+                                  <widget class="QPushButton" name="btn_delete_doc_id">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete document</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-minus.png</normaloff>:/icons/images/icons/cil-minus.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="0" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_11">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="response_text_frame_3">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_29">
                                  <item>
                                   <widget class="QLabel" name="label_9">
                                    <property name="font">
@@ -2747,159 +2945,11 @@ border: 2px solid #ff79c6;</string>
                                       <property name="maximumSize">
                                        <size>
                                         <width>16777215</width>
-                                        <height>30</height>
+                                        <height>16777215</height>
                                        </size>
                                       </property>
                                       <property name="readOnly">
                                        <bool>true</bool>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                             </layout>
-                            </item>
-                            <item>
-                             <layout class="QVBoxLayout" name="response_frame2_2">
-                              <property name="spacing">
-                               <number>0</number>
-                              </property>
-                              <property name="leftMargin">
-                               <number>0</number>
-                              </property>
-                              <item>
-                               <widget class="QFrame" name="response_json_frame_3">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QVBoxLayout" name="verticalLayout_27">
-                                 <item>
-                                  <widget class="QLabel" name="label_8">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Cluster health</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="health_frame">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_28">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Health_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="response_text_frame_3">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QVBoxLayout" name="verticalLayout_29">
-                                 <item>
-                                  <widget class="QLabel" name="label_7">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Indices info</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="indice_frame">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_26">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Indices_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
                                       </property>
                                      </widget>
                                     </item>
@@ -2996,88 +3046,6 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout_3">
-                                 <item row="5" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_13">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Delete Index</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="10" column="0">
-                                  <widget class="QLineEdit" name="Delete_index">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>34</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_15">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Type new create index.</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="9" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_16">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Type index to delete.</string>
-                                   </property>
-                                  </widget>
-                                 </item>
                                  <item row="10" column="1">
                                   <widget class="QPushButton" name="btn_delete_index">
                                    <property name="minimumSize">
@@ -3108,28 +3076,20 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="2" column="0">
-                                  <widget class="QLineEdit" name="Create_index">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
+                                 <item row="9" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_16">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                    <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
+                                    <string>Type index to delete.</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -3153,6 +3113,31 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="alignment">
                                     <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="10" column="0">
+                                  <widget class="QLineEdit" name="Delete_index">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>34</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
                                    </property>
                                   </widget>
                                  </item>
@@ -3186,6 +3171,71 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
+                                 <item row="2" column="0">
+                                  <widget class="QLineEdit" name="Create_index">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_15">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Type new create index.</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="5" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_13">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete Index</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
                                 </layout>
                                </widget>
                               </item>
@@ -3213,6 +3263,196 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QVBoxLayout" name="verticalLayout_32">
+                                 <item>
+                                  <widget class="QLabel" name="label_19">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Indices info</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="indice_frame_2">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QVBoxLayout" name="verticalLayout_37">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QTextBrowser" name="Indices_text_2">
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </item>
+                            <item>
+                             <layout class="QVBoxLayout" name="response_frame2_3">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QFrame" name="Danger_zone_frame">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QGridLayout" name="gridLayout_5">
+                                 <item row="2" column="0">
+                                  <widget class="QLineEdit" name="Password_del_all">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="1">
+                                  <widget class="QPushButton" name="btn_create_index_4">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);
+color: #ff5555;
+</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete All</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_22">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Password</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="0" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_20">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff5555;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Delete ALL</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="response_json_frame_4">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_34">
                                  <item>
                                   <widget class="QLabel" name="label_17">
                                    <property name="font">
@@ -3282,25 +3522,15 @@ border: 2px solid #ff79c6;</string>
                                 </layout>
                                </widget>
                               </item>
-                             </layout>
-                            </item>
-                            <item>
-                             <layout class="QVBoxLayout" name="response_frame2_3">
-                              <property name="spacing">
-                               <number>0</number>
-                              </property>
-                              <property name="leftMargin">
-                               <number>0</number>
-                              </property>
                               <item>
-                               <widget class="QFrame" name="response_json_frame_4">
+                               <widget class="QFrame" name="response_text_frame_4">
                                 <property name="frameShape">
                                  <enum>QFrame::StyledPanel</enum>
                                 </property>
                                 <property name="frameShadow">
                                  <enum>QFrame::Raised</enum>
                                 </property>
-                                <layout class="QVBoxLayout" name="verticalLayout_34">
+                                <layout class="QVBoxLayout" name="verticalLayout_36">
                                  <item>
                                   <widget class="QLabel" name="label_18">
                                    <property name="font">
@@ -3350,75 +3580,6 @@ border: 2px solid #ff79c6;</string>
                                     </property>
                                     <item>
                                      <widget class="QTextBrowser" name="Health_text_2">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="response_text_frame_4">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QVBoxLayout" name="verticalLayout_36">
-                                 <item>
-                                  <widget class="QLabel" name="label_19">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Indices info</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="indice_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_37">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Indices_text_2">
                                       <property name="styleSheet">
                                        <string notr="true"/>
                                       </property>
@@ -3667,18 +3828,14 @@ border: 2px solid #ff79c6;</string>
   <tabstop>maximizeRestoreAppBtn</tabstop>
   <tabstop>client_text</tabstop>
   <tabstop>Title_index_doc</tabstop>
-  <tabstop>Delete_doc_id</tabstop>
-  <tabstop>btn_delete_doc_id</tabstop>
   <tabstop>btn_index_doc</tabstop>
   <tabstop>response_json</tabstop>
   <tabstop>response_text</tabstop>
   <tabstop>Content_index_doc</tabstop>
-  <tabstop>Index_doc</tabstop>
   <tabstop>Result_text</tabstop>
   <tabstop>Index_combo</tabstop>
   <tabstop>Field_combo</tabstop>
   <tabstop>btn_document</tabstop>
-  <tabstop>Health_text</tabstop>
   <tabstop>Indices_text</tabstop>
   <tabstop>btn_search</tabstop>
   <tabstop>btn_index</tabstop>

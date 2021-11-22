@@ -87,17 +87,6 @@ class MainWindow(QMainWindow):
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is not found can't delete.")
 
-    def Update_doc(self):
-        # try:
-        doc = {
-            self.ui.Field_update_doc.currentText(): self.ui.Data_update_doc,
-        }
-        res = client.update(index=self.ui.Index_doc.currentText(), id=self.ui.ID_update_doc, body=doc)
-        self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
-
-        # except:
-        #     self.ui.Result_text.setText("Unknown error please try again.")
-
     def Del_doc(self):
         try:
             res = client.delete(index=self.ui.Index_doc.currentText(), id=self.ui.Delete_doc_id.text())
@@ -111,10 +100,11 @@ class MainWindow(QMainWindow):
                 'Title': self.ui.Title_index_doc.toPlainText(),
                 'Content': self.ui.Content_index_doc.toPlainText(),
             }
-            res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
-            # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
-            self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'] + ".")
-            print(res)
+            resp = client.index(index=self.ui.Index_doc.currentText(), id=self.ui.ID_index_doc.text(), document=doc)
+            self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".")
+            json_resp = json.dumps(resp, indent=4)
+            self.ui.Result_text.append(json_resp)
+
         except:
             self.ui.Result_text.setText("Unknown error please try again.")
 
@@ -219,10 +209,12 @@ class MainWindow(QMainWindow):
             resp = client.info()
             json_resp = json.dumps(resp, indent=4)
             widgets.client_text.setText(json_resp)
+            self.ui.Status_text.setText("Status: Connected")
             print("Connection complete")
         except:
             print("Connection error. is elasticsearch.bat running ?")
-            widgets.client_text.setText("Connection error. is elasticsearch.bat running ?")
+            self.ui.Status_text.setText("Status: Disconnected")
+            self.ui.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
     # BUTTONS CLICK
     def buttonClick(self):
