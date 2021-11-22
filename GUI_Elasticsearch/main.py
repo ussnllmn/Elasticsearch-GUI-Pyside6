@@ -271,9 +271,6 @@ class MainWindow(QMainWindow):
         if btnName == "btn_delete_doc_id":
             self.Del_doc()
 
-        if btnName == "btn_update_doc":
-            self.Update_doc()
-
         if btnName == "btn_create_index":
             self.Create_index()
 
