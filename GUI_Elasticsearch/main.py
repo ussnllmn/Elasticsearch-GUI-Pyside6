@@ -119,87 +119,6 @@ class MainWindow(QMainWindow):
         except:
             self.ui.Result_text.setText("Unknown error please try again.")
 
-    def show_Query(self):
-        self.ui.response_text.setText("")
-        # pass the field name and query args to filter dict
-        query = {
-            'match': {
-                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
-                # "age": 30
-            }
-        }
-        # get the index name and put into a string variable
-        index_name = self.ui.Index_combo.currentText()
-        # make sure that the user has entered an index name
-        if index_name == "":
-            json_resp = '{"error", "index name field cannot be empty"}'
-        else:
-            # pass the filter dict to the make_query() function
-            try:
-                resp = self.make_Query(query, index_name)
-                json_resp = json.dumps(resp, indent=4)
-                print("Elasticsearch response:", resp)
-                print("total hits:", len(resp["hits"]["hits"]))
-            except:
-                json_resp = "Cannot get response. is elasticsearch.bat running ?"
-                print("Cannot get response. is elasticsearch.bat running ?")
-        # change the label to match the Elasticsearch API response
-        self.ui.response_json.setText(json_resp)
-
-        try:
-            # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
-            all_hits = resp["hits"]["hits"]
-            i = 0
-            # iterate the nested dictionaries inside the ["hits"]["hits"] list
-            for num, doc in enumerate(all_hits):
-                # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
-
-                # Use 'iteritems()` instead of 'items()' if using Python 2
-                for key, value in doc.items():
-                    if key != "_source":
-                        self.ui.response_text.append(key + " = " + str(value))
-
-                self.ui.response_text.append("Title: " + all_hits[i]["_source"]["Title"])
-                self.ui.response_text.append("Content: " + all_hits[i]["_source"]["Content"])
-                self.ui.response_text.append("")
-                i += 1
-
-        except:
-            self.ui.response_text.setText("Query not found.")
-        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
-
-    def make_Query(self, query, index_name):
-        # make an API call to check if the index exists
-        index_exists = client.indices.exists(index=index_name)
-
-        # if it exists then make the API call
-        if index_exists:
-            print("Index_name:", index_name, "exists.")
-            print("Query:", query, "\n")
-
-            # catch any exceptions and return them to Kivy app
-            try:
-                # pass filter query to the client's search() method
-                response = client.search(index=index_name, query=query)
-
-                # print the query response for debugging purposes
-                print('response["hits"]:', len(response["hits"]))
-                print('response TYPE:', type(response))
-
-            except Exception as err:
-                print("search() index ERROR", err)
-                response = {"error": str(err)}
-
-        # error text response if index doesn't exist
-        else:
-            # build a string for the index-does-not-exist response
-            resp_text = "Elasticsearch index name '" + str(index_name)
-            resp_text += "' does not exist."
-            response = {"response": resp_text}
-
-        # return the dict response to Kivy app
-        return response
-
     def show_Health(self):
         health = client.cluster.health()
         json_health = json.dumps(health, indent=4)
@@ -238,58 +157,29 @@ class MainWindow(QMainWindow):
         else:
             self.ui.Result_text_2.setText("Incorrect password please try again.")
 
-    def show_Query2(self):
+    def show_Query(self):
         self.ui.response_text.setText("")
         # pass the field name and query args to filter dict
         query = {
             'match': {
                 self.ui.Field_combo.currentText(): self.ui.Query_name.text()
-                # "age": 30
             }
         }
-        # get the index name and put into a string variable
-        index_name = self.ui.Index_combo.currentText()
+        index_name = self.ui.Index_name.text()
         # make sure that the user has entered an index name
         if index_name == "":
-            json_resp = '{"error", "index name field cannot be empty"}'
+            self.ui.response_json.setText('{"error", "index name field cannot be empty"}')
         else:
-            # pass the filter dict to the make_query() function
             try:
-                resp = self.make_Query(query, index_name)
+                resp = client.search(index=index_name, query=query)
                 json_resp = json.dumps(resp, indent=4)
-                print("Elasticsearch response:", resp)
-                print("total hits:", len(resp["hits"]["hits"]))
+                self.ui.response_json.setText(json_resp)
+                self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value']+"\n")
+                for hit in resp['hits']['hits']:
+                    self.ui.response_text.append("ID: %(_id)s \nScore: %(_score)s" % hit)
+                    self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
             except:
-                json_resp = "Cannot get response. is elasticsearch.bat running ?"
-                print("Cannot get response. is elasticsearch.bat running ?")
-        # change the label to match the Elasticsearch API response
-        self.ui.response_json.setText(json_resp)
-
-        # resp = client.search(index="test-covid", query={"match_all": {}})
-        # self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'])
-        # for hit in resp['hits']['hits']:
-        #     self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
-        try:
-            # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
-            all_hits = resp["hits"]["hits"]
-            i = 0
-            # iterate the nested dictionaries inside the ["hits"]["hits"] list
-            for num, doc in enumerate(all_hits):
-                # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
-
-                # Use 'iteritems()` instead of 'items()' if using Python 2
-                for key, value in doc.items():
-                    if key != "_source":
-                        self.ui.response_text.append(key + " = " + str(value))
-
-                self.ui.response_text.append("Title: " + all_hits[i]["_source"]["Title"])
-                self.ui.response_text.append("Content: " + all_hits[i]["_source"]["Content"])
-                self.ui.response_text.append("")
-                i += 1
-
-        except:
-            self.ui.response_text.setText("Query not found.")
-        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
+                self.ui.response_text.setText("Query not found.")
 
     # BUTTONS CLICK
     def buttonClick(self):
@@ -317,13 +207,7 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         if btnName == "btn_search_doc":
-            # self.show_Query()
-            resp = client.search(index="test-covid", query={"match_all": {}})
-            self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'])
-            for hit in resp['hits']:
-                self.ui.response_text.append("Title: %(_id)f \nContent: %(_score)f" % hit['hits']+"\n")
-            # for hit in resp['hits']['hits']:
-            #     self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
+            self.show_Query()
 
         if btnName == "btn_index_doc":
             self.Index_doc()
