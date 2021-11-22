@@ -1850,8 +1850,117 @@ background-repeat: no-repeat;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout">
-                                 <item row="6" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
+                                 <item row="4" column="1">
+                                  <widget class="QPushButton" name="btn_search_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="9" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_8">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search all document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="8" column="1">
+                                  <widget class="QLineEdit" name="Query_name">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="4" column="0">
+                                  <widget class="QComboBox" name="Index_combo">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>test-covid</string>
+                                    </property>
+                                   </item>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -1863,8 +1972,39 @@ background-repeat: no-repeat;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Field name here..</string>
+                                    <string>Index Name</string>
                                    </property>
+                                  </widget>
+                                 </item>
+                                 <item row="11" column="0">
+                                  <widget class="QComboBox" name="Index_combo_all">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>test-covid</string>
+                                    </property>
+                                   </item>
                                   </widget>
                                  </item>
                                  <item row="8" column="0">
@@ -1903,33 +2043,38 @@ background-repeat: no-repeat;</string>
                                    </item>
                                   </widget>
                                  </item>
-                                 <item row="8" column="1">
-                                  <widget class="QLineEdit" name="Query_name">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
+                                 <item row="11" column="1">
+                                  <widget class="QPushButton" name="btn_search_doc_all">
                                    <property name="minimumSize">
                                     <size>
-                                     <width>0</width>
+                                     <width>150</width>
                                      <height>30</height>
                                     </size>
                                    </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>10</pointsize>
+                                     <italic>false</italic>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
                                    </property>
                                    <property name="text">
-                                    <string/>
+                                    <string>Search all</string>
                                    </property>
-                                   <property name="placeholderText">
-                                    <string/>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-layers.png</normaloff>:/icons/images/icons/cil-layers.png</iconset>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
+                                 <item row="6" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -1941,7 +2086,7 @@ background-repeat: no-repeat;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Index Name</string>
+                                    <string>Field name here..</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -1985,39 +2130,8 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="2" column="0">
-                                  <widget class="QLineEdit" name="Index_name">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="2" column="1">
-                                  <widget class="QPushButton" name="btn_search_doc">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
+                                 <item row="10" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
@@ -2025,18 +2139,11 @@ border: 2px solid #ff79c6;</string>
                                      <bold>false</bold>
                                     </font>
                                    </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                    <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Search</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                    <string>Index Name</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -2392,16 +2499,6 @@ border: 2px solid #ff79c6;</string>
                                    <item>
                                     <property name="text">
                                      <string>test-covid</string>
-                                    </property>
-                                   </item>
-                                   <item>
-                                    <property name="text">
-                                     <string>test1</string>
-                                    </property>
-                                   </item>
-                                   <item>
-                                    <property name="text">
-                                     <string>test2</string>
                                     </property>
                                    </item>
                                   </widget>
@@ -3800,6 +3897,7 @@ border: 2px solid #ff79c6;</string>
   <tabstop>response_text</tabstop>
   <tabstop>Content_index_doc</tabstop>
   <tabstop>Result_text</tabstop>
+  <tabstop>Index_combo</tabstop>
   <tabstop>Field_combo</tabstop>
   <tabstop>btn_document</tabstop>
   <tabstop>Indices_text</tabstop>
@@ -3809,6 +3907,7 @@ border: 2px solid #ff79c6;</string>
   <tabstop>toggleButton</tabstop>
   <tabstop>btn_home</tabstop>
   <tabstop>Query_name</tabstop>
+  <tabstop>btn_search_doc</tabstop>
   <tabstop>toggleLeftBox</tabstop>
   <tabstop>extraCloseColumnBtn</tabstop>
   <tabstop>textEdit</tabstop>

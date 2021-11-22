@@ -78,6 +78,31 @@ class MainWindow(QMainWindow):
 
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
+    def Search_query(self):
+        self.ui.response_text.setText("")
+        # pass the field name and query args to filter dict
+        query = {
+            'match': {
+                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
+            }
+        }
+        index_name = self.ui.Index_combo.currentText()
+        # make sure that the user has entered an index name
+        if index_name == "":
+            self.ui.response_json.setText('{"error", "index name field cannot be empty"}')
+            self.ui.response_text.setText("Got 0 Hits")
+        else:
+            try:
+                resp = client.search(index=index_name, query=query)
+                json_resp = json.dumps(resp, indent=4)
+                self.ui.response_json.setText(json_resp)
+                self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
+                for hit in resp['hits']['hits']:
+                    self.ui.response_text.append("ID: %(_id)s \nScore: %(_score)s" % hit)
+                    self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"] + "\n")
+            except:
+                self.ui.response_text.setText("Query not found.")
+
     def Create_index(self):
         try:
             resp = client.indices.create(index=self.ui.Create_index.text())
@@ -85,6 +110,8 @@ class MainWindow(QMainWindow):
             self.show_Indices()
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text_2.append(json_resp)
+            self.ui.Index_combo.addItem(self.ui.Create_index.text())
+            self.ui.Index_doc.addItem(self.ui.Create_index.text())
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
 
@@ -95,6 +122,7 @@ class MainWindow(QMainWindow):
             self.show_Indices()
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text_2.append(json_resp)
+            # self.ui.Index_combo.removeItem(int(self.ui.Delete_index.text()))
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is not found can't delete.")
 
@@ -112,7 +140,7 @@ class MainWindow(QMainWindow):
                 'Content': self.ui.Content_index_doc.toPlainText(),
             }
             resp = client.index(index=self.ui.Index_doc.currentText(), id=self.ui.ID_index_doc.text(), document=doc)
-            self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".")
+            self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".\n")
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text.append(json_resp)
 
@@ -157,30 +185,6 @@ class MainWindow(QMainWindow):
         else:
             self.ui.Result_text_2.setText("Incorrect password please try again.")
 
-    def show_Query(self):
-        self.ui.response_text.setText("")
-        # pass the field name and query args to filter dict
-        query = {
-            'match': {
-                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
-            }
-        }
-        index_name = self.ui.Index_name.text()
-        # make sure that the user has entered an index name
-        if index_name == "":
-            self.ui.response_json.setText('{"error", "index name field cannot be empty"}')
-        else:
-            try:
-                resp = client.search(index=index_name, query=query)
-                json_resp = json.dumps(resp, indent=4)
-                self.ui.response_json.setText(json_resp)
-                self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value']+"\n")
-                for hit in resp['hits']['hits']:
-                    self.ui.response_text.append("ID: %(_id)s \nScore: %(_score)s" % hit)
-                    self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
-            except:
-                self.ui.response_text.setText("Query not found.")
-
     # BUTTONS CLICK
     def buttonClick(self):
         btn = self.sender()
@@ -207,7 +211,7 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         if btnName == "btn_search_doc":
-            self.show_Query()
+            self.Search_query()
 
         if btnName == "btn_index_doc":
             self.Index_doc()
@@ -226,7 +230,7 @@ class MainWindow(QMainWindow):
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
-            self.show_Query()
+            self.Search_query()
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
