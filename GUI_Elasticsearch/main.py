@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
 
         widgets.btn_create_index.clicked.connect(self.buttonClick)
         widgets.btn_delete_index.clicked.connect(self.buttonClick)
-
+        widgets.btn_search_doc_all.clicked.connect(self.buttonClick)
         widgets.btn_del_all.clicked.connect(self.buttonClick)
 
         widgets.Query_name.keyReleaseEvent = self.check_Enter
@@ -140,7 +140,7 @@ class MainWindow(QMainWindow):
                 'Content': self.ui.Content_index_doc.toPlainText(),
             }
             resp = client.index(index=self.ui.Index_doc.currentText(), id=self.ui.ID_index_doc.text(), document=doc)
-            self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".\n")
+            self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".")
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text.append(json_resp)
 
@@ -169,7 +169,7 @@ class MainWindow(QMainWindow):
     def Del_ALL(self):
         if self.ui.Password_del_all.text() == "123456":
             all_indices = client.indices.get_alias().keys()
-            self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.")
+            self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.\n")
             # iterate the list of indexes
             for _index in all_indices:
                 # attempt to delete ALL indices in a 'try' and 'catch block
@@ -184,6 +184,25 @@ class MainWindow(QMainWindow):
             self.ui.Result_text_2.setText("Password field can't be empty.")
         else:
             self.ui.Result_text_2.setText("Incorrect password please try again.")
+
+    def Search_ALL(self):
+        self.ui.response_text.setText("")
+        index_name = self.ui.Index_combo.currentText()
+        index_exists = client.indices.exists(index=index_name)
+        if index_exists:
+            try:
+                resp = client.search(index=index_name, query={"match_all": {}})
+                json_resp = json.dumps(resp, indent=4)
+                self.ui.response_json.setText(json_resp)
+                self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
+                for hit in resp['hits']['hits']:
+                    self.ui.response_text.append("ID: %(_id)s \nScore: %(_score)s" % hit)
+                    self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"] + "\n")
+            except:
+                self.ui.response_text.setText("Query not found.")
+        else:
+            self.ui.response_json.setText("Index name: " + index_name + " does not exist.")
+            self.ui.response_text.setText("Query not found.")
 
     # BUTTONS CLICK
     def buttonClick(self):
@@ -227,6 +246,9 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_del_all":
             self.Del_ALL()
+
+        if btnName == "btn_search_doc_all":
+            self.Search_ALL()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
