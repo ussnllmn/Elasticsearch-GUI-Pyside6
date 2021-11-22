@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainPYdNMM.ui'
+## Form generated from reading UI file 'mainYtCqeI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
 "#indice_frame_2{	\n"
 "	border: 2px solid #bd93f9;\n"
 "}\n"
-"#Result_text_2{	\n"
+"#result_frame_2{	\n"
 "	border: 2px solid #bd93f9;\n"
 "}\n"
 "#Danger_zone_frame{	\n"
@@ -112,8 +112,8 @@ class Ui_MainWindow(object):
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
-"#response_json_fram"
-                        "e{\n"
+"#response_json_fra"
+                        "me{\n"
 "	border: 2px solid #bd93f9;\n"
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
@@ -145,8 +145,8 @@ class Ui_MainWindow(object):
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: 22px soli"
-                        "d transparent;\n"
+"	border-left: 22px sol"
+                        "id transparent;\n"
 "	background-color: transparent;\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
@@ -183,8 +183,8 @@ class Ui_MainWindow(object):
 "\n"
 "/* Toggle Button */\n"
 "#toggleButton {\n"
-"	background-position: le"
-                        "ft center;\n"
+"	background-position: l"
+                        "eft center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
 "	border-left: 20px solid transparent;\n"
@@ -224,8 +224,8 @@ class Ui_MainWindow(object):
 "#extraLabel { color: rgb(255, 255, 255); }\n"
 "\n"
 "/* Btn Close */\n"
-"#extraCloseColumnBtn { background"
-                        "-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
+"#extraCloseColumnBtn { backgroun"
+                        "d-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
 "#extraCloseColumnBtn:hover { background-color: rgb(196, 161, 249); border-style: solid; border-radius: 4px; }\n"
 "#extraCloseColumnBtn:pressed { background-color: rgb(180, 141, 238); border-style: solid; border-radius: 4px; }\n"
 "\n"
@@ -1726,17 +1726,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_32.addWidget(self.indice_frame_2)
 
-
-        self.info_frame_5.addWidget(self.info_frame_6)
-
-
-        self.horizontalLayout_9.addLayout(self.info_frame_5)
-
-        self.response_frame2_3 = QVBoxLayout()
-        self.response_frame2_3.setSpacing(0)
-        self.response_frame2_3.setObjectName(u"response_frame2_3")
-        self.response_frame2_3.setContentsMargins(0, -1, -1, -1)
-        self.Danger_zone_frame = QFrame(self.row_4)
+        self.Danger_zone_frame = QFrame(self.info_frame_6)
         self.Danger_zone_frame.setObjectName(u"Danger_zone_frame")
         self.Danger_zone_frame.setMinimumSize(QSize(0, 0))
         self.Danger_zone_frame.setFrameShape(QFrame.StyledPanel)
@@ -1782,8 +1772,18 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.label_20, 0, 0, 1, 2)
 
 
-        self.response_frame2_3.addWidget(self.Danger_zone_frame)
+        self.verticalLayout_32.addWidget(self.Danger_zone_frame)
 
+
+        self.info_frame_5.addWidget(self.info_frame_6)
+
+
+        self.horizontalLayout_9.addLayout(self.info_frame_5)
+
+        self.response_frame2_3 = QVBoxLayout()
+        self.response_frame2_3.setSpacing(0)
+        self.response_frame2_3.setObjectName(u"response_frame2_3")
+        self.response_frame2_3.setContentsMargins(0, -1, -1, -1)
         self.response_json_frame_4 = QFrame(self.row_4)
         self.response_json_frame_4.setObjectName(u"response_json_frame_4")
         self.response_json_frame_4.setFrameShape(QFrame.StyledPanel)

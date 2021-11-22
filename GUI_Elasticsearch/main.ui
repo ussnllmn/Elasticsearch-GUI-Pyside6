@@ -88,7 +88,7 @@ Bg App */
 #indice_frame_2{	
 	border: 2px solid #bd93f9;
 }
-#Result_text_2{	
+#result_frame_2{	
 	border: 2px solid #bd93f9;
 }
 #Danger_zone_frame{	
@@ -3320,6 +3320,120 @@ border: 2px solid #ff79c6;</string>
                                    </layout>
                                   </widget>
                                  </item>
+                                 <item>
+                                  <widget class="QFrame" name="Danger_zone_frame">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QGridLayout" name="gridLayout_5">
+                                    <item row="2" column="0">
+                                     <widget class="QLineEdit" name="Password_del_all">
+                                      <property name="sizePolicy">
+                                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                       </sizepolicy>
+                                      </property>
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>0</width>
+                                        <height>30</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                      </property>
+                                      <property name="text">
+                                       <string/>
+                                      </property>
+                                      <property name="echoMode">
+                                       <enum>QLineEdit::Password</enum>
+                                      </property>
+                                      <property name="placeholderText">
+                                       <string/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item row="2" column="1">
+                                     <widget class="QPushButton" name="btn_del_all">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>150</width>
+                                        <height>30</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>10</pointsize>
+                                        <italic>false</italic>
+                                        <bold>false</bold>
+                                       </font>
+                                      </property>
+                                      <property name="cursor">
+                                       <cursorShape>PointingHandCursor</cursorShape>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">background-color: rgb(52, 59, 72);
+color: #ff5555;
+</string>
+                                      </property>
+                                      <property name="text">
+                                       <string>Delete All</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item row="1" column="0">
+                                     <widget class="QLabel" name="labelBoxBlenderInstalation_22">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>10</pointsize>
+                                        <italic>false</italic>
+                                        <bold>false</bold>
+                                       </font>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                      <property name="text">
+                                       <string>Password</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item row="0" column="0" colspan="2">
+                                     <widget class="QLabel" name="label_20">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>10</pointsize>
+                                        <italic>false</italic>
+                                        <bold>true</bold>
+                                        <underline>false</underline>
+                                       </font>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff5555;</string>
+                                      </property>
+                                      <property name="text">
+                                       <string>Delete ALL</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
                                 </layout>
                                </widget>
                               </item>
@@ -3333,120 +3447,6 @@ border: 2px solid #ff79c6;</string>
                               <property name="leftMargin">
                                <number>0</number>
                               </property>
-                              <item>
-                               <widget class="QFrame" name="Danger_zone_frame">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>0</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QGridLayout" name="gridLayout_5">
-                                 <item row="2" column="0">
-                                  <widget class="QLineEdit" name="Password_del_all">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="echoMode">
-                                    <enum>QLineEdit::Password</enum>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="2" column="1">
-                                  <widget class="QPushButton" name="btn_del_all">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);
-color: #ff5555;
-</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Delete All</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_22">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Password</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="0" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_20">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff5555;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Delete ALL</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
                               <item>
                                <widget class="QFrame" name="response_json_frame_4">
                                 <property name="frameShape">

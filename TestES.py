@@ -3,24 +3,6 @@ from datetime import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch.client import indices
 
-# ////////////////////// DELETE ALL //////////////////////////////////////////
-# create a new instance of the Elasticsearch client class
-# elastic = Elasticsearch()
-#
-# # get the names of the indexes
-# all_indices = elastic.indices.get_alias().keys()
-# print ("\nAttempting to delete", len(all_indices), "indexes.")
-#
-# # iterate the list of indexes
-# for _index in all_indices:
-# # attempt to delete ALL indices in a 'try' and 'catch block
-#     try:
-#         if "." not in _index: # avoid deleting indexes like `.kibana`
-#             elastic.indices.delete(index=_index)
-#             print ("Successfully deleted:", _index)
-#     except Exception as error:
-#         print ('indices.delete error:', error, 'for index:', _index)
-
 
 # ////////////////////// UPDATE //////////////////////////////////////////
 # es = Elasticsearch()
