@@ -219,18 +219,23 @@ class MainWindow(QMainWindow):
             self.ui.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
     def Del_ALL(self):
-        all_indices = client.indices.get_alias().keys()
-        self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.")
-        # iterate the list of indexes
-        for _index in all_indices:
-            # attempt to delete ALL indices in a 'try' and 'catch block
-            try:
-                if "." not in _index: # avoid deleting indexes like `.kibana`
-                    client.indices.delete(index=_index)
-                    self.ui.Result_text_2.append("Successfully deleted: "+_index)
-            except Exception as error:
-                self.ui.Result_text_2.append('indices.delete error: ' + str(error) + 'for index: ' + _index)
-        self.show_Indices()
+        if self.ui.Password_del_all.text() == "123456":
+            all_indices = client.indices.get_alias().keys()
+            self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.")
+            # iterate the list of indexes
+            for _index in all_indices:
+                # attempt to delete ALL indices in a 'try' and 'catch block
+                try:
+                    if "." not in _index: # avoid deleting indexes like `.kibana`
+                        client.indices.delete(index=_index)
+                        self.ui.Result_text_2.append("Successfully deleted: "+_index)
+                except Exception as error:
+                    self.ui.Result_text_2.append('indices.delete error: ' + str(error) + 'for index: ' + _index)
+            self.show_Indices()
+        elif self.ui.Password_del_all.text() == "":
+            self.ui.Result_text_2.setText("Password field can't be empty.")
+        else:
+            self.ui.Result_text_2.setText("Incorrect password please try again.")
 
     # BUTTONS CLICK
     def buttonClick(self):

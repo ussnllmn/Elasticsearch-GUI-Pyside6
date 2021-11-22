@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainByyHmI.ui'
+## Form generated from reading UI file 'mainPYdNMM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -1749,6 +1749,7 @@ class Ui_MainWindow(object):
         self.Password_del_all.setSizePolicy(sizePolicy3)
         self.Password_del_all.setMinimumSize(QSize(0, 30))
         self.Password_del_all.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.Password_del_all.setEchoMode(QLineEdit.Password)
 
         self.gridLayout_5.addWidget(self.Password_del_all, 2, 0, 1, 1)
 
