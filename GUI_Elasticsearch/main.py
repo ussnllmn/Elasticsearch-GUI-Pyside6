@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
 
     def Del_index(self):
         try:
-            client.indices.delete(index=self.ui.Delete_index.text())
+            client.indices.delete(index=self.ui.Delete_index.text(), ignore=[400, 404])
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is deleted.")
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is not found can't delete.")
