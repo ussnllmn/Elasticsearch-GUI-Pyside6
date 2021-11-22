@@ -59,8 +59,7 @@ class MainWindow(QMainWindow):
 
         widgets.btn_send.clicked.connect(self.buttonClick)
 
-        widgets.btn_add_doc.clicked.connect(self.buttonClick)
-        widgets.btn_update_doc.clicked.connect(self.buttonClick)
+        widgets.btn_index_doc.clicked.connect(self.buttonClick)
         widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
 
         widgets.btn_create_index.clicked.connect(self.buttonClick)
@@ -70,17 +69,23 @@ class MainWindow(QMainWindow):
 
     def Create_index(self):
         try:
-            client.indices.create(index=self.ui.Create_index.text())
+            resp = client.indices.create(index=self.ui.Create_index.text())
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is created.")
+            self.show_Indices()
+            json_resp = json.dumps(resp, indent=4)
+            self.ui.Result_text_2.append(json_resp)
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
 
     def Del_index(self):
         try:
-            client.indices.delete(index=self.ui.Delete_index.text(), ignore=[400, 404])
-            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is deleted.")
+            resp = client.indices.delete(index=self.ui.Delete_index.text())
+            self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is deleted.")
+            self.show_Indices()
+            json_resp = json.dumps(resp, indent=4)
+            self.ui.Result_text_2.append(json_resp)
         except:
-            self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is not found can't delete.")
+            self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is not found can't delete.")
 
     def Update_doc(self):
         # try:
@@ -100,11 +105,11 @@ class MainWindow(QMainWindow):
         except:
             self.ui.Result_text.setText("ID: " + self.ui.Delete_doc_id.text() + " is not found can't delete.")
 
-    def Add_doc(self):
+    def Index_doc(self):
         try:
             doc = {
-                'Title': self.ui.Title_add_doc.toPlainText(),
-                'Content': self.ui.Content_add_doc.toPlainText(),
+                'Title': self.ui.Title_index_doc.toPlainText(),
+                'Content': self.ui.Content_index_doc.toPlainText(),
             }
             res = client.index(index=self.ui.Index_doc.currentText(), document=doc)
             # self.ui.Result_label.setText("ID: " + res['_id'] + " is " + res['result'])
@@ -200,6 +205,8 @@ class MainWindow(QMainWindow):
         self.ui.Health_text_2.setText(json_health)
 
     def show_Indices(self):
+        self.ui.Indices_text.setText("")
+        self.ui.Indices_text_2.setText("")
         indices = client.indices.get_alias().keys()
         sortIndices = sorted(indices)
         for index in sortIndices:
@@ -245,8 +252,8 @@ class MainWindow(QMainWindow):
         if btnName == "btn_send":
             self.show_Query()
 
-        if btnName == "btn_add_doc":
-            self.Add_doc()
+        if btnName == "btn_index_doc":
+            self.Index_doc()
 
         if btnName == "btn_delete_doc_id":
             self.Del_doc()
