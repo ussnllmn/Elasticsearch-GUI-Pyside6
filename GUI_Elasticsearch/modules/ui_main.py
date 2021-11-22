@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainYtCqeI.ui'
+## Form generated from reading UI file 'mainfWlJer.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -1089,17 +1089,17 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.labelBoxBlenderInstalation_3, 6, 0, 1, 1)
 
-        self.btn_send = QPushButton(self.search_frame)
-        self.btn_send.setObjectName(u"btn_send")
-        self.btn_send.setMinimumSize(QSize(150, 30))
-        self.btn_send.setFont(font)
-        self.btn_send.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_send.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        self.btn_search_doc = QPushButton(self.search_frame)
+        self.btn_search_doc.setObjectName(u"btn_search_doc")
+        self.btn_search_doc.setMinimumSize(QSize(150, 30))
+        self.btn_search_doc.setFont(font)
+        self.btn_search_doc.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_search_doc.setStyleSheet(u"background-color: rgb(52, 59, 72);")
         icon3 = QIcon()
         icon3.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_send.setIcon(icon3)
+        self.btn_search_doc.setIcon(icon3)
 
-        self.gridLayout.addWidget(self.btn_send, 4, 1, 1, 1)
+        self.gridLayout.addWidget(self.btn_search_doc, 4, 1, 1, 1)
 
         self.Index_combo = QComboBox(self.search_frame)
         self.Index_combo.addItem("")
@@ -1987,14 +1987,14 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.closeAppBtn, self.toggleButton)
         QWidget.setTabOrder(self.toggleButton, self.btn_home)
         QWidget.setTabOrder(self.btn_home, self.Query_name)
-        QWidget.setTabOrder(self.Query_name, self.btn_send)
-        QWidget.setTabOrder(self.btn_send, self.toggleLeftBox)
+        QWidget.setTabOrder(self.Query_name, self.btn_search_doc)
+        QWidget.setTabOrder(self.btn_search_doc, self.toggleLeftBox)
         QWidget.setTabOrder(self.toggleLeftBox, self.extraCloseColumnBtn)
         QWidget.setTabOrder(self.extraCloseColumnBtn, self.textEdit)
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2038,7 +2038,7 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
-        self.btn_send.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.btn_search_doc.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         self.Index_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
         self.Index_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"test1", None))
         self.Index_combo.setItemText(2, QCoreApplication.translate("MainWindow", u"covid-19", None))

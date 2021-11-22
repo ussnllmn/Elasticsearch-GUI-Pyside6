@@ -48,16 +48,25 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
-        self.show_Client()
-        self.show_Indices()
-        self.show_Health()
+        try:
+            self.show_Client()
+            self.show_Indices()
+            self.show_Health()
+            self.ui.Status_text.setText("Status: Connected")
+        except:
+            error_text = "Connection error. is elasticsearch.bat running ?"
+            self.ui.Status_text.setText("Status: Disconnected")
+            self.ui.client_text.setText(error_text)
+            self.ui.Indices_text.setText(error_text)
+            self.ui.Indices_text_2.setText(error_text)
+            self.ui.Health_text_2.setText(error_text)
 
         widgets.btn_home.clicked.connect(self.buttonClick)
         widgets.btn_search.clicked.connect(self.buttonClick)
         widgets.btn_document.clicked.connect(self.buttonClick)
         widgets.btn_index.clicked.connect(self.buttonClick)
 
-        widgets.btn_send.clicked.connect(self.buttonClick)
+        widgets.btn_search_doc.clicked.connect(self.buttonClick)
 
         widgets.btn_index_doc.clicked.connect(self.buttonClick)
         widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
@@ -206,17 +215,9 @@ class MainWindow(QMainWindow):
             self.ui.Indices_text_2.append(index)
 
     def show_Client(self):
-        try:
-            print("Connecting to http://localhost:9200")
-            resp = client.info()
-            json_resp = json.dumps(resp, indent=4)
-            widgets.client_text.setText(json_resp)
-            self.ui.Status_text.setText("Status: Connected")
-            print("Connection complete")
-        except:
-            print("Connection error. is elasticsearch.bat running ?")
-            self.ui.Status_text.setText("Status: Disconnected")
-            self.ui.client_text.setText("Connection error. is elasticsearch.bat running ?")
+        resp = client.info()
+        json_resp = json.dumps(resp, indent=4)
+        self.ui.client_text.setText(json_resp)
 
     def Del_ALL(self):
         if self.ui.Password_del_all.text() == "123456":
@@ -236,6 +237,59 @@ class MainWindow(QMainWindow):
             self.ui.Result_text_2.setText("Password field can't be empty.")
         else:
             self.ui.Result_text_2.setText("Incorrect password please try again.")
+
+    def show_Query2(self):
+        self.ui.response_text.setText("")
+        # pass the field name and query args to filter dict
+        query = {
+            'match': {
+                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
+                # "age": 30
+            }
+        }
+        # get the index name and put into a string variable
+        index_name = self.ui.Index_combo.currentText()
+        # make sure that the user has entered an index name
+        if index_name == "":
+            json_resp = '{"error", "index name field cannot be empty"}'
+        else:
+            # pass the filter dict to the make_query() function
+            try:
+                resp = self.make_Query(query, index_name)
+                json_resp = json.dumps(resp, indent=4)
+                print("Elasticsearch response:", resp)
+                print("total hits:", len(resp["hits"]["hits"]))
+            except:
+                json_resp = "Cannot get response. is elasticsearch.bat running ?"
+                print("Cannot get response. is elasticsearch.bat running ?")
+        # change the label to match the Elasticsearch API response
+        self.ui.response_json.setText(json_resp)
+
+        # resp = client.search(index="test-covid", query={"match_all": {}})
+        # self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'])
+        # for hit in resp['hits']['hits']:
+        #     self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
+        try:
+            # returns 4 different keys: "took", "timed_out", "_shards", and "hits"
+            all_hits = resp["hits"]["hits"]
+            i = 0
+            # iterate the nested dictionaries inside the ["hits"]["hits"] list
+            for num, doc in enumerate(all_hits):
+                # self.ui.response_text.append("DOC ID:" + str(doc["_id"]) + "--->" + str(doc) + str(type(doc)))
+
+                # Use 'iteritems()` instead of 'items()' if using Python 2
+                for key, value in doc.items():
+                    if key != "_source":
+                        self.ui.response_text.append(key + " = " + str(value))
+
+                self.ui.response_text.append("Title: " + all_hits[i]["_source"]["Title"])
+                self.ui.response_text.append("Content: " + all_hits[i]["_source"]["Content"])
+                self.ui.response_text.append("")
+                i += 1
+
+        except:
+            self.ui.response_text.setText("Query not found.")
+        # print(json.loads(json_resp)["hits"]["hits"][0]["_source"])
 
     # BUTTONS CLICK
     def buttonClick(self):
@@ -262,8 +316,14 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
-        if btnName == "btn_send":
-            self.show_Query()
+        if btnName == "btn_search_doc":
+            # self.show_Query()
+            resp = client.search(index="test-covid", query={"match_all": {}})
+            self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'])
+            for hit in resp['hits']:
+                self.ui.response_text.append("Title: %(_id)f \nContent: %(_score)f" % hit['hits']+"\n")
+            # for hit in resp['hits']['hits']:
+            #     self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"]+"\n")
 
         if btnName == "btn_index_doc":
             self.Index_doc()
