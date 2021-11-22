@@ -65,6 +65,8 @@ class MainWindow(QMainWindow):
         widgets.btn_create_index.clicked.connect(self.buttonClick)
         widgets.btn_delete_index.clicked.connect(self.buttonClick)
 
+        widgets.btn_del_all.clicked.connect(self.buttonClick)
+
         widgets.Query_name.keyReleaseEvent = self.check_Enter
 
     def Create_index(self):
@@ -216,6 +218,20 @@ class MainWindow(QMainWindow):
             self.ui.Status_text.setText("Status: Disconnected")
             self.ui.client_text.setText("Connection error. is elasticsearch.bat running ?")
 
+    def Del_ALL(self):
+        all_indices = client.indices.get_alias().keys()
+        self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.")
+        # iterate the list of indexes
+        for _index in all_indices:
+            # attempt to delete ALL indices in a 'try' and 'catch block
+            try:
+                if "." not in _index: # avoid deleting indexes like `.kibana`
+                    client.indices.delete(index=_index)
+                    self.ui.Result_text_2.append("Successfully deleted: "+_index)
+            except Exception as error:
+                self.ui.Result_text_2.append('indices.delete error: ' + str(error) + 'for index: ' + _index)
+        self.show_Indices()
+
     # BUTTONS CLICK
     def buttonClick(self):
         btn = self.sender()
@@ -258,6 +274,9 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_delete_index":
             self.Del_index()
+
+        if btnName == "btn_del_all":
+            self.Del_ALL()
 
     def check_Enter(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:

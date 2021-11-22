@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainTMNiAf.ui'
+## Form generated from reading UI file 'mainByyHmI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -1752,16 +1752,16 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5.addWidget(self.Password_del_all, 2, 0, 1, 1)
 
-        self.btn_create_index_4 = QPushButton(self.Danger_zone_frame)
-        self.btn_create_index_4.setObjectName(u"btn_create_index_4")
-        self.btn_create_index_4.setMinimumSize(QSize(150, 30))
-        self.btn_create_index_4.setFont(font)
-        self.btn_create_index_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_create_index_4.setStyleSheet(u"background-color: rgb(52, 59, 72);\n"
+        self.btn_del_all = QPushButton(self.Danger_zone_frame)
+        self.btn_del_all.setObjectName(u"btn_del_all")
+        self.btn_del_all.setMinimumSize(QSize(150, 30))
+        self.btn_del_all.setFont(font)
+        self.btn_del_all.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_del_all.setStyleSheet(u"background-color: rgb(52, 59, 72);\n"
 "color: #ff5555;\n"
 "")
 
-        self.gridLayout_5.addWidget(self.btn_create_index_4, 2, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.btn_del_all, 2, 1, 1, 1)
 
         self.labelBoxBlenderInstalation_22 = QLabel(self.Danger_zone_frame)
         self.labelBoxBlenderInstalation_22.setObjectName(u"labelBoxBlenderInstalation_22")
@@ -2093,7 +2093,7 @@ class Ui_MainWindow(object):
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Indices info", None))
         self.Password_del_all.setText("")
         self.Password_del_all.setPlaceholderText("")
-        self.btn_create_index_4.setText(QCoreApplication.translate("MainWindow", u"Delete All", None))
+        self.btn_del_all.setText(QCoreApplication.translate("MainWindow", u"Delete All", None))
         self.labelBoxBlenderInstalation_22.setText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"Delete ALL", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Result", None))

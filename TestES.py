@@ -20,15 +20,7 @@ from elasticsearch.client import indices
 #             print ("Successfully deleted:", _index)
 #     except Exception as error:
 #         print ('indices.delete error:', error, 'for index:', _index)
-#
-# # now create a new index
-# elastic.indices.create(index="new-index")
-#
-# # verify the new index was created
-# final_indices = elastic.indices.get_alias().keys()
-# print ("\nNew total:", len(final_indices), "indexes.")
-# for _index in final_indices:
-#     print ("Index name:", _index)
+
 
 # ////////////////////// UPDATE //////////////////////////////////////////
 # es = Elasticsearch()
