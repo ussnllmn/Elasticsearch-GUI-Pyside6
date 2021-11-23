@@ -66,7 +66,8 @@ class MainWindow(QMainWindow):
         widgets.btn_document.clicked.connect(self.buttonClick)
         widgets.btn_index.clicked.connect(self.buttonClick)
 
-        widgets.btn_search_doc.clicked.connect(self.buttonClick)
+        widgets.btn_search_doc_query.clicked.connect(self.buttonClick)
+        widgets.btn_search_doc_id.clicked.connect(self.buttonClick)
 
         widgets.btn_index_doc.clicked.connect(self.buttonClick)
         widgets.btn_delete_doc_id.clicked.connect(self.buttonClick)
@@ -77,6 +78,20 @@ class MainWindow(QMainWindow):
         widgets.btn_del_all.clicked.connect(self.buttonClick)
 
         widgets.Query_name.keyReleaseEvent = self.check_Enter
+
+    def Search_id(self):
+        self.ui.response_text.setText("")
+        index_name = self.ui.Index_combo.currentText()
+        ID = self.ui.ID_name.text()
+        try:
+            resp = client.get(index=index_name, id=self.ui.ID_name.text())
+            json_resp = json.dumps(resp, indent=4)
+            self.ui.response_json.setText(json_resp)
+            self.ui.response_text.append("Index: " + index_name + "\nID: " + ID)
+            self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % resp['_source'])
+        except:
+            self.ui.response_json.setText("Index: " + index_name + "\nID: " + ID + " not found.")
+            self.ui.response_text.setText("Query not found.")
 
     def Search_query(self):
         self.ui.response_text.setText("")
@@ -89,7 +104,7 @@ class MainWindow(QMainWindow):
         index_name = self.ui.Index_combo.currentText()
         # make sure that the user has entered an index name
         if index_name == "":
-            self.ui.response_json.setText('{"error", "index name field cannot be empty"}')
+            self.ui.response_json.setText("Index name field cannot be empty")
             self.ui.response_text.setText("Got 0 Hits")
         else:
             try:
@@ -229,8 +244,11 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
-        if btnName == "btn_search_doc":
+        if btnName == "btn_search_doc_query":
             self.Search_query()
+
+        if btnName == "btn_search_doc_id":
+            self.Search_id()
 
         if btnName == "btn_index_doc":
             self.Index_doc()
