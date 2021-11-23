@@ -77,7 +77,13 @@ class MainWindow(QMainWindow):
         widgets.btn_search_doc_all.clicked.connect(self.buttonClick)
         widgets.btn_del_all.clicked.connect(self.buttonClick)
 
-        widgets.Query_name.keyReleaseEvent = self.check_Enter
+        widgets.Query_name.keyReleaseEvent = self.enter_Query
+        widgets.ID_name.keyReleaseEvent = self.enter_ID
+        widgets.Delete_doc_name.keyReleaseEvent = self.enter_delID
+        widgets.Delete_doc_id.keyReleaseEvent = self.enter_delID
+        widgets.Create_index.keyReleaseEvent = self.enter_creIn
+        widgets.Delete_index.keyReleaseEvent = self.enter_delIn
+        widgets.Password_del_all.keyReleaseEvent = self.enter_delALL
 
     def Search_id(self):
         self.ui.response_text.setText("")
@@ -130,7 +136,7 @@ class MainWindow(QMainWindow):
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
 
-    def Del_index(self):
+    def Delete_index(self):
         try:
             resp = client.indices.delete(index=self.ui.Delete_index.text())
             self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is deleted.")
@@ -141,7 +147,7 @@ class MainWindow(QMainWindow):
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Delete_index.text() + " is not found can't delete.")
 
-    def Del_doc(self):
+    def Delete_doc(self):
         try:
             res = client.delete(index=self.ui.Index_doc.currentText(), id=self.ui.Delete_doc_id.text())
             self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'])
@@ -181,7 +187,7 @@ class MainWindow(QMainWindow):
         json_resp = json.dumps(resp, indent=4)
         self.ui.client_text.setText(json_resp)
 
-    def Del_ALL(self):
+    def Delete_ALL(self):
         if self.ui.Password_del_all.text() == "123456":
             all_indices = client.indices.get_alias().keys()
             self.ui.Result_text_2.setText("Attempting to delete " + str(len(all_indices)) + " indexes.\n")
@@ -254,23 +260,43 @@ class MainWindow(QMainWindow):
             self.Index_doc()
 
         if btnName == "btn_delete_doc_id":
-            self.Del_doc()
+            self.Delete_doc()
 
         if btnName == "btn_create_index":
             self.Create_index()
 
         if btnName == "btn_delete_index":
-            self.Del_index()
+            self.Delete_index()
 
         if btnName == "btn_del_all":
-            self.Del_ALL()
+            self.Delete_ALL()
 
         if btnName == "btn_search_doc_all":
             self.Search_ALL()
 
-    def check_Enter(self, event):
+    def enter_Query(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
             self.Search_query()
+
+    def enter_ID(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Search_id()
+
+    def enter_delID(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Delete_doc()
+
+    def enter_creIn(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Create_index()
+
+    def enter_delIn(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Delete_index()
+
+    def enter_delALL(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Delete_ALL()
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
