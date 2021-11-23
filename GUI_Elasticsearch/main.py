@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
             json_resp = json.dumps(resp, indent=4)
             self.ui.response_json.setText(json_resp)
             self.ui.response_text.append("Index: " + index_name + "\nID: " + ID)
-            self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % resp['_source'])
+            self.ui.response_text.append("Title: %(Title)s\nContent: %(Content)s" % resp['_source'])
         except:
             self.ui.response_json.setText("Index: " + index_name + "\nID: " + ID + " not found.")
             self.ui.response_text.setText("Query not found.")
@@ -113,8 +113,8 @@ class MainWindow(QMainWindow):
                 self.ui.response_json.setText(json_resp)
                 self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
                 for hit in resp['hits']['hits']:
-                    self.ui.response_text.append("ID: %(_id)s \nScore: %(_score)s" % hit)
-                    self.ui.response_text.append("Title: %(Title)s \nContent: %(Content)s" % hit["_source"] + "\n")
+                    self.ui.response_text.append("ID: %(_id)s\nScore: %(_score)s" % hit)
+                    self.ui.response_text.append("Title: %(Title)s\nContent: %(Content)s" % hit["_source"] + "\n")
             except:
                 self.ui.response_text.setText("Query not found.")
 
