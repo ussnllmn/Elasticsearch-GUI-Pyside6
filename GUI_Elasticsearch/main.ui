@@ -264,7 +264,7 @@ Content App */
 
 /* Bottom Bar */
 #bottomBar { background-color: rgb(44, 49, 58); border-bottom-right-radius: 12px;}
-#bottomBar QLabel { font-size: 11px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }
+#bottomBar QLabel { font-size: 16px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }
 
 /* CONTENT SETTINGS */
 /* MENUS */
@@ -1764,7 +1764,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>3</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
