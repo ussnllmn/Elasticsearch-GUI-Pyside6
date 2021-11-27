@@ -78,6 +78,7 @@ class MainWindow(QMainWindow):
         widgets.btn_del_all.clicked.connect(self.buttonClick)
 
         widgets.Query_name.keyReleaseEvent = self.enter_Query
+        widgets.Index_name_2.keyReleaseEvent = self.enter_searchALL
         widgets.ID_name.keyReleaseEvent = self.enter_ID
         widgets.Delete_doc_name.keyReleaseEvent = self.enter_delID
         widgets.Delete_doc_id.keyReleaseEvent = self.enter_delID
@@ -87,7 +88,7 @@ class MainWindow(QMainWindow):
 
     def Search_id(self):
         self.ui.response_text.setText("")
-        index_name = self.ui.Index_combo.currentText()
+        index_name = self.ui.Index_name.text()
         ID = self.ui.ID_name.text()
         try:
             resp = client.get(index=index_name, id=self.ui.ID_name.text())
@@ -103,18 +104,22 @@ class MainWindow(QMainWindow):
         self.ui.response_text.setText("")
         # pass the field name and query args to filter dict
         query = {
-            'match': {
-                self.ui.Field_combo.currentText(): self.ui.Query_name.text()
+          "query": {
+            "multi_match": {
+              "analyzer": "thai",
+              "query": self.ui.Query_name.text(),
+              "fields": ["Title", "Content"]
             }
+          }
         }
-        index_name = self.ui.Index_combo.currentText()
+        index_name = self.ui.Index_name.text()
         # make sure that the user has entered an index name
         if index_name == "":
             self.ui.response_json.setText("Index name field cannot be empty")
             self.ui.response_text.setText("Got 0 Hits")
         else:
             try:
-                resp = client.search(index=index_name, query=query)
+                resp = client.search(index=index_name, body=query)
                 json_resp = json.dumps(resp, indent=4)
                 self.ui.response_json.setText(json_resp)
                 self.ui.response_text.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
@@ -125,13 +130,26 @@ class MainWindow(QMainWindow):
                 self.ui.response_text.setText("Query not found.")
 
     def Create_index(self):
+        query = {
+            "mappings": {
+                "properties": {
+                    "Title": {
+                        "type": "text",
+                        "analyzer": "thai"
+                    },
+                    "Content": {
+                        "type": "text",
+                        "analyzer": "thai"
+                    }
+                }
+            }
+        }
         try:
-            resp = client.indices.create(index=self.ui.Create_index.text())
+            resp = client.indices.create(index=self.ui.Create_index.text(), body=query)
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is created.")
             self.show_Indices()
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text_2.append(json_resp)
-            self.ui.Index_combo.addItem(self.ui.Create_index.text())
             self.ui.Index_doc.addItem(self.ui.Create_index.text())
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
@@ -160,7 +178,7 @@ class MainWindow(QMainWindow):
                 'Title': self.ui.Title_index_doc.toPlainText(),
                 'Content': self.ui.Content_index_doc.toPlainText(),
             }
-            resp = client.index(index=self.ui.Index_doc.currentText(), id=self.ui.ID_index_doc.text(), document=doc)
+            resp = client.index(index=self.ui.Index_doc.text(), id=self.ui.ID_index_doc.text(), document=doc)
             self.ui.Result_text.setText("ID: " + resp['_id'] + " is " + resp['result'] + ".")
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text.append(json_resp)
@@ -208,7 +226,7 @@ class MainWindow(QMainWindow):
 
     def Search_ALL(self):
         self.ui.response_text.setText("")
-        index_name = self.ui.Index_combo.currentText()
+        index_name = self.ui.Index_name_2.text()
         index_exists = client.indices.exists(index=index_name)
         if index_exists:
             try:
@@ -272,6 +290,11 @@ class MainWindow(QMainWindow):
             self.Delete_ALL()
 
         if btnName == "btn_search_doc_all":
+            self.Search_ALL()
+
+
+    def enter_searchALL(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
             self.Search_ALL()
 
     def enter_Query(self, event):

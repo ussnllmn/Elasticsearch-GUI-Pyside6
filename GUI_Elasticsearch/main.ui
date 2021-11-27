@@ -23,9 +23,9 @@
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>14</pointsize>
      <italic>false</italic>
-     <bold>false</bold>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -38,7 +38,8 @@ DARK THEME - DRACULA COLOR BASED
 
 QWidget{
 	color: rgb(221, 221, 221);
-	font: 10pt &quot;Segoe UI&quot;;
+	font: 14pt &quot;TH Sarabun New&quot;;
+	font-weight: bold;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -846,9 +847,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -908,9 +909,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -943,9 +944,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -978,9 +979,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -1013,9 +1014,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -1075,9 +1076,9 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="cursor">
@@ -1345,10 +1346,10 @@ Button */
                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff79c6;&quot;&gt;Elasticsearch for Covid-19 Information Application&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#bd93f9;&quot;&gt;Created by: &lt;br /&gt;Kridsanapong Buathongjun&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'TH Sarabun New'; font-size:14pt; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:600; color:#ff79c6;&quot;&gt;Elasticsearch for Covid-19 Information Application&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400;&quot;&gt;This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:400; color:#bd93f9;&quot;&gt;Created by: &lt;br /&gt;Kridsanapong Buathongjun&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -1477,9 +1478,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -1590,9 +1591,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>14</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                     <stylestrategy>PreferDefault</stylestrategy>
                    </font>
                   </property>
@@ -1850,7 +1851,24 @@ background-repeat: no-repeat;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout">
-                                 <item row="9" column="1">
+                                 <item row="8" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_12">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>ID</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="10" column="1">
                                   <widget class="QLineEdit" name="Query_name">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1875,11 +1893,66 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
+                                 <item row="14" column="0">
+                                  <widget class="QLineEdit" name="Index_name_2">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="11" column="0">
+                                  <widget class="QPushButton" name="btn_search_doc_id">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search by ID</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
                                  <item row="0" column="0" colspan="2">
                                   <widget class="QLabel" name="label_2">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -1898,24 +1971,7 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="12" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Index Name</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="13" column="1">
+                                 <item row="14" column="1">
                                   <widget class="QPushButton" name="btn_search_doc_all">
                                    <property name="minimumSize">
                                     <size>
@@ -1925,9 +1981,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -1945,59 +2001,11 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="7" column="1">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_4">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Query match here..</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="13" column="0">
-                                  <widget class="QComboBox" name="Index_combo_all">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="autoFillBackground">
-                                    <bool>false</bool>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="iconSize">
-                                    <size>
-                                     <width>16</width>
-                                     <height>16</height>
-                                    </size>
-                                   </property>
-                                   <property name="frame">
-                                    <bool>true</bool>
-                                   </property>
-                                   <item>
-                                    <property name="text">
-                                     <string>test-covid</string>
-                                    </property>
-                                   </item>
-                                  </widget>
-                                 </item>
-                                 <item row="11" column="0" colspan="2">
+                                 <item row="12" column="0" colspan="2">
                                   <widget class="QLabel" name="label_8">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -2016,43 +2024,24 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="3" column="1">
-                                  <widget class="QComboBox" name="Field_combo">
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
-                                   <property name="autoFillBackground">
-                                    <bool>false</bool>
-                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                    <string notr="true"/>
                                    </property>
-                                   <property name="iconSize">
-                                    <size>
-                                     <width>16</width>
-                                     <height>16</height>
-                                    </size>
+                                   <property name="text">
+                                    <string>Index Name</string>
                                    </property>
-                                   <property name="frame">
-                                    <bool>true</bool>
-                                   </property>
-                                   <item>
-                                    <property name="text">
-                                     <string>Title</string>
-                                    </property>
-                                   </item>
-                                   <item>
-                                    <property name="text">
-                                     <string>Content</string>
-                                    </property>
-                                   </item>
                                   </widget>
                                  </item>
-                                 <item row="9" column="0">
+                                 <item row="10" column="0">
                                   <widget class="QLineEdit" name="ID_name">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -2077,78 +2066,30 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="1" column="1">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
+                                 <item row="8" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_4">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Field name here..</string>
+                                    <string>Query for search</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="7" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_12">
+                                 <item row="13" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>ID</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="3" column="0">
-                                  <widget class="QComboBox" name="Index_combo">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="autoFillBackground">
-                                    <bool>false</bool>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="iconSize">
-                                    <size>
-                                     <width>16</width>
-                                     <height>16</height>
-                                    </size>
-                                   </property>
-                                   <property name="frame">
-                                    <bool>true</bool>
-                                   </property>
-                                   <item>
-                                    <property name="text">
-                                     <string>test-covid</string>
-                                    </property>
-                                   </item>
-                                  </widget>
-                                 </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
@@ -2159,7 +2100,7 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="10" column="1">
+                                 <item row="11" column="1">
                                   <widget class="QPushButton" name="btn_search_doc_query">
                                    <property name="minimumSize">
                                     <size>
@@ -2169,9 +2110,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -2189,33 +2130,70 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="10" column="0">
-                                  <widget class="QPushButton" name="btn_search_doc_id">
+                                 <item row="1" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_3">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Field name here..</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="1">
+                                  <widget class="QLineEdit" name="Field_name">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
                                    <property name="minimumSize">
                                     <size>
-                                     <width>150</width>
+                                     <width>0</width>
                                      <height>30</height>
                                     </size>
                                    </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
                                    <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
                                    </property>
                                    <property name="text">
-                                    <string>Search by ID</string>
+                                    <string/>
                                    </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                   <property name="placeholderText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="0">
+                                  <widget class="QLineEdit" name="Index_name">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string/>
                                    </property>
                                   </widget>
                                  </item>
@@ -2250,7 +2228,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_3">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -2329,7 +2307,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_4">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -2398,7 +2376,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_5">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -2544,44 +2522,13 @@ border: 2px solid #ff79c6;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout_2">
-                                 <item row="4" column="0">
-                                  <widget class="QComboBox" name="Index_doc">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="autoFillBackground">
-                                    <bool>false</bool>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="iconSize">
-                                    <size>
-                                     <width>16</width>
-                                     <height>16</height>
-                                    </size>
-                                   </property>
-                                   <property name="frame">
-                                    <bool>true</bool>
-                                   </property>
-                                   <item>
-                                    <property name="text">
-                                     <string>test-covid</string>
-                                    </property>
-                                   </item>
-                                  </widget>
-                                 </item>
-                                 <item row="5" column="1">
+                                 <item row="6" column="1">
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_7">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
@@ -2592,7 +2539,88 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="7" column="0" colspan="2">
+                                 <item row="7" column="0">
+                                  <widget class="QPlainTextEdit" name="Title_index_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>40</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="plainText">
+                                    <string/>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="2" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_6">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Create or Update document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_8">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Type ID to create (optional)</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="7" column="1">
+                                  <widget class="QPlainTextEdit" name="Content_index_doc">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>40</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="8" column="0" colspan="2">
                                   <widget class="QPushButton" name="btn_index_doc">
                                    <property name="minimumSize">
                                     <size>
@@ -2602,9 +2630,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -2622,13 +2650,13 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="5" column="0">
+                                 <item row="6" column="0">
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_5">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
@@ -2639,43 +2667,45 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="3" column="1">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_8">
+                                 <item row="3" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_6">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Type ID create</string>
+                                    <string>Index name</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="2" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_6">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
+                                 <item row="4" column="0">
+                                  <widget class="QLineEdit" name="Index_doc">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>34</height>
+                                    </size>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
                                    </property>
                                    <property name="text">
-                                    <string>Create or Update document</string>
+                                    <string/>
                                    </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
+                                   <property name="placeholderText">
+                                    <string/>
                                    </property>
                                   </widget>
                                  </item>
@@ -2700,64 +2730,6 @@ border: 2px solid #ff79c6;</string>
                                     <string/>
                                    </property>
                                    <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="3" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_6">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>10</pointsize>
-                                     <italic>false</italic>
-                                     <bold>false</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Index name</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="6" column="1">
-                                  <widget class="QPlainTextEdit" name="Content_index_doc">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>200</width>
-                                     <height>40</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>16777215</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="6" column="0">
-                                  <widget class="QPlainTextEdit" name="Title_index_doc">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>200</width>
-                                     <height>40</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>16777215</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="plainText">
                                     <string/>
                                    </property>
                                   </widget>
@@ -2793,7 +2765,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_7">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -2878,9 +2850,9 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_9">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
@@ -2945,9 +2917,9 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_10">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
@@ -2968,9 +2940,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -2992,7 +2964,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_11">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3027,7 +2999,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_9">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3189,9 +3161,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -3213,16 +3185,16 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_16">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Type index to delete.</string>
+                                    <string>Type index to delete</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -3230,7 +3202,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_14">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3284,9 +3256,9 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="cursor">
@@ -3333,16 +3305,16 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="labelBoxBlenderInstalation_15">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
-                                     <bold>false</bold>
+                                     <bold>true</bold>
                                     </font>
                                    </property>
                                    <property name="styleSheet">
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Type new create index.</string>
+                                    <string>Type new create index</string>
                                    </property>
                                   </widget>
                                  </item>
@@ -3350,7 +3322,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_13">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3400,7 +3372,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_19">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3506,9 +3478,9 @@ border: 2px solid #ff79c6;</string>
                                       </property>
                                       <property name="font">
                                        <font>
-                                        <pointsize>10</pointsize>
+                                        <pointsize>14</pointsize>
                                         <italic>false</italic>
-                                        <bold>false</bold>
+                                        <bold>true</bold>
                                        </font>
                                       </property>
                                       <property name="cursor">
@@ -3528,9 +3500,9 @@ color: #ff5555;
                                      <widget class="QLabel" name="labelBoxBlenderInstalation_22">
                                       <property name="font">
                                        <font>
-                                        <pointsize>10</pointsize>
+                                        <pointsize>14</pointsize>
                                         <italic>false</italic>
-                                        <bold>false</bold>
+                                        <bold>true</bold>
                                        </font>
                                       </property>
                                       <property name="styleSheet">
@@ -3545,7 +3517,7 @@ color: #ff5555;
                                      <widget class="QLabel" name="label_20">
                                       <property name="font">
                                        <font>
-                                        <pointsize>10</pointsize>
+                                        <pointsize>14</pointsize>
                                         <italic>false</italic>
                                         <bold>true</bold>
                                         <underline>false</underline>
@@ -3593,7 +3565,7 @@ border: 2px solid #ff5555;</string>
                                   <widget class="QLabel" name="label_17">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3671,7 +3643,7 @@ border: 2px solid #ff79c6;</string>
                                   <widget class="QLabel" name="label_18">
                                    <property name="font">
                                     <font>
-                                     <pointsize>10</pointsize>
+                                     <pointsize>14</pointsize>
                                      <italic>false</italic>
                                      <bold>true</bold>
                                      <underline>false</underline>
@@ -3901,7 +3873,7 @@ border: 2px solid #ff79c6;</string>
                    <font>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -3963,23 +3935,44 @@ border: 2px solid #ff79c6;</string>
   <tabstop>minimizeAppBtn</tabstop>
   <tabstop>maximizeRestoreAppBtn</tabstop>
   <tabstop>client_text</tabstop>
-  <tabstop>Title_index_doc</tabstop>
-  <tabstop>btn_index_doc</tabstop>
-  <tabstop>response_json</tabstop>
-  <tabstop>response_text</tabstop>
-  <tabstop>Content_index_doc</tabstop>
-  <tabstop>Result_text</tabstop>
-  <tabstop>btn_document</tabstop>
-  <tabstop>Indices_text</tabstop>
-  <tabstop>btn_search</tabstop>
-  <tabstop>btn_index</tabstop>
-  <tabstop>closeAppBtn</tabstop>
   <tabstop>toggleButton</tabstop>
-  <tabstop>btn_home</tabstop>
-  <tabstop>Query_name</tabstop>
-  <tabstop>toggleLeftBox</tabstop>
   <tabstop>extraCloseColumnBtn</tabstop>
+  <tabstop>btn_home</tabstop>
+  <tabstop>btn_index_doc</tabstop>
+  <tabstop>btn_search</tabstop>
+  <tabstop>toggleLeftBox</tabstop>
+  <tabstop>response_text</tabstop>
+  <tabstop>Index_name_2</tabstop>
+  <tabstop>btn_search_doc_all</tabstop>
+  <tabstop>Index_doc</tabstop>
+  <tabstop>ID_index_doc</tabstop>
+  <tabstop>Title_index_doc</tabstop>
+  <tabstop>Content_index_doc</tabstop>
+  <tabstop>Delete_doc_name</tabstop>
+  <tabstop>Delete_doc_id</tabstop>
+  <tabstop>btn_delete_doc_id</tabstop>
+  <tabstop>Create_index</tabstop>
+  <tabstop>btn_create_index</tabstop>
+  <tabstop>Delete_index</tabstop>
+  <tabstop>btn_delete_index</tabstop>
+  <tabstop>Password_del_all</tabstop>
+  <tabstop>btn_del_all</tabstop>
+  <tabstop>Index_name</tabstop>
+  <tabstop>Field_name</tabstop>
+  <tabstop>ID_name</tabstop>
+  <tabstop>btn_search_doc_id</tabstop>
+  <tabstop>Query_name</tabstop>
+  <tabstop>btn_search_doc_query</tabstop>
   <tabstop>textEdit</tabstop>
+  <tabstop>Indices_text_2</tabstop>
+  <tabstop>response_json</tabstop>
+  <tabstop>closeAppBtn</tabstop>
+  <tabstop>Result_text_2</tabstop>
+  <tabstop>Health_text_2</tabstop>
+  <tabstop>Result_text</tabstop>
+  <tabstop>Indices_text</tabstop>
+  <tabstop>btn_document</tabstop>
+  <tabstop>btn_index</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>

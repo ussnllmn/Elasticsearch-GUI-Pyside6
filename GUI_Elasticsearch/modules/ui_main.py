@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainhZbkyS.ui'
+## Form generated from reading UI file 'mainjWjIzE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QLabel, QLineEdit, QMainWindow,
-    QPlainTextEdit, QPushButton, QSizePolicy, QStackedWidget,
-    QTextBrowser, QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QSizePolicy, QStackedWidget, QTextBrowser,
+    QTextEdit, QVBoxLayout, QWidget)
 from .resources_rc import *
 
 class Ui_MainWindow(object):
@@ -30,8 +30,8 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
-        font.setPointSize(10)
-        font.setBold(False)
+        font.setPointSize(14)
+        font.setBold(True)
         font.setItalic(False)
         self.styleSheet.setFont(font)
         self.styleSheet.setStyleSheet(u"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -43,7 +43,8 @@ class Ui_MainWindow(object):
 "\n"
 "QWidget{\n"
 "	color: rgb(221, 221, 221);\n"
-"	font: 10pt \"Segoe UI\";\n"
+"	font: 14pt \"TH Sarabun New\";\n"
+"	font-weight: bold;\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -63,10 +64,10 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
-"Bg App */\n"
+"Bg App */"
+                        "\n"
 "#bgApp {	\n"
-"	background"
-                        "-color: rgb(40, 44, 52);\n"
+"	background-color: rgb(40, 44, 52);\n"
 "	border: 1px solid rgb(44, 49, 58);\n"
 "	border-radius: 12px;\n"
 "}\n"
@@ -110,10 +111,10 @@ class Ui_MainWindow(object):
 "#info_frame {	\n"
 "	border: 2px solid #bd93f9;\n"
 "	background-position: center;\n"
-"	background-repeat: no-repeat;\n"
+"	background-repeat: no-repeat"
+                        ";\n"
 "}\n"
-"#response_json_fra"
-                        "me{\n"
+"#response_json_frame{\n"
 "	border: 2px solid #bd93f9;\n"
 "	background-position: center;\n"
 "	background-repeat: no-repeat;\n"
@@ -144,9 +145,9 @@ class Ui_MainWindow(object):
 "#topMenu .QPushButton {	\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
-"	border: none;\n"
-"	border-left: 22px sol"
-                        "id transparent;\n"
+"	border: no"
+                        "ne;\n"
+"	border-left: 22px solid transparent;\n"
 "	background-color: transparent;\n"
 "	text-align: left;\n"
 "	padding-left: 44px;\n"
@@ -182,9 +183,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Toggle Button */\n"
-"#toggleButton {\n"
-"	background-position: l"
-                        "eft center;\n"
+"#toggleButton"
+                        " {\n"
+"	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
 "	border-left: 20px solid transparent;\n"
@@ -224,8 +225,8 @@ class Ui_MainWindow(object):
 "#extraLabel { color: rgb(255, 255, 255); }\n"
 "\n"
 "/* Btn Close */\n"
-"#extraCloseColumnBtn { backgroun"
-                        "d-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
+"#e"
+                        "xtraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
 "#extraCloseColumnBtn:hover { background-color: rgb(196, 161, 249); border-style: solid; border-radius: 4px; }\n"
 "#extraCloseColumnBtn:pressed { background-color: rgb(180, 141, 238); border-style: solid; border-radius: 4px; }\n"
 "\n"
@@ -252,10 +253,10 @@ class Ui_MainWindow(object):
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* ///////////////////////////////////////////////////////////////////////////////////////"
+                        "//////////\n"
 "Content App */\n"
-""
-                        "#contentTopBg{	\n"
+"#contentTopBg{	\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	border-top-right-radius: 12px;\n"
 "}\n"
@@ -277,9 +278,9 @@ class Ui_MainWindow(object):
 "#bottomBar QLabel { font-size: 11px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
-"/* MENUS */\n"
-"#contentSettings .QPushButt"
-                        "on {	\n"
+"/* MENUS "
+                        "*/\n"
+"#contentSettings .QPushButton {	\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
@@ -312,10 +313,10 @@ class Ui_MainWindow(object):
 "	gridline-color: rgb(44, 49, 60);\n"
 "}\n"
 "QTableWidget::item:selected{\n"
-"	background-color: rgb(189, 147, 249);\n"
+"	background-color: rgb(189, 147,"
+                        " 249);\n"
 "}\n"
-"QHeaderView::sect"
-                        "ion{\n"
+"QHeaderView::section{\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	max-width: 30px;\n"
 "	border: 1px solid rgb(44, 49, 58);\n"
@@ -347,10 +348,10 @@ class Ui_MainWindow(object):
 "	border: 2px solid rgb(33, 37, 43);\n"
 "	padding-left: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121, 198);\n"
+"	selection-background-color: rgb(255, 121"
+                        ", 198);\n"
 "}\n"
-"QLineEdit:hover "
-                        "{\n"
+"QLineEdit:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
 "}\n"
 "QLineEdit:focus {\n"
@@ -385,9 +386,9 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    background: rgb(52, 59, 72);\n"
 "    height: 8px;\n"
-"    margin: 0px 21px 0 21px;\n"
-"	border"
-                        "-radius: 0px;\n"
+"    ma"
+                        "rgin: 0px 21px 0 21px;\n"
+"	border-radius: 0px;\n"
 "}\n"
 "QScrollBar::handle:horizontal {\n"
 "    background: rgb(189, 147, 249);\n"
@@ -423,9 +424,9 @@ class Ui_MainWindow(object):
 " QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
-"    width: 8px;\n"
-"    margin"
-                        ": 21px 0 21px 0;\n"
+""
+                        "    width: 8px;\n"
+"    margin: 21px 0 21px 0;\n"
 "	border-radius: 0px;\n"
 " }\n"
 " QScrollBar::handle:vertical {	\n"
@@ -459,8 +460,8 @@ class Ui_MainWindow(object):
 "     background: none;\n"
 " }\n"
 "\n"
-"/* //////////////////////////////////////////////////////////////////////////////"
-                        "///////////////////\n"
+"/* ////////////////////////////////////////////////"
+                        "/////////////////////////////////////////////////\n"
 "CheckBox */\n"
 "QCheckBox::indicator {\n"
 "    border: 3px solid rgb(52, 59, 72);\n"
@@ -492,11 +493,11 @@ class Ui_MainWindow(object):
 "}\n"
 "QRadioButton::indicator:checked {\n"
 "    background: 3px solid rgb(94, 106, 130);\n"
-"	border: 3px solid rgb(52, 59, 72);	\n"
+"	border: 3px solid r"
+                        "gb(52, 59, 72);	\n"
 "}\n"
 "\n"
-""
-                        "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "ComboBox */\n"
 "QComboBox{\n"
 "	background-color: rgb(27, 29, 35);\n"
@@ -528,8 +529,8 @@ class Ui_MainWindow(object):
 "	selection-background-color: rgb(39, 44, 54);\n"
 "}\n"
 "\n"
-"/* ///////////////////////////////"
-                        "//////////////////////////////////////////////////////////////////\n"
+"/*"
+                        " /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Sliders */\n"
 "QSlider::groove:horizontal {\n"
 "    border-radius: 5px;\n"
@@ -565,10 +566,10 @@ class Ui_MainWindow(object):
 "	background-color: rgb(55, 62, 76);\n"
 "}\n"
 "QSlider::handle:vertical {\n"
-"    background-color: rgb(189, 147, 249);\n"
+"    background-color: rgb(189"
+                        ", 147, 249);\n"
 "	border: none;\n"
-""
-                        "    height: 10px;\n"
+"    height: 10px;\n"
 "    width: 10px;\n"
 "    margin: 0px;\n"
 "	border-radius: 5px;\n"
@@ -601,9 +602,9 @@ class Ui_MainWindow(object):
 "Button */\n"
 "#pagesContainer QPushButton {\n"
 "	border: 2px solid rgb(52, 59, 72);\n"
-"	border-radius: 5px;	\n"
-"	background-color: rgb(52, 59"
-                        ", 72);\n"
+"	border-radius: 5px"
+                        ";	\n"
+"	background-color: rgb(52, 59, 72);\n"
 "}\n"
 "#pagesContainer QPushButton:hover {\n"
 "	background-color: rgb(57, 65, 80);\n"
@@ -985,8 +986,8 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
-        font3.setPointSize(10)
-        font3.setBold(False)
+        font3.setPointSize(14)
+        font3.setBold(True)
         font3.setItalic(False)
         font3.setStyleStrategy(QFont.PreferDefault)
         self.maximizeRestoreAppBtn.setFont(font3)
@@ -1082,6 +1083,13 @@ class Ui_MainWindow(object):
         self.search_frame.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.search_frame)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.labelBoxBlenderInstalation_12 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_12.setObjectName(u"labelBoxBlenderInstalation_12")
+        self.labelBoxBlenderInstalation_12.setFont(font)
+        self.labelBoxBlenderInstalation_12.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_12, 8, 0, 1, 1)
+
         self.Query_name = QLineEdit(self.search_frame)
         self.Query_name.setObjectName(u"Query_name")
         sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -1092,12 +1100,33 @@ class Ui_MainWindow(object):
         self.Query_name.setMinimumSize(QSize(0, 30))
         self.Query_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout.addWidget(self.Query_name, 9, 1, 1, 1)
+        self.gridLayout.addWidget(self.Query_name, 10, 1, 1, 1)
+
+        self.Index_name_2 = QLineEdit(self.search_frame)
+        self.Index_name_2.setObjectName(u"Index_name_2")
+        sizePolicy3.setHeightForWidth(self.Index_name_2.sizePolicy().hasHeightForWidth())
+        self.Index_name_2.setSizePolicy(sizePolicy3)
+        self.Index_name_2.setMinimumSize(QSize(0, 30))
+        self.Index_name_2.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.Index_name_2, 14, 0, 1, 1)
+
+        self.btn_search_doc_id = QPushButton(self.search_frame)
+        self.btn_search_doc_id.setObjectName(u"btn_search_doc_id")
+        self.btn_search_doc_id.setMinimumSize(QSize(150, 30))
+        self.btn_search_doc_id.setFont(font)
+        self.btn_search_doc_id.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_search_doc_id.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_search_doc_id.setIcon(icon3)
+
+        self.gridLayout.addWidget(self.btn_search_doc_id, 11, 0, 1, 1)
 
         self.label_2 = QLabel(self.search_frame)
         self.label_2.setObjectName(u"label_2")
         font4 = QFont()
-        font4.setPointSize(10)
+        font4.setPointSize(14)
         font4.setBold(True)
         font4.setItalic(False)
         font4.setUnderline(False)
@@ -1109,42 +1138,17 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.label_2, 0, 0, 1, 2)
 
-        self.labelBoxBlenderInstalation_11 = QLabel(self.search_frame)
-        self.labelBoxBlenderInstalation_11.setObjectName(u"labelBoxBlenderInstalation_11")
-        self.labelBoxBlenderInstalation_11.setFont(font)
-        self.labelBoxBlenderInstalation_11.setStyleSheet(u"")
-
-        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_11, 12, 0, 1, 1)
-
         self.btn_search_doc_all = QPushButton(self.search_frame)
         self.btn_search_doc_all.setObjectName(u"btn_search_doc_all")
         self.btn_search_doc_all.setMinimumSize(QSize(150, 30))
         self.btn_search_doc_all.setFont(font)
         self.btn_search_doc_all.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_search_doc_all.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/images/icons/cil-layers.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_search_doc_all.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/images/icons/cil-layers.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_search_doc_all.setIcon(icon4)
 
-        self.gridLayout.addWidget(self.btn_search_doc_all, 13, 1, 1, 1)
-
-        self.labelBoxBlenderInstalation_4 = QLabel(self.search_frame)
-        self.labelBoxBlenderInstalation_4.setObjectName(u"labelBoxBlenderInstalation_4")
-        self.labelBoxBlenderInstalation_4.setFont(font)
-        self.labelBoxBlenderInstalation_4.setStyleSheet(u"")
-
-        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_4, 7, 1, 1, 1)
-
-        self.Index_combo_all = QComboBox(self.search_frame)
-        self.Index_combo_all.addItem("")
-        self.Index_combo_all.setObjectName(u"Index_combo_all")
-        self.Index_combo_all.setFont(font)
-        self.Index_combo_all.setAutoFillBackground(False)
-        self.Index_combo_all.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Index_combo_all.setIconSize(QSize(16, 16))
-        self.Index_combo_all.setFrame(True)
-
-        self.gridLayout.addWidget(self.Index_combo_all, 13, 0, 1, 1)
+        self.gridLayout.addWidget(self.btn_search_doc_all, 14, 1, 1, 1)
 
         self.label_8 = QLabel(self.search_frame)
         self.label_8.setObjectName(u"label_8")
@@ -1154,53 +1158,7 @@ class Ui_MainWindow(object):
 "border: 2px solid #ff79c6;")
         self.label_8.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.label_8, 11, 0, 1, 2)
-
-        self.Field_combo = QComboBox(self.search_frame)
-        self.Field_combo.addItem("")
-        self.Field_combo.addItem("")
-        self.Field_combo.setObjectName(u"Field_combo")
-        self.Field_combo.setFont(font)
-        self.Field_combo.setAutoFillBackground(False)
-        self.Field_combo.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Field_combo.setIconSize(QSize(16, 16))
-        self.Field_combo.setFrame(True)
-
-        self.gridLayout.addWidget(self.Field_combo, 3, 1, 1, 1)
-
-        self.ID_name = QLineEdit(self.search_frame)
-        self.ID_name.setObjectName(u"ID_name")
-        sizePolicy3.setHeightForWidth(self.ID_name.sizePolicy().hasHeightForWidth())
-        self.ID_name.setSizePolicy(sizePolicy3)
-        self.ID_name.setMinimumSize(QSize(0, 30))
-        self.ID_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-
-        self.gridLayout.addWidget(self.ID_name, 9, 0, 1, 1)
-
-        self.labelBoxBlenderInstalation_3 = QLabel(self.search_frame)
-        self.labelBoxBlenderInstalation_3.setObjectName(u"labelBoxBlenderInstalation_3")
-        self.labelBoxBlenderInstalation_3.setFont(font)
-        self.labelBoxBlenderInstalation_3.setStyleSheet(u"")
-
-        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_3, 1, 1, 1, 1)
-
-        self.labelBoxBlenderInstalation_12 = QLabel(self.search_frame)
-        self.labelBoxBlenderInstalation_12.setObjectName(u"labelBoxBlenderInstalation_12")
-        self.labelBoxBlenderInstalation_12.setFont(font)
-        self.labelBoxBlenderInstalation_12.setStyleSheet(u"")
-
-        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_12, 7, 0, 1, 1)
-
-        self.Index_combo = QComboBox(self.search_frame)
-        self.Index_combo.addItem("")
-        self.Index_combo.setObjectName(u"Index_combo")
-        self.Index_combo.setFont(font)
-        self.Index_combo.setAutoFillBackground(False)
-        self.Index_combo.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Index_combo.setIconSize(QSize(16, 16))
-        self.Index_combo.setFrame(True)
-
-        self.gridLayout.addWidget(self.Index_combo, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_8, 12, 0, 1, 2)
 
         self.labelBoxBlenderInstalation_2 = QLabel(self.search_frame)
         self.labelBoxBlenderInstalation_2.setObjectName(u"labelBoxBlenderInstalation_2")
@@ -1209,27 +1167,63 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.labelBoxBlenderInstalation_2, 1, 0, 1, 1)
 
+        self.ID_name = QLineEdit(self.search_frame)
+        self.ID_name.setObjectName(u"ID_name")
+        sizePolicy3.setHeightForWidth(self.ID_name.sizePolicy().hasHeightForWidth())
+        self.ID_name.setSizePolicy(sizePolicy3)
+        self.ID_name.setMinimumSize(QSize(0, 30))
+        self.ID_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.ID_name, 10, 0, 1, 1)
+
+        self.labelBoxBlenderInstalation_4 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_4.setObjectName(u"labelBoxBlenderInstalation_4")
+        self.labelBoxBlenderInstalation_4.setFont(font)
+        self.labelBoxBlenderInstalation_4.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_4, 8, 1, 1, 1)
+
+        self.labelBoxBlenderInstalation_11 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_11.setObjectName(u"labelBoxBlenderInstalation_11")
+        self.labelBoxBlenderInstalation_11.setFont(font)
+        self.labelBoxBlenderInstalation_11.setStyleSheet(u"")
+
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_11, 13, 0, 1, 1)
+
         self.btn_search_doc_query = QPushButton(self.search_frame)
         self.btn_search_doc_query.setObjectName(u"btn_search_doc_query")
         self.btn_search_doc_query.setMinimumSize(QSize(150, 30))
         self.btn_search_doc_query.setFont(font)
         self.btn_search_doc_query.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_search_doc_query.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_search_doc_query.setIcon(icon4)
+        self.btn_search_doc_query.setIcon(icon3)
 
-        self.gridLayout.addWidget(self.btn_search_doc_query, 10, 1, 1, 1)
+        self.gridLayout.addWidget(self.btn_search_doc_query, 11, 1, 1, 1)
 
-        self.btn_search_doc_id = QPushButton(self.search_frame)
-        self.btn_search_doc_id.setObjectName(u"btn_search_doc_id")
-        self.btn_search_doc_id.setMinimumSize(QSize(150, 30))
-        self.btn_search_doc_id.setFont(font)
-        self.btn_search_doc_id.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_search_doc_id.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        self.btn_search_doc_id.setIcon(icon4)
+        self.labelBoxBlenderInstalation_3 = QLabel(self.search_frame)
+        self.labelBoxBlenderInstalation_3.setObjectName(u"labelBoxBlenderInstalation_3")
+        self.labelBoxBlenderInstalation_3.setFont(font)
+        self.labelBoxBlenderInstalation_3.setStyleSheet(u"")
 
-        self.gridLayout.addWidget(self.btn_search_doc_id, 10, 0, 1, 1)
+        self.gridLayout.addWidget(self.labelBoxBlenderInstalation_3, 1, 1, 1, 1)
+
+        self.Field_name = QLineEdit(self.search_frame)
+        self.Field_name.setObjectName(u"Field_name")
+        sizePolicy3.setHeightForWidth(self.Field_name.sizePolicy().hasHeightForWidth())
+        self.Field_name.setSizePolicy(sizePolicy3)
+        self.Field_name.setMinimumSize(QSize(0, 30))
+        self.Field_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.Field_name, 2, 1, 1, 1)
+
+        self.Index_name = QLineEdit(self.search_frame)
+        self.Index_name.setObjectName(u"Index_name")
+        sizePolicy3.setHeightForWidth(self.Index_name.sizePolicy().hasHeightForWidth())
+        self.Index_name.setSizePolicy(sizePolicy3)
+        self.Index_name.setMinimumSize(QSize(0, 30))
+        self.Index_name.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout.addWidget(self.Index_name, 2, 0, 1, 1)
 
 
         self.info_frame_2.addWidget(self.search_frame)
@@ -1392,49 +1386,20 @@ class Ui_MainWindow(object):
         self.search_frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.search_frame_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.Index_doc = QComboBox(self.search_frame_2)
-        self.Index_doc.addItem("")
-        self.Index_doc.setObjectName(u"Index_doc")
-        self.Index_doc.setFont(font)
-        self.Index_doc.setAutoFillBackground(False)
-        self.Index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.Index_doc.setIconSize(QSize(16, 16))
-        self.Index_doc.setFrame(True)
-
-        self.gridLayout_2.addWidget(self.Index_doc, 4, 0, 1, 1)
-
         self.labelBoxBlenderInstalation_7 = QLabel(self.search_frame_2)
         self.labelBoxBlenderInstalation_7.setObjectName(u"labelBoxBlenderInstalation_7")
         self.labelBoxBlenderInstalation_7.setFont(font)
         self.labelBoxBlenderInstalation_7.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 5, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_7, 6, 1, 1, 1)
 
-        self.btn_index_doc = QPushButton(self.search_frame_2)
-        self.btn_index_doc.setObjectName(u"btn_index_doc")
-        self.btn_index_doc.setMinimumSize(QSize(150, 30))
-        self.btn_index_doc.setFont(font)
-        self.btn_index_doc.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_index_doc.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/images/icons/cil-plus.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_index_doc.setIcon(icon5)
+        self.Title_index_doc = QPlainTextEdit(self.search_frame_2)
+        self.Title_index_doc.setObjectName(u"Title_index_doc")
+        self.Title_index_doc.setMinimumSize(QSize(200, 40))
+        self.Title_index_doc.setMaximumSize(QSize(16777215, 16777215))
+        self.Title_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.btn_index_doc, 7, 0, 1, 2)
-
-        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
-        self.labelBoxBlenderInstalation_5.setFont(font)
-        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 5, 0, 1, 1)
-
-        self.labelBoxBlenderInstalation_8 = QLabel(self.search_frame_2)
-        self.labelBoxBlenderInstalation_8.setObjectName(u"labelBoxBlenderInstalation_8")
-        self.labelBoxBlenderInstalation_8.setFont(font)
-        self.labelBoxBlenderInstalation_8.setStyleSheet(u"")
-
-        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_8, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.Title_index_doc, 7, 0, 1, 1)
 
         self.label_6 = QLabel(self.search_frame_2)
         self.label_6.setObjectName(u"label_6")
@@ -1446,14 +1411,39 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_6, 2, 0, 1, 2)
 
-        self.ID_index_doc = QLineEdit(self.search_frame_2)
-        self.ID_index_doc.setObjectName(u"ID_index_doc")
-        sizePolicy3.setHeightForWidth(self.ID_index_doc.sizePolicy().hasHeightForWidth())
-        self.ID_index_doc.setSizePolicy(sizePolicy3)
-        self.ID_index_doc.setMinimumSize(QSize(0, 34))
-        self.ID_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.labelBoxBlenderInstalation_8 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_8.setObjectName(u"labelBoxBlenderInstalation_8")
+        self.labelBoxBlenderInstalation_8.setFont(font)
+        self.labelBoxBlenderInstalation_8.setStyleSheet(u"")
 
-        self.gridLayout_2.addWidget(self.ID_index_doc, 4, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_8, 3, 1, 1, 1)
+
+        self.Content_index_doc = QPlainTextEdit(self.search_frame_2)
+        self.Content_index_doc.setObjectName(u"Content_index_doc")
+        self.Content_index_doc.setMinimumSize(QSize(200, 40))
+        self.Content_index_doc.setMaximumSize(QSize(16777215, 16777215))
+        self.Content_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout_2.addWidget(self.Content_index_doc, 7, 1, 1, 1)
+
+        self.btn_index_doc = QPushButton(self.search_frame_2)
+        self.btn_index_doc.setObjectName(u"btn_index_doc")
+        self.btn_index_doc.setMinimumSize(QSize(150, 30))
+        self.btn_index_doc.setFont(font)
+        self.btn_index_doc.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_index_doc.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/images/icons/cil-plus.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_index_doc.setIcon(icon5)
+
+        self.gridLayout_2.addWidget(self.btn_index_doc, 8, 0, 1, 2)
+
+        self.labelBoxBlenderInstalation_5 = QLabel(self.search_frame_2)
+        self.labelBoxBlenderInstalation_5.setObjectName(u"labelBoxBlenderInstalation_5")
+        self.labelBoxBlenderInstalation_5.setFont(font)
+        self.labelBoxBlenderInstalation_5.setStyleSheet(u"")
+
+        self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_5, 6, 0, 1, 1)
 
         self.labelBoxBlenderInstalation_6 = QLabel(self.search_frame_2)
         self.labelBoxBlenderInstalation_6.setObjectName(u"labelBoxBlenderInstalation_6")
@@ -1462,21 +1452,23 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.labelBoxBlenderInstalation_6, 3, 0, 1, 1)
 
-        self.Content_index_doc = QPlainTextEdit(self.search_frame_2)
-        self.Content_index_doc.setObjectName(u"Content_index_doc")
-        self.Content_index_doc.setMinimumSize(QSize(200, 40))
-        self.Content_index_doc.setMaximumSize(QSize(16777215, 16777215))
-        self.Content_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.Index_doc = QLineEdit(self.search_frame_2)
+        self.Index_doc.setObjectName(u"Index_doc")
+        sizePolicy3.setHeightForWidth(self.Index_doc.sizePolicy().hasHeightForWidth())
+        self.Index_doc.setSizePolicy(sizePolicy3)
+        self.Index_doc.setMinimumSize(QSize(0, 34))
+        self.Index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.Content_index_doc, 6, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.Index_doc, 4, 0, 1, 1)
 
-        self.Title_index_doc = QPlainTextEdit(self.search_frame_2)
-        self.Title_index_doc.setObjectName(u"Title_index_doc")
-        self.Title_index_doc.setMinimumSize(QSize(200, 40))
-        self.Title_index_doc.setMaximumSize(QSize(16777215, 16777215))
-        self.Title_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.ID_index_doc = QLineEdit(self.search_frame_2)
+        self.ID_index_doc.setObjectName(u"ID_index_doc")
+        sizePolicy3.setHeightForWidth(self.ID_index_doc.sizePolicy().hasHeightForWidth())
+        self.ID_index_doc.setSizePolicy(sizePolicy3)
+        self.ID_index_doc.setMinimumSize(QSize(0, 34))
+        self.ID_index_doc.setStyleSheet(u"background-color: rgb(33, 37, 43);")
 
-        self.gridLayout_2.addWidget(self.Title_index_doc, 6, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.ID_index_doc, 4, 1, 1, 1)
 
 
         self.info_frame_3.addWidget(self.search_frame_2)
@@ -1992,7 +1984,7 @@ class Ui_MainWindow(object):
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
         font5 = QFont()
-        font5.setBold(False)
+        font5.setBold(True)
         font5.setItalic(False)
         self.creditsLabel.setFont(font5)
         self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
@@ -2029,23 +2021,44 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.styleSheet)
         QWidget.setTabOrder(self.minimizeAppBtn, self.maximizeRestoreAppBtn)
         QWidget.setTabOrder(self.maximizeRestoreAppBtn, self.client_text)
-        QWidget.setTabOrder(self.client_text, self.Title_index_doc)
-        QWidget.setTabOrder(self.Title_index_doc, self.btn_index_doc)
-        QWidget.setTabOrder(self.btn_index_doc, self.response_json)
-        QWidget.setTabOrder(self.response_json, self.response_text)
-        QWidget.setTabOrder(self.response_text, self.Content_index_doc)
-        QWidget.setTabOrder(self.Content_index_doc, self.Result_text)
-        QWidget.setTabOrder(self.Result_text, self.btn_document)
-        QWidget.setTabOrder(self.btn_document, self.Indices_text)
-        QWidget.setTabOrder(self.Indices_text, self.btn_search)
-        QWidget.setTabOrder(self.btn_search, self.btn_index)
-        QWidget.setTabOrder(self.btn_index, self.closeAppBtn)
-        QWidget.setTabOrder(self.closeAppBtn, self.toggleButton)
-        QWidget.setTabOrder(self.toggleButton, self.btn_home)
-        QWidget.setTabOrder(self.btn_home, self.Query_name)
-        QWidget.setTabOrder(self.Query_name, self.toggleLeftBox)
-        QWidget.setTabOrder(self.toggleLeftBox, self.extraCloseColumnBtn)
-        QWidget.setTabOrder(self.extraCloseColumnBtn, self.textEdit)
+        QWidget.setTabOrder(self.client_text, self.toggleButton)
+        QWidget.setTabOrder(self.toggleButton, self.extraCloseColumnBtn)
+        QWidget.setTabOrder(self.extraCloseColumnBtn, self.btn_home)
+        QWidget.setTabOrder(self.btn_home, self.btn_index_doc)
+        QWidget.setTabOrder(self.btn_index_doc, self.btn_search)
+        QWidget.setTabOrder(self.btn_search, self.toggleLeftBox)
+        QWidget.setTabOrder(self.toggleLeftBox, self.response_text)
+        QWidget.setTabOrder(self.response_text, self.Index_name_2)
+        QWidget.setTabOrder(self.Index_name_2, self.btn_search_doc_all)
+        QWidget.setTabOrder(self.btn_search_doc_all, self.Index_doc)
+        QWidget.setTabOrder(self.Index_doc, self.ID_index_doc)
+        QWidget.setTabOrder(self.ID_index_doc, self.Title_index_doc)
+        QWidget.setTabOrder(self.Title_index_doc, self.Content_index_doc)
+        QWidget.setTabOrder(self.Content_index_doc, self.Delete_doc_name)
+        QWidget.setTabOrder(self.Delete_doc_name, self.Delete_doc_id)
+        QWidget.setTabOrder(self.Delete_doc_id, self.btn_delete_doc_id)
+        QWidget.setTabOrder(self.btn_delete_doc_id, self.Create_index)
+        QWidget.setTabOrder(self.Create_index, self.btn_create_index)
+        QWidget.setTabOrder(self.btn_create_index, self.Delete_index)
+        QWidget.setTabOrder(self.Delete_index, self.btn_delete_index)
+        QWidget.setTabOrder(self.btn_delete_index, self.Password_del_all)
+        QWidget.setTabOrder(self.Password_del_all, self.btn_del_all)
+        QWidget.setTabOrder(self.btn_del_all, self.Index_name)
+        QWidget.setTabOrder(self.Index_name, self.Field_name)
+        QWidget.setTabOrder(self.Field_name, self.ID_name)
+        QWidget.setTabOrder(self.ID_name, self.btn_search_doc_id)
+        QWidget.setTabOrder(self.btn_search_doc_id, self.Query_name)
+        QWidget.setTabOrder(self.Query_name, self.btn_search_doc_query)
+        QWidget.setTabOrder(self.btn_search_doc_query, self.textEdit)
+        QWidget.setTabOrder(self.textEdit, self.Indices_text_2)
+        QWidget.setTabOrder(self.Indices_text_2, self.response_json)
+        QWidget.setTabOrder(self.response_json, self.closeAppBtn)
+        QWidget.setTabOrder(self.closeAppBtn, self.Result_text_2)
+        QWidget.setTabOrder(self.Result_text_2, self.Health_text_2)
+        QWidget.setTabOrder(self.Health_text_2, self.Result_text)
+        QWidget.setTabOrder(self.Result_text, self.Indices_text)
+        QWidget.setTabOrder(self.Indices_text, self.btn_document)
+        QWidget.setTabOrder(self.btn_document, self.btn_index)
 
         self.retranslateUi(MainWindow)
 
@@ -2073,11 +2086,11 @@ class Ui_MainWindow(object):
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Elasticsearch for Covid-19 Information Application</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564</p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-i"
-                        "ndent:0; text-indent:0px;\"><span style=\" color:#bd93f9;\">Created by: <br />Kridsanapong Buathongjun</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'TH Sarabun New'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:600; color:#ff79c6;\">Elasticsearch for Covid-19 Information Application</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:400;\">This application use elasticsearch to search about Covid-19 Information for Information Storage and Web Search assignment in 1/2564</span></p>\n"
+"<"
+                        "p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:400; color:#bd93f9;\">Created by: <br />Kridsanapong Buathongjun</span></p></body></html>", None))
         self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Elasticsearch for Covid-19 Information Application", None))
         self.Status_text.setText("")
 #if QT_CONFIG(tooltip)
@@ -2092,41 +2105,40 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
+        self.labelBoxBlenderInstalation_12.setText(QCoreApplication.translate("MainWindow", u"ID", None))
         self.Query_name.setText("")
         self.Query_name.setPlaceholderText("")
+        self.Index_name_2.setText("")
+        self.Index_name_2.setPlaceholderText("")
+        self.btn_search_doc_id.setText(QCoreApplication.translate("MainWindow", u"Search by ID", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Search document by ID or Query", None))
-        self.labelBoxBlenderInstalation_11.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.btn_search_doc_all.setText(QCoreApplication.translate("MainWindow", u"Search all", None))
-        self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query match here..", None))
-        self.Index_combo_all.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
-
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Search all document", None))
-        self.Field_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"Title", None))
-        self.Field_combo.setItemText(1, QCoreApplication.translate("MainWindow", u"Content", None))
-
+        self.labelBoxBlenderInstalation_2.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.ID_name.setText("")
         self.ID_name.setPlaceholderText("")
-        self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
-        self.labelBoxBlenderInstalation_12.setText(QCoreApplication.translate("MainWindow", u"ID", None))
-        self.Index_combo.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
-
-        self.labelBoxBlenderInstalation_2.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
+        self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query for search", None))
+        self.labelBoxBlenderInstalation_11.setText(QCoreApplication.translate("MainWindow", u"Index Name", None))
         self.btn_search_doc_query.setText(QCoreApplication.translate("MainWindow", u"Search by Query", None))
-        self.btn_search_doc_id.setText(QCoreApplication.translate("MainWindow", u"Search by ID", None))
+        self.labelBoxBlenderInstalation_3.setText(QCoreApplication.translate("MainWindow", u"Field name here..", None))
+        self.Field_name.setText("")
+        self.Field_name.setPlaceholderText("")
+        self.Index_name.setText("")
+        self.Index_name.setPlaceholderText("")
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Client info", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Response in json format", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Response in txt format", None))
-        self.Index_doc.setItemText(0, QCoreApplication.translate("MainWindow", u"test-covid", None))
-
         self.labelBoxBlenderInstalation_7.setText(QCoreApplication.translate("MainWindow", u"Content", None))
+        self.Title_index_doc.setPlainText("")
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Create or Update document", None))
+        self.labelBoxBlenderInstalation_8.setText(QCoreApplication.translate("MainWindow", u"Type ID to create (optional)", None))
         self.btn_index_doc.setText(QCoreApplication.translate("MainWindow", u"Index document", None))
         self.labelBoxBlenderInstalation_5.setText(QCoreApplication.translate("MainWindow", u"Title", None))
-        self.labelBoxBlenderInstalation_8.setText(QCoreApplication.translate("MainWindow", u"Type ID create", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Create or Update document", None))
+        self.labelBoxBlenderInstalation_6.setText(QCoreApplication.translate("MainWindow", u"Index name", None))
+        self.Index_doc.setText("")
+        self.Index_doc.setPlaceholderText("")
         self.ID_index_doc.setText("")
         self.ID_index_doc.setPlaceholderText("")
-        self.labelBoxBlenderInstalation_6.setText(QCoreApplication.translate("MainWindow", u"Index name", None))
-        self.Title_index_doc.setPlainText("")
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Indices info", None))
         self.labelBoxBlenderInstalation_9.setText(QCoreApplication.translate("MainWindow", u"Type ID to delete.", None))
         self.Delete_doc_id.setText("")
@@ -2138,14 +2150,14 @@ class Ui_MainWindow(object):
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Delete document", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Result", None))
         self.btn_delete_index.setText(QCoreApplication.translate("MainWindow", u"Delete Index", None))
-        self.labelBoxBlenderInstalation_16.setText(QCoreApplication.translate("MainWindow", u"Type index to delete.", None))
+        self.labelBoxBlenderInstalation_16.setText(QCoreApplication.translate("MainWindow", u"Type index to delete", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Create Index", None))
         self.Delete_index.setText("")
         self.Delete_index.setPlaceholderText("")
         self.btn_create_index.setText(QCoreApplication.translate("MainWindow", u"Create Index", None))
         self.Create_index.setText("")
         self.Create_index.setPlaceholderText("")
-        self.labelBoxBlenderInstalation_15.setText(QCoreApplication.translate("MainWindow", u"Type new create index.", None))
+        self.labelBoxBlenderInstalation_15.setText(QCoreApplication.translate("MainWindow", u"Type new create index", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Delete Index", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Indices info", None))
         self.Password_del_all.setText("")
