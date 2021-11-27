@@ -1493,6 +1493,12 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <widget class="QLabel" name="Status_text">
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
@@ -1851,8 +1857,8 @@ background-repeat: no-repeat;</string>
                                  <enum>QFrame::Raised</enum>
                                 </property>
                                 <layout class="QGridLayout" name="gridLayout">
-                                 <item row="8" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_12">
+                                 <item row="10" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_4">
                                    <property name="font">
                                     <font>
                                      <pointsize>14</pointsize>
@@ -1864,12 +1870,12 @@ background-repeat: no-repeat;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>ID</string>
+                                    <string>Query for search</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="10" column="1">
-                                  <widget class="QLineEdit" name="Query_name">
+                                 <item row="3" column="0">
+                                  <widget class="QLineEdit" name="Index_name">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                      <horstretch>0</horstretch>
@@ -1893,7 +1899,24 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="14" column="0">
+                                 <item row="10" column="1">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_12">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>ID for search</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="16" column="0">
                                   <widget class="QLineEdit" name="Index_name_2">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1918,189 +1941,7 @@ background-repeat: no-repeat;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="11" column="0">
-                                  <widget class="QPushButton" name="btn_search_doc_id">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Search by ID</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="0" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_2">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Search document by ID or Query</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="14" column="1">
-                                  <widget class="QPushButton" name="btn_search_doc_all">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>150</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="cursor">
-                                    <cursorShape>PointingHandCursor</cursorShape>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Search all</string>
-                                   </property>
-                                   <property name="icon">
-                                    <iconset resource="resources.qrc">
-                                     <normaloff>:/icons/images/icons/cil-layers.png</normaloff>:/icons/images/icons/cil-layers.png</iconset>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="12" column="0" colspan="2">
-                                  <widget class="QLabel" name="label_8">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                     <underline>false</underline>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font-weight: bold;
-border-radius: 5px;
-border: 2px solid #ff79c6;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>Search all document</string>
-                                   </property>
-                                   <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Index Name</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="10" column="0">
-                                  <widget class="QLineEdit" name="ID_name">
-                                   <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                     <horstretch>0</horstretch>
-                                     <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                   </property>
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
-                                   </property>
-                                   <property name="text">
-                                    <string/>
-                                   </property>
-                                   <property name="placeholderText">
-                                    <string/>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="8" column="1">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_4">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Query for search</string>
-                                   </property>
-                                  </widget>
-                                 </item>
                                  <item row="13" column="0">
-                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
-                                   <property name="font">
-                                    <font>
-                                     <pointsize>14</pointsize>
-                                     <italic>false</italic>
-                                     <bold>true</bold>
-                                    </font>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true"/>
-                                   </property>
-                                   <property name="text">
-                                    <string>Index Name</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item row="11" column="1">
                                   <widget class="QPushButton" name="btn_search_doc_query">
                                    <property name="minimumSize">
                                     <size>
@@ -2143,12 +1984,105 @@ border: 2px solid #ff79c6;</string>
                                     <string notr="true"/>
                                    </property>
                                    <property name="text">
-                                    <string>Field name here..</string>
+                                    <string>Select field</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="2" column="1">
-                                  <widget class="QLineEdit" name="Field_name">
+                                 <item row="0" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_2">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search document by ID or Query</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="16" column="1">
+                                  <widget class="QPushButton" name="btn_search_doc_all">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search all</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-layers.png</normaloff>:/icons/images/icons/cil-layers.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="14" column="0" colspan="2">
+                                  <widget class="QLabel" name="label_8">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                     <underline>false</underline>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font-weight: bold;
+border-radius: 5px;
+border: 2px solid #ff79c6;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search all document</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="1" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_2">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Index name</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="12" column="0">
+                                  <widget class="QLineEdit" name="Query_name">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                      <horstretch>0</horstretch>
@@ -2172,8 +2106,25 @@ border: 2px solid #ff79c6;</string>
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="2" column="0">
-                                  <widget class="QLineEdit" name="Index_name">
+                                 <item row="15" column="0">
+                                  <widget class="QLabel" name="labelBoxBlenderInstalation_11">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true"/>
+                                   </property>
+                                   <property name="text">
+                                    <string>Index name</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="12" column="1">
+                                  <widget class="QLineEdit" name="ID_name">
                                    <property name="sizePolicy">
                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                      <horstretch>0</horstretch>
@@ -2195,6 +2146,77 @@ border: 2px solid #ff79c6;</string>
                                    <property name="placeholderText">
                                     <string/>
                                    </property>
+                                  </widget>
+                                 </item>
+                                 <item row="13" column="1">
+                                  <widget class="QPushButton" name="btn_search_doc_id">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="cursor">
+                                    <cursorShape>PointingHandCursor</cursorShape>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(52, 59, 72);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>Search by ID</string>
+                                   </property>
+                                   <property name="icon">
+                                    <iconset resource="resources.qrc">
+                                     <normaloff>:/icons/images/icons/cil-magnifying-glass.png</normaloff>:/icons/images/icons/cil-magnifying-glass.png</iconset>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="1">
+                                  <widget class="QComboBox" name="Field_combo">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>14</pointsize>
+                                     <italic>false</italic>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="autoFillBackground">
+                                    <bool>false</bool>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="iconSize">
+                                    <size>
+                                     <width>16</width>
+                                     <height>16</height>
+                                    </size>
+                                   </property>
+                                   <property name="frame">
+                                    <bool>true</bool>
+                                   </property>
+                                   <item>
+                                    <property name="text">
+                                     <string>None</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>Title</string>
+                                    </property>
+                                   </item>
+                                   <item>
+                                    <property name="text">
+                                     <string>Content</string>
+                                    </property>
+                                   </item>
                                   </widget>
                                  </item>
                                 </layout>
@@ -3958,11 +3980,6 @@ border: 2px solid #ff79c6;</string>
   <tabstop>Password_del_all</tabstop>
   <tabstop>btn_del_all</tabstop>
   <tabstop>Index_name</tabstop>
-  <tabstop>Field_name</tabstop>
-  <tabstop>ID_name</tabstop>
-  <tabstop>btn_search_doc_id</tabstop>
-  <tabstop>Query_name</tabstop>
-  <tabstop>btn_search_doc_query</tabstop>
   <tabstop>textEdit</tabstop>
   <tabstop>Indices_text_2</tabstop>
   <tabstop>response_json</tabstop>

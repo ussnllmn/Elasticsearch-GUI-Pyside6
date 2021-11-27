@@ -103,15 +103,27 @@ class MainWindow(QMainWindow):
     def Search_query(self):
         self.ui.response_text.setText("")
         # pass the field name and query args to filter dict
-        query = {
-          "query": {
-            "multi_match": {
-              "analyzer": "thai",
-              "query": self.ui.Query_name.text(),
-              "fields": ["Title", "Content"]
+        if self.ui.Field_combo.currentText() == "None":
+            query = {
+              "query": {
+                "multi_match": {
+                  "analyzer": "thai",
+                  "query": self.ui.Query_name.text(),
+                  "fields": ["Title", "Content"]
+                }
+              }
             }
-          }
-        }
+        else:
+            query = {
+              "query": {
+                "multi_match": {
+                  "analyzer": "thai",
+                  "query": self.ui.Query_name.text(),
+                  "fields": [self.ui.Field_combo.currentText()]
+                }
+              }
+            }
+
         index_name = self.ui.Index_name.text()
         # make sure that the user has entered an index name
         if index_name == "":
@@ -150,7 +162,6 @@ class MainWindow(QMainWindow):
             self.show_Indices()
             json_resp = json.dumps(resp, indent=4)
             self.ui.Result_text_2.append(json_resp)
-            self.ui.Index_doc.addItem(self.ui.Create_index.text())
         except:
             self.ui.Result_text_2.setText("Index: " + self.ui.Create_index.text() + " is already exists can't create.")
 
@@ -167,7 +178,7 @@ class MainWindow(QMainWindow):
 
     def Delete_doc(self):
         try:
-            res = client.delete(index=self.ui.Index_doc.currentText(), id=self.ui.Delete_doc_id.text())
+            res = client.delete(index=self.ui.Delete_doc_name.text(), id=self.ui.Delete_doc_id.text())
             self.ui.Result_text.setText("ID: " + res['_id'] + " is " + res['result'])
         except:
             self.ui.Result_text.setText("ID: " + self.ui.Delete_doc_id.text() + " is not found can't delete.")
