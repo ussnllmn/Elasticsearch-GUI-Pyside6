@@ -1764,7 +1764,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>3</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -3954,42 +3954,47 @@ border: 2px solid #ff79c6;</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>minimizeAppBtn</tabstop>
-  <tabstop>maximizeRestoreAppBtn</tabstop>
-  <tabstop>client_text</tabstop>
-  <tabstop>toggleButton</tabstop>
-  <tabstop>extraCloseColumnBtn</tabstop>
-  <tabstop>btn_home</tabstop>
-  <tabstop>btn_index_doc</tabstop>
-  <tabstop>btn_search</tabstop>
   <tabstop>toggleLeftBox</tabstop>
-  <tabstop>response_text</tabstop>
-  <tabstop>Index_name_2</tabstop>
-  <tabstop>btn_search_doc_all</tabstop>
   <tabstop>Index_doc</tabstop>
   <tabstop>ID_index_doc</tabstop>
   <tabstop>Title_index_doc</tabstop>
   <tabstop>Content_index_doc</tabstop>
+  <tabstop>btn_index_doc</tabstop>
   <tabstop>Delete_doc_name</tabstop>
   <tabstop>Delete_doc_id</tabstop>
   <tabstop>btn_delete_doc_id</tabstop>
+  <tabstop>response_text</tabstop>
+  <tabstop>Result_text</tabstop>
+  <tabstop>btn_document</tabstop>
+  <tabstop>maximizeRestoreAppBtn</tabstop>
+  <tabstop>client_text</tabstop>
+  <tabstop>toggleButton</tabstop>
+  <tabstop>extraCloseColumnBtn</tabstop>
+  <tabstop>btn_index</tabstop>
+  <tabstop>Field_combo</tabstop>
+  <tabstop>minimizeAppBtn</tabstop>
   <tabstop>Create_index</tabstop>
   <tabstop>btn_create_index</tabstop>
   <tabstop>Delete_index</tabstop>
   <tabstop>btn_delete_index</tabstop>
   <tabstop>Password_del_all</tabstop>
   <tabstop>btn_del_all</tabstop>
-  <tabstop>Index_name</tabstop>
+  <tabstop>Health_text_2</tabstop>
   <tabstop>textEdit</tabstop>
   <tabstop>Indices_text_2</tabstop>
   <tabstop>response_json</tabstop>
   <tabstop>closeAppBtn</tabstop>
   <tabstop>Result_text_2</tabstop>
-  <tabstop>Health_text_2</tabstop>
-  <tabstop>Result_text</tabstop>
+  <tabstop>Index_name</tabstop>
+  <tabstop>Query_name</tabstop>
+  <tabstop>btn_search_doc_query</tabstop>
+  <tabstop>ID_name</tabstop>
+  <tabstop>btn_search_doc_id</tabstop>
+  <tabstop>Index_name_2</tabstop>
+  <tabstop>btn_search_doc_all</tabstop>
+  <tabstop>btn_home</tabstop>
   <tabstop>Indices_text</tabstop>
-  <tabstop>btn_document</tabstop>
-  <tabstop>btn_index</tabstop>
+  <tabstop>btn_search</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>
