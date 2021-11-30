@@ -110,7 +110,10 @@ class MainWindow(QMainWindow):
             self.ui.Google_Result.setText("โปรดกรอกคำต้องการค้นหา")
         else:
             try:
-                resp = client.search(index=index_name, body=query)
+                if search_text == "ทั้งหมด":
+                    resp = client.search(index=index_name, query={"match_all": {}})
+                else:
+                    resp = client.search(index=index_name, body=query)
                 if resp['hits']['total']['value'] != 0:
                     self.ui.Google_Result.setText('พบ %d เอกสารสำหรับ "' % resp['hits']['total']['value'] + search_text + '"\n')
                 else:
