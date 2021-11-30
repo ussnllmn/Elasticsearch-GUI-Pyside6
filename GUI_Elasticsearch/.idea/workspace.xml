@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b0a1339-19a8-4941-b086-d330de1749fc" name="Changes" comment="Refactor color" />
+    <list default="true" id="3b0a1339-19a8-4941-b086-d330de1749fc" name="Changes" comment="Add Spacial Keyword to search all" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638301741832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add Spacial Keyword to search all">
+      <created>1638302267831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638302267831</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +138,7 @@
     <MESSAGE value="Add google search" />
     <MESSAGE value="Update thai language" />
     <MESSAGE value="Refactor color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor color" />
+    <MESSAGE value="Add Spacial Keyword to search all" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Spacial Keyword to search all" />
   </component>
 </project>

@@ -114,10 +114,12 @@ class MainWindow(QMainWindow):
                     resp = client.search(index=index_name, query={"match_all": {}})
                 else:
                     resp = client.search(index=index_name, body=query)
+                self.ui.Google_Result.setFontUnderline(True)
                 if resp['hits']['total']['value'] != 0:
                     self.ui.Google_Result.setText('พบ %d เอกสารสำหรับ "' % resp['hits']['total']['value'] + search_text + '"\n')
                 else:
                     self.ui.Google_Result.setText('ไม่พบเอกสารที่เกี่ยวข้องกับ "' + search_text + '"')
+                self.ui.Google_Result.setFontUnderline(False)
                 for hit in resp['hits']['hits']:
                     self.ui.Google_Result.setTextColor(BlueColor)
                     self.ui.Google_Result.setFontPointSize(18)
