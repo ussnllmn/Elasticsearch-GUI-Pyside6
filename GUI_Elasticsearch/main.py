@@ -66,6 +66,8 @@ class MainWindow(QMainWindow):
         widgets.btn_document.clicked.connect(self.buttonClick)
         widgets.btn_index.clicked.connect(self.buttonClick)
 
+        widgets.btn_google_search.clicked.connect(self.buttonClick)
+
         widgets.btn_search_doc_query.clicked.connect(self.buttonClick)
         widgets.btn_search_doc_id.clicked.connect(self.buttonClick)
 
@@ -77,6 +79,7 @@ class MainWindow(QMainWindow):
         widgets.btn_search_doc_all.clicked.connect(self.buttonClick)
         widgets.btn_del_all.clicked.connect(self.buttonClick)
 
+        widgets.Google_search.keyReleaseEvent = self.enter_Google
         widgets.Query_name.keyReleaseEvent = self.enter_Query
         widgets.Index_name_2.keyReleaseEvent = self.enter_searchALL
         widgets.ID_name.keyReleaseEvent = self.enter_ID
@@ -85,6 +88,39 @@ class MainWindow(QMainWindow):
         widgets.Create_index.keyReleaseEvent = self.enter_creIn
         widgets.Delete_index.keyReleaseEvent = self.enter_delIn
         widgets.Password_del_all.keyReleaseEvent = self.enter_delALL
+
+    def Search_Google(self):
+        BlueColor = QColor(130, 175, 255)
+        WhiteColor = QColor(255, 255, 255)
+
+        index_name = "no"
+        self.ui.Google_Result.setText("")
+        query = {
+          "query": {
+            "multi_match": {
+              "analyzer": "thai",
+              "query": self.ui.Google_search.text(),
+              "fields": ["Title", "Content"]
+            }
+          }
+        }
+        if self.ui.Google_search.text() == "":
+            self.ui.Google_Result.setText("Search field cannot be empty!!")
+        else:
+            try:
+                resp = client.search(index=index_name, body=query)
+                self.ui.Google_Result.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
+                for hit in resp['hits']['hits']:
+                    self.ui.Google_Result.setTextColor(BlueColor)
+                    self.ui.Google_Result.setFontPointSize(18)
+                    self.ui.Google_Result.append("%(Title)s" % hit["_source"])
+
+                    self.ui.Google_Result.setTextColor(WhiteColor)
+                    self.ui.Google_Result.setFontPointSize(14)
+                    self.ui.Google_Result.append("%(Content)s" % hit["_source"] + "\n")
+
+            except:
+                self.ui.Google_Result.setText("Query not found.")
 
     def Search_id(self):
         self.ui.response_text.setText("")
@@ -303,6 +339,12 @@ class MainWindow(QMainWindow):
         if btnName == "btn_search_doc_all":
             self.Search_ALL()
 
+        if btnName == "btn_google_search":
+            self.Search_Google()
+
+    def enter_Google(self, event):
+        if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            self.Search_Google()
 
     def enter_searchALL(self, event):
         if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:

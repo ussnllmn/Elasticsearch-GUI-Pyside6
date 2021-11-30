@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainNqIBaZ.ui'
+## Form generated from reading UI file 'maineSVTqB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -98,6 +98,9 @@ class Ui_MainWindow(object):
 "#result_frame_2{	\n"
 "	border: 2px solid #bd93f9;\n"
 "}\n"
+"#Google_Result{	\n"
+"	border: 2px solid #bd93f9;\n"
+"}\n"
 "#Danger_zone_frame{	\n"
 "	border-radius: 5px;\n"
 "	border: 2px solid #ff5555;\n"
@@ -110,9 +113,9 @@ class Ui_MainWindow(object):
 "}\n"
 "#info_frame {	\n"
 "	border: 2px solid #bd93f9;\n"
-"	background-position: center;\n"
-"	background-repeat: no-repeat"
-                        ";\n"
+"	bac"
+                        "kground-position: center;\n"
+"	background-repeat: no-repeat;\n"
 "}\n"
 "#response_json_frame{\n"
 "	border: 2px solid #bd93f9;\n"
@@ -143,10 +146,10 @@ class Ui_MainWindow(object):
 "\n"
 "/* MENUS */\n"
 "#topMenu .QPushButton {	\n"
-"	background-position: left center;\n"
+"	background-position: left ce"
+                        "nter;\n"
 "    background-repeat: no-repeat;\n"
-"	border: no"
-                        "ne;\n"
+"	border: none;\n"
 "	border-left: 22px solid transparent;\n"
 "	background-color: transparent;\n"
 "	text-align: left;\n"
@@ -179,12 +182,12 @@ class Ui_MainWindow(object):
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "#leftMenuFrame{\n"
-"	border-top: 3px solid rgb(44, 49, 58);\n"
+"	border-top: 3px solid rgb(44, 49"
+                        ", 58);\n"
 "}\n"
 "\n"
 "/* Toggle Button */\n"
-"#toggleButton"
-                        " {\n"
+"#toggleButton {\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
@@ -222,11 +225,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Label */\n"
-"#extraLabel { color: rgb(255, 255, 255); }\n"
+"#extraLabel { c"
+                        "olor: rgb(255, 255, 255); }\n"
 "\n"
 "/* Btn Close */\n"
-"#e"
-                        "xtraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
+"#extraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
 "#extraCloseColumnBtn:hover { background-color: rgb(196, 161, 249); border-style: solid; border-radius: 4px; }\n"
 "#extraCloseColumnBtn:pressed { background-color: rgb(180, 141, 238); border-style: solid; border-radius: 4px; }\n"
 "\n"
@@ -253,8 +256,8 @@ class Ui_MainWindow(object):
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"/* ///////////////////////////////////////////////////////////////////////////////////////"
-                        "//////////\n"
+"/* ////////////////////////////"
+                        "/////////////////////////////////////////////////////////////////////\n"
 "Content App */\n"
 "#contentTopBg{	\n"
 "	background-color: rgb(33, 37, 43);\n"
@@ -275,11 +278,11 @@ class Ui_MainWindow(object):
 "\n"
 "/* Bottom Bar */\n"
 "#bottomBar { background-color: rgb(44, 49, 58); border-bottom-right-radius: 12px;}\n"
-"#bottomBar QLabel { font-size: 16px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
+"#bottomBar QLabel { font-size: 16px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-b"
+                        "ottom: 2px; }\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
-"/* MENUS "
-                        "*/\n"
+"/* MENUS */\n"
 "#contentSettings .QPushButton {	\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
@@ -312,9 +315,9 @@ class Ui_MainWindow(object):
 "	padding-right: 5px;\n"
 "	gridline-color: rgb(44, 49, 60);\n"
 "}\n"
-"QTableWidget::item:selected{\n"
-"	background-color: rgb(189, 147,"
-                        " 249);\n"
+"QTable"
+                        "Widget::item:selected{\n"
+"	background-color: rgb(189, 147, 249);\n"
 "}\n"
 "QHeaderView::section{\n"
 "	background-color: rgb(33, 37, 43);\n"
@@ -347,9 +350,9 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "	border: 2px solid rgb(33, 37, 43);\n"
 "	padding-left: 10px;\n"
-"	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121"
-                        ", 198);\n"
+"	selection-color: rgb(25"
+                        "5, 255, 255);\n"
+"	selection-background-color: rgb(255, 121, 198);\n"
 "}\n"
 "QLineEdit:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
@@ -384,10 +387,10 @@ class Ui_MainWindow(object):
 "ScrollBars */\n"
 "QScrollBar:horizontal {\n"
 "    border: none;\n"
-"    background: rgb(52, 59, 72);\n"
+"    b"
+                        "ackground: rgb(52, 59, 72);\n"
 "    height: 8px;\n"
-"    ma"
-                        "rgin: 0px 21px 0 21px;\n"
+"    margin: 0px 21px 0 21px;\n"
 "	border-radius: 0px;\n"
 "}\n"
 "QScrollBar::handle:horizontal {\n"
@@ -421,11 +424,11 @@ class Ui_MainWindow(object):
 "{\n"
 "     background: none;\n"
 "}\n"
-" QScrollBar:vertical {\n"
+" QScrollBar:vertical"
+                        " {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
-""
-                        "    width: 8px;\n"
+"    width: 8px;\n"
 "    margin: 21px 0 21px 0;\n"
 "	border-radius: 0px;\n"
 " }\n"
@@ -458,10 +461,10 @@ class Ui_MainWindow(object):
 "\n"
 " QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
 "     background: none;\n"
-" }\n"
+""
+                        " }\n"
 "\n"
-"/* ////////////////////////////////////////////////"
-                        "/////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CheckBox */\n"
 "QCheckBox::indicator {\n"
 "    border: 3px solid rgb(52, 59, 72);\n"
@@ -492,9 +495,9 @@ class Ui_MainWindow(object):
 "    border: 3px solid rgb(58, 66, 81);\n"
 "}\n"
 "QRadioButton::indicator:checked {\n"
-"    background: 3px solid rgb(94, 106, 130);\n"
-"	border: 3px solid r"
-                        "gb(52, 59, 72);	\n"
+"    ba"
+                        "ckground: 3px solid rgb(94, 106, 130);\n"
+"	border: 3px solid rgb(52, 59, 72);	\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -526,11 +529,11 @@ class Ui_MainWindow(object):
 "	color: rgb(255, 121, 198);	\n"
 "	background-color: rgb(33, 37, 43);\n"
 "	padding: 10px;\n"
-"	selection-background-color: rgb(39, 44, 54);\n"
+""
+                        "	selection-background-color: rgb(39, 44, 54);\n"
 "}\n"
 "\n"
-"/*"
-                        " /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Sliders */\n"
 "QSlider::groove:horizontal {\n"
 "    border-radius: 5px;\n"
@@ -565,9 +568,9 @@ class Ui_MainWindow(object):
 "QSlider::groove:vertical:hover {\n"
 "	background-color: rgb(55, 62, 76);\n"
 "}\n"
-"QSlider::handle:vertical {\n"
-"    background-color: rgb(189"
-                        ", 147, 249);\n"
+""
+                        "QSlider::handle:vertical {\n"
+"    background-color: rgb(189, 147, 249);\n"
 "	border: none;\n"
 "    height: 10px;\n"
 "    width: 10px;\n"
@@ -601,9 +604,9 @@ class Ui_MainWindow(object):
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Button */\n"
 "#pagesContainer QPushButton {\n"
-"	border: 2px solid rgb(52, 59, 72);\n"
-"	border-radius: 5px"
-                        ";	\n"
+""
+                        "	border: 2px solid rgb(52, 59, 72);\n"
+"	border-radius: 5px;	\n"
 "	background-color: rgb(52, 59, 72);\n"
 "}\n"
 "#pagesContainer QPushButton:hover {\n"
@@ -1050,9 +1053,61 @@ class Ui_MainWindow(object):
         self.stackedWidget.setStyleSheet(u"background: transparent;")
         self.home = QWidget()
         self.home.setObjectName(u"home")
-        self.home.setStyleSheet(u"background-image: url(:/images/images/images/Home.png);\n"
-"background-position: center;\n"
-"background-repeat: no-repeat;")
+        self.home.setStyleSheet(u"")
+        self.gridLayout_6 = QGridLayout(self.home)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.label_10 = QLabel(self.home)
+        self.label_10.setObjectName(u"label_10")
+        font4 = QFont()
+        font4.setPointSize(14)
+        font4.setBold(True)
+        font4.setItalic(False)
+        font4.setUnderline(False)
+        self.label_10.setFont(font4)
+        self.label_10.setStyleSheet(u"font-weight: bold;\n"
+"border-radius: 5px;\n"
+"border: 2px solid #ff79c6;")
+        self.label_10.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_6.addWidget(self.label_10, 0, 0, 1, 2)
+
+        self.Google_search = QLineEdit(self.home)
+        self.Google_search.setObjectName(u"Google_search")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.Google_search.sizePolicy().hasHeightForWidth())
+        self.Google_search.setSizePolicy(sizePolicy3)
+        self.Google_search.setMinimumSize(QSize(0, 30))
+        self.Google_search.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.gridLayout_6.addWidget(self.Google_search, 1, 0, 1, 1)
+
+        self.btn_google_search = QPushButton(self.home)
+        self.btn_google_search.setObjectName(u"btn_google_search")
+        self.btn_google_search.setMinimumSize(QSize(150, 30))
+        self.btn_google_search.setMaximumSize(QSize(150, 16777215))
+        self.btn_google_search.setFont(font)
+        self.btn_google_search.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_google_search.setStyleSheet(u"background-color: rgb(52, 59, 72);")
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_google_search.setIcon(icon3)
+
+        self.gridLayout_6.addWidget(self.btn_google_search, 1, 1, 1, 1)
+
+        self.frame = QFrame(self.home)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+
+        self.gridLayout_6.addWidget(self.frame, 2, 0, 1, 1)
+
+        self.Google_Result = QTextBrowser(self.home)
+        self.Google_Result.setObjectName(u"Google_Result")
+
+        self.gridLayout_6.addWidget(self.Google_Result, 3, 0, 1, 2)
+
         self.stackedWidget.addWidget(self.home)
         self.Search = QWidget()
         self.Search.setObjectName(u"Search")
@@ -1093,9 +1148,6 @@ class Ui_MainWindow(object):
 
         self.Index_name = QLineEdit(self.search_frame)
         self.Index_name.setObjectName(u"Index_name")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.Index_name.sizePolicy().hasHeightForWidth())
         self.Index_name.setSizePolicy(sizePolicy3)
         self.Index_name.setMinimumSize(QSize(0, 30))
@@ -1125,8 +1177,6 @@ class Ui_MainWindow(object):
         self.btn_search_doc_query.setFont(font)
         self.btn_search_doc_query.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_search_doc_query.setStyleSheet(u"background-color: rgb(52, 59, 72);")
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/images/icons/cil-magnifying-glass.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_search_doc_query.setIcon(icon3)
 
         self.gridLayout.addWidget(self.btn_search_doc_query, 13, 0, 1, 1)
@@ -1140,11 +1190,6 @@ class Ui_MainWindow(object):
 
         self.label_2 = QLabel(self.search_frame)
         self.label_2.setObjectName(u"label_2")
-        font4 = QFont()
-        font4.setPointSize(14)
-        font4.setBold(True)
-        font4.setItalic(False)
-        font4.setUnderline(False)
         self.label_2.setFont(font4)
         self.label_2.setStyleSheet(u"font-weight: bold;\n"
 "border-radius: 5px;\n"
@@ -2067,7 +2112,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2110,6 +2155,15 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e40\u0e01\u0e35\u0e48\u0e22\u0e27\u0e01\u0e31\u0e1a\u0e19\u0e34\u0e17\u0e32\u0e19", None))
+        self.Google_search.setText("")
+        self.Google_search.setPlaceholderText("")
+        self.btn_google_search.setText(QCoreApplication.translate("MainWindow", u"\u0e04\u0e49\u0e19\u0e2b\u0e32", None))
+        self.Google_Result.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'TH Sarabun New'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.labelBoxBlenderInstalation_4.setText(QCoreApplication.translate("MainWindow", u"Query for search", None))
         self.Index_name.setText("")
         self.Index_name.setPlaceholderText("")
