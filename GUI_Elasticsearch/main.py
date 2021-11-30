@@ -94,22 +94,26 @@ class MainWindow(QMainWindow):
         WhiteColor = QColor(255, 255, 255)
 
         index_name = "no"
+        search_text = self.ui.Google_search.text()
         self.ui.Google_Result.setText("")
         query = {
           "query": {
             "multi_match": {
               "analyzer": "thai",
-              "query": self.ui.Google_search.text(),
+              "query": search_text,
               "fields": ["Title", "Content"]
             }
           }
         }
-        if self.ui.Google_search.text() == "":
-            self.ui.Google_Result.setText("Search field cannot be empty!!")
+        if search_text == "":
+            self.ui.Google_Result.setText("โปรดกรอกคำต้องการค้นหา")
         else:
             try:
                 resp = client.search(index=index_name, body=query)
-                self.ui.Google_Result.setText("Got %d Hits:" % resp['hits']['total']['value'] + "\n")
+                if resp['hits']['total']['value'] != 0:
+                    self.ui.Google_Result.setText('พบ %d เอกสารสำหรับ "' % resp['hits']['total']['value'] + search_text + '"\n')
+                else:
+                    self.ui.Google_Result.setText('ไม่พบเอกสารที่เกี่ยวข้องกับ "' + search_text + '"')
                 for hit in resp['hits']['hits']:
                     self.ui.Google_Result.setTextColor(BlueColor)
                     self.ui.Google_Result.setFontPointSize(18)
@@ -120,7 +124,7 @@ class MainWindow(QMainWindow):
                     self.ui.Google_Result.append("%(Content)s" % hit["_source"] + "\n")
 
             except:
-                self.ui.Google_Result.setText("Query not found.")
+                self.ui.Google_Result.setText("พบข้อผิดพลาดที่ไม่ทราบสาเหตุ")
 
     def Search_id(self):
         self.ui.response_text.setText("")
