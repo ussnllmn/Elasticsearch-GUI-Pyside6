@@ -115,6 +115,7 @@ class MainWindow(QMainWindow):
                 else:
                     resp = client.search(index=index_name, body=query)
                 self.ui.Google_Result.setFontUnderline(True)
+                self.ui.Google_Result.setTextColor(WhiteColor)
                 if resp['hits']['total']['value'] != 0:
                     self.ui.Google_Result.setText('ผลการค้นหา %d รายการสำหรับ "' % resp['hits']['total']['value'] + search_text + '"\n')
                 else:

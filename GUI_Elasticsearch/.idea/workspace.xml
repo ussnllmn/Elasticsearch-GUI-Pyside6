@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b0a1339-19a8-4941-b086-d330de1749fc" name="Changes" comment="Add Underline" />
+    <list default="true" id="3b0a1339-19a8-4941-b086-d330de1749fc" name="Changes" comment="Change word like google">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638302609698</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Change word like google">
+      <created>1638303066267</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638303066267</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +157,7 @@
     <MESSAGE value="Refactor color" />
     <MESSAGE value="Add Spacial Keyword to search all" />
     <MESSAGE value="Add Underline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Underline" />
+    <MESSAGE value="Change word like google" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change word like google" />
   </component>
 </project>
