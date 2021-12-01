@@ -5,9 +5,10 @@ Based on Python 3.9.7 and PySide6.
 > Before you run this application please make sure you're running ```elasticsearch.bat``` in background otherwise you may need to run this application again.
 
 # Screenshot
-![Home_Page](https://sv1.picz.in.th/images/2021/11/18/67t9ln.png)
-![Search_Page](https://sv1.picz.in.th/images/2021/11/18/67tlSR.png)
-![Debug_Page](https://sv1.picz.in.th/images/2021/11/18/67twfW.png)
+![Home_Page](https://www.img.in.th/images/6a0c9d73077cc7ee9774ef3f91ae22f8.png)
+![Search_Page](https://www.img.in.th/images/9d7bdf6d06e3395a249b79359edab057.png)
+![Document_Page](https://www.img.in.th/images/f9a48bef5f9357a5a7e7437672dc063c.png)
+![Index_Page](https://www.img.in.th/images/1166fc621c7e1c5860afee76748bc18e.png)
 
 # High DPI
 > Qt Widgets is an old technology and does not have a good support for high DPI settings, making these images look distorted when your system has DPI applied above 100%.
