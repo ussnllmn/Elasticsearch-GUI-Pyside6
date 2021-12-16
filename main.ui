@@ -1763,7 +1763,7 @@ border-radius: 5px;
 border: 2px solid #ff79c6;</string>
                          </property>
                          <property name="text">
-                          <string>ค้นหาเกี่ยวกับโควิด</string>
+                          <string>ค้นหาเกี่ยวกับโควิด-19</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>

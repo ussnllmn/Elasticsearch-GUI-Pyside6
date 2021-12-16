@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
         widgets.Password_del_all.keyReleaseEvent = self.enter_delALL
 
     def Search_Google(self):
-        index_name = "no"
+        index_name = "covid-19"
         search_text = self.ui.Google_search.text()
 
         BlueColor = QColor(130, 175, 255)

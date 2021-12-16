@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwrogvl.ui'
+## Form generated from reading UI file 'mainjVsVJq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.1
 ##
@@ -2033,7 +2033,7 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e40\u0e01\u0e35\u0e48\u0e22\u0e27\u0e01\u0e31\u0e1a\u0e42\u0e04\u0e27\u0e34\u0e14", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e40\u0e01\u0e35\u0e48\u0e22\u0e27\u0e01\u0e31\u0e1a\u0e42\u0e04\u0e27\u0e34\u0e14-19", None))
         self.Google_search.setText("")
         self.Google_search.setPlaceholderText("")
         self.btn_google_search.setText(QCoreApplication.translate("MainWindow", u"\u0e04\u0e49\u0e19\u0e2b\u0e32", None))
