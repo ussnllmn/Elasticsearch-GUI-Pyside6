@@ -65,33 +65,6 @@ Bg App */
 	border: 1px solid rgb(44, 49, 58);
 	border-radius: 12px;
 }
-#response_json_frame_2 {	
-	border: 2px solid #bd93f9;
-}
-#response_text_frame_2 {	
-	border: 2px solid #bd93f9;
-}
-#client_text_frame {	
-	border: 2px solid #bd93f9;
-}
-#result_frame {	
-	border: 2px solid #bd93f9;
-}
-#health_frame {	
-	border: 2px solid #bd93f9;
-}
-#indice_frame{	
-	border: 2px solid #bd93f9;
-}
-#health_frame_2 {	
-	border: 2px solid #bd93f9;
-}
-#indice_frame_2{	
-	border: 2px solid #bd93f9;
-}
-#result_frame_2{	
-	border: 2px solid #bd93f9;
-}
 #Google_Result{	
 	border: 2px solid #bd93f9;
 }
@@ -1790,7 +1763,7 @@ border-radius: 5px;
 border: 2px solid #ff79c6;</string>
                          </property>
                          <property name="text">
-                          <string>ค้นหาเกี่ยวกับนิทาน</string>
+                          <string>ค้นหาเกี่ยวกับโควิด</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -2378,37 +2351,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="client_text_frame">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="client_text">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_23">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="client_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -2457,37 +2403,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="response_json_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="response_json">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_16">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="response_json">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -2526,37 +2445,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="response_text_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="response_text">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_18">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="response_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -2915,37 +2807,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="indice_frame">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="Indices_text">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_26">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Indices_text">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -3149,46 +3014,22 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="result_frame">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextEdit" name="Result_text">
+                                   <property name="enabled">
+                                    <bool>true</bool>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
                                    </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_30">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextEdit" name="Result_text">
-                                      <property name="enabled">
-                                       <bool>true</bool>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="readOnly">
-                                       <bool>true</bool>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
+                                   </property>
+                                   <property name="readOnly">
+                                    <bool>true</bool>
+                                   </property>
                                   </widget>
                                  </item>
                                 </layout>
@@ -3522,37 +3363,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="indice_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="Indices_text_2">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_37">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Indices_text_2">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                  <item>
@@ -3715,46 +3529,22 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="result_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextEdit" name="Result_text_2">
+                                   <property name="enabled">
+                                    <bool>true</bool>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
                                    </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_33">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextEdit" name="Result_text_2">
-                                      <property name="enabled">
-                                       <bool>true</bool>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="readOnly">
-                                       <bool>true</bool>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
+                                   </property>
+                                   <property name="readOnly">
+                                    <bool>true</bool>
+                                   </property>
                                   </widget>
                                  </item>
                                 </layout>
@@ -3793,37 +3583,10 @@ border: 2px solid #ff79c6;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QFrame" name="health_frame_2">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
+                                  <widget class="QTextBrowser" name="Health_text_2">
+                                   <property name="styleSheet">
+                                    <string notr="true">border: 2px solid #bd93f9;</string>
                                    </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QVBoxLayout" name="verticalLayout_35">
-                                    <property name="spacing">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="leftMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="topMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="rightMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>0</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QTextBrowser" name="Health_text_2">
-                                      <property name="styleSheet">
-                                       <string notr="true"/>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
                                   </widget>
                                  </item>
                                 </layout>
@@ -4071,11 +3834,8 @@ border: 2px solid #ff79c6;</string>
   <tabstop>Delete_doc_name</tabstop>
   <tabstop>Delete_doc_id</tabstop>
   <tabstop>btn_delete_doc_id</tabstop>
-  <tabstop>response_text</tabstop>
-  <tabstop>Result_text</tabstop>
   <tabstop>btn_document</tabstop>
   <tabstop>maximizeRestoreAppBtn</tabstop>
-  <tabstop>client_text</tabstop>
   <tabstop>toggleButton</tabstop>
   <tabstop>extraCloseColumnBtn</tabstop>
   <tabstop>btn_index</tabstop>
@@ -4087,12 +3847,8 @@ border: 2px solid #ff79c6;</string>
   <tabstop>btn_delete_index</tabstop>
   <tabstop>Password_del_all</tabstop>
   <tabstop>btn_del_all</tabstop>
-  <tabstop>Health_text_2</tabstop>
   <tabstop>textEdit</tabstop>
-  <tabstop>Indices_text_2</tabstop>
-  <tabstop>response_json</tabstop>
   <tabstop>closeAppBtn</tabstop>
-  <tabstop>Result_text_2</tabstop>
   <tabstop>Index_name</tabstop>
   <tabstop>Query_name</tabstop>
   <tabstop>btn_search_doc_query</tabstop>
@@ -4101,7 +3857,6 @@ border: 2px solid #ff79c6;</string>
   <tabstop>Index_name_2</tabstop>
   <tabstop>btn_search_doc_all</tabstop>
   <tabstop>btn_home</tabstop>
-  <tabstop>Indices_text</tabstop>
   <tabstop>btn_search</tabstop>
  </tabstops>
  <resources>
