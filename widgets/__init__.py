@@ -11,7 +11,8 @@
 # There are limitations on Qt licenses if you want to use your products
 # commercially, I recommend reading them on the official website:
 # https://doc.qt.io/qtforpython/licenses.html
-#
+# update from xiaomi pad 6
+
 # ///////////////////////////////////////////////////////////////
 
 from . custom_grips import CustomGrip
